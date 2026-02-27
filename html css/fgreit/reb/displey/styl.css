@@ -1,0 +1,73 @@
+li{
+    display: inline;
+    font-size: 45;
+    margin: 15;
+}
+ul{
+    border: 5px solid  blue;
+}
+span{
+    display: block;
+    margin: 20px;
+    font-size: 45px;
+    border: 5px solid red;
+    background-color: yellow;
+}
+
+.wraper{
+    display: contents;
+}
+.divdiv1{
+    padding: 15px;
+    background-color: aqua;
+    border: 5px solid red;
+    margin: 15px;
+}
+
+.grid-contayner{
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    gap: 45px;
+}
+.grid-itim{
+    
+    padding: 25px;
+    text-align: center;
+    font-size: 50px;
+    border: 5px inset blue;
+}
+
+table{
+    display: table;
+    
+}
+.row{
+    display: table-row;
+}
+.call{
+    
+    display: table-cell;
+    border: 2px solid rgb(35, 175, 217);
+    padding: 10px;
+}
+
+
+.list{
+    display: list-item;
+    list-style-type: square ;
+    font-size: 50px;
+}
+.s{
+    list-style-type:armenian ;
+}
+
+.parent{
+    display: flex;
+    border: 5px solid red;
+    background-color: aqua;
+    font-size: 35px;
+    padding: 30px;
+}
+.child{
+display: inline;
+}

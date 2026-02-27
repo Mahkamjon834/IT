@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futbol O'yini</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { display: block; background-color: #2c9d2e; }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <script>// Canvasni olish va o'lchamlarni belgilash
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = 800;
+        canvas.height = 400;
+        
+        // Futbolchi va to'p ob'ektlari
+        let player = {
+            x: canvas.width / 2 - 25,
+            y: canvas.height - 50,
+            width: 50,
+            height: 50,
+            speed: 5,
+            dx: 0,
+            dy: 0
+        };
+        
+        let ball = {
+            x: canvas.width / 2,
+            y: canvas.height / 2,
+            radius: 10,
+            speed: 3,
+            dx: 3,
+            dy: 3
+        };
+        
+        // Futbolchi harakatini yaratish
+        function drawPlayer() {
+            ctx.fillStyle = "blue";
+            ctx.fillRect(player.x, player.y, player.width, player.height);
+        }
+        
+        function movePlayer() {
+            player.x += player.dx;
+            player.y += player.dy;
+        }
+        
+        // Topni yaratish
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.closePath();
+        }
+        
+        // Topning harakatini yaratish
+        function moveBall() {
+            ball.x += ball.dx;
+            ball.y += ball.dy;
+        
+            // Topning yuqori va pastki chegara bilan to'qnashuvi
+            if (ball.y - ball.radius < 0 || ball.y + ball.radius > canvas.height) {
+                ball.dy *= -1;
+            }
+        
+            // Topning chap va o'ng devorlar bilan to'qnashuvi
+            if (ball.x - ball.radius < 0 || ball.x + ball.radius > canvas.width) {
+                ball.dx *= -1;
+            }
+        }
+        
+        // Gol urish mexanizmi
+        let score = 0;
+        
+        function kickBall() {
+            if (player.x < ball.x + ball.radius && player.x + player.width > ball.x - ball.radius &&
+                player.y < ball.y + ball.radius && player.y + player.height > ball.y - ball.radius) {
+                ball.dx = (Math.random() * 4 - 2); // Random tarzda zarba burchagini belgilash
+                ball.dy = (Math.random() * 4 - 2);
+                score++; // Har safar to'pni zarb qilishda hisobni oshirish
+            }
+        }
+        
+        // Hisobni ko'rsatish
+        function drawScore() {
+            ctx.font = "20px Arial";
+            ctx.fillStyle = "white";
+            ctx.fillText("Score: " + score, 10, 30);
+        }
+        
+        // Vaqtni ko'rsatish
+        let timeLeft = 60;
+        
+        function drawTime() {
+            ctx.font = "20px Arial";
+            ctx.fillStyle = "white";
+            ctx.fillText("Time Left: " + timeLeft, canvas.width - 150, 30);
+        }
+        
+        function countdown() {
+            if (timeLeft > 0) {
+                timeLeft--;
+            } else {
+                alert("O'yin tugadi! Yig'gan ballaringiz: " + score);
+                location.reload();
+            }
+        }
+        
+        setInterval(countdown, 1000);
+        
+        // O'yin loop
+        function update() {
+            movePlayer();
+            moveBall();
+            kickBall();
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawPlayer();
+            drawBall();
+            drawScore();
+            drawTime();
+            requestAnimationFrame(update);
+        }
+        
+        // Klaviatura orqali futbolchi harakatini boshqarish
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'w') player.dy = -player.speed; // Yuqoriga
+            if (e.key === 's') player.dy = player.speed; // Pastga
+            if (e.key === 'a') player.dx = -player.speed; // Chapga
+            if (e.key === 'd') player.dx = player.speed; // O'ngga
+        });
+        
+        window.addEventListener('keyup', (e) => {
+            if (e.key === 'w' || e.key === 's') player.dy = 0;
+            if (e.key === 'a' || e.key === 'd') player.dx = 0;
+        });
+        
+        // O'yinni boshlash
+        update();</script>
+</body>
+
+</html>

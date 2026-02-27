@@ -1,0 +1,31 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+.animated-card {
+    animation: fadeInUp 1s ease-in-out;
+    transition: transform 1s, box-shadow 0.5s;
+}
+
+.animated-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar {
+    min-height: 90vh;
+    background-color: #f8f900;
+    padding: 1rem;
+}
+
+footer {
+    background-color: #212529;
+    color: #80f7fb;
+    text-align: center;
+    font-size: 60px;
+}

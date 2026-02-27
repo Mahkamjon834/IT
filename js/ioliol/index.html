@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Philosopher:700|Roboto:500,400");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+:root{
+    --primary: rgba(220,120,11,1)
+    --black: rgba(21,12,1,1)
+}
+.desktop {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+  min-width: 1440px;
+  min-height: 5498px;
+  position: relative;
+}
+
+.desktop .footer {
+  position: absolute;
+  top: 5069px;
+  left: 0;
+  width: 1472px;
+  height: 429px;
+  background-color: transparent;
+}
+
+.desktop .rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 429px;
+  background-color: #252525;
+}
+
+.desktop .group {
+  position: absolute;
+  top: 284px;
+  left: 1121px;
+  width: 21px;
+  height: 21px;
+}
+
+.desktop .text-wrapper {
+  position: absolute;
+  top: 137px;
+  left: 443px;
+  width: 262px;
+  font-family: "Philosopher", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .div {
+  left: 443px;
+  position: absolute;
+  top: 180px;
+  width: 262px;
+  opacity: 0.7;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .text-wrapper-2 {
+  left: 443px;
+  position: absolute;
+  top: 213px;
+  width: 262px;
+  opacity: 0.7;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .text-wrapper-3 {
+  position: absolute;
+  top: 246px;
+  left: 443px;
+  width: 262px;
+  opacity: 0.7;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .UI-UX-design {
+  position: absolute;
+  top: 279px;
+  left: 443px;
+  width: 262px;
+  opacity: 0.7;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .text-wrapper-4 {
+  position: absolute;
+  top: 312px;
+  left: 443px;
+  width: 262px;
+  opacity: 0.7;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .text-wrapper-5 {
+  position: absolute;
+  top: 137px;
+  left: 735px;
+  width: 262px;
+  font-family: "Philosopher", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .text-wrapper-6 {
+  left: 735px;
+  position: absolute;
+  top: 180px;
+  width: 262px;
+  opacity: 0.7;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .text-wrapper-7 {
+  left: 735px;
+  position: absolute;
+  top: 213px;
+  width: 262px;
+  opacity: 0.7;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .text-wrapper-8 {
+  left: 735px;
+  position: absolute;
+  top: 246px;
+  width: 262px;
+  opacity: 0.7;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .UI-UX-design-2 {
+  position: absolute;
+  top: 279px;
+  left: 735px;
+  width: 262px;
+  opacity: 0.7;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .text-wrapper-9 {
+  position: absolute;
+  top: 312px;
+  left: 735px;
+  width: 262px;
+  opacity: 0.7;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .group-2 {
+  position: absolute;
+  top: 222px;
+  left: 150px;
+  width: 268px;
+  height: 73px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.desktop .text-wrapper-10 {
+  width: 262px;
+  height: 13px;
+  opacity: 0.7;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .element-food-network {
+  position: absolute;
+  top: 137px;
+  left: 150px;
+  width: 61px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.desktop .text-wrapper-11 {
+  position: absolute;
+  top: 137px;
+  left: 1028px;
+  width: 262px;
+  font-family: "Philosopher", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .text-wrapper-12 {
+  left: 1028px;
+  position: absolute;
+  top: 180px;
+  width: 262px;
+  opacity: 0.7;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .text-wrapper-13 {
+  left: 1028px;
+  position: absolute;
+  top: 213px;
+  width: 262px;
+  opacity: 0.7;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .text-wrapper-14 {
+  left: 1028px;
+  position: absolute;
+  top: 246px;
+  width: 262px;
+  opacity: 0.7;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .img {
+  position: absolute;
+  top: 284px;
+  left: 1028px;
+  width: 21px;
+  height: 21px;
+}
+
+.desktop .group-3 {
+  position: absolute;
+  top: 284px;
+  left: 1059px;
+  width: 21px;
+  height: 21px;
+}
+
+.desktop .twitter {
+  position: absolute;
+  top: 284px;
+  left: 1090px;
+  width: 21px;
+  height: 21px;
+}
+
+.desktop .contact {
+  position: absolute;
+  top: 4621px;
+  left: 0;
+  width: 1440px;
+  height: 448px;
+}
+
+.desktop .rectangle-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 448px;
+  background-color: #dc780b;
+  opacity: 0.1;
+}
+
+.desktop .group-4 {
+  position: absolute;
+  top: 115px;
+  left: 345px;
+  width: 754px;
+  height: 216px;
+  display: flex;
+  flex-direction: column;
+}
+
+.desktop .contact-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 328px;
+  width: 94px;
+  height: 19px;
+  opacity: 0.7;
+  font-family: "Roboto", Helvetica;
+  font-weight: 500;
+  color: #dc780b;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 3.2px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 749px;
+  height: 61px;
+  margin-top: 15px;
+  font-family: "Philosopher", Helvetica;
+  font-weight: 700;
+  color: #150c01;
+  font-size: 31.2px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 40.6px;
+}
+
+.desktop .group-5 {
+  width: 750px;
+  height: 75px;
+  position: relative;
+  margin-top: 46px;
+}
+
+.desktop .group-6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 752px;
+  height: 75px;
+}
+
+.desktop .rectangle-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 750px;
+  height: 75px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.desktop .text-wrapper-15 {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  width: 160px;
+  height: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 40.6px;
+  white-space: nowrap;
+}
+
+.desktop .group-7 {
+  position: absolute;
+  top: 0;
+  left: 594px;
+  width: 158px;
+  height: 75px;
+}
+
+.desktop .rectangle-4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 156px;
+  height: 75px;
+  background-color: #dc780b;
+  border-radius: 10px;
+}
+
+.desktop .text-wrapper-16 {
+  position: absolute;
+  top: 30px;
+  left: 57px;
+  width: 42px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 40.6px;
+  white-space: nowrap;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="desktop">
+      <footer class="footer">
+        <div class="rectangle"></div>
+        <img class="group" src="https://c.animaapp.com/ml82ec72lecewD/img/group-117.png" />
+        <div class="text-wrapper">Home</div>
+        <div class="div">Landingpage</div>
+        <div class="text-wrapper-2">Documentation</div>
+        <div class="text-wrapper-3">Referral Program</div>
+        <div class="UI-UX-design">UI &amp; UX Design</div>
+        <div class="text-wrapper-4">Web Design</div>
+        <div class="text-wrapper-5">Menu</div>
+        <div class="text-wrapper-6">Landingpage</div>
+        <div class="text-wrapper-7">Documentation</div>
+        <div class="text-wrapper-8">Referral Program</div>
+        <div class="UI-UX-design-2">UI &amp; UX Design</div>
+        <div class="text-wrapper-9">Web Design</div>
+        <div class="group-2">
+          <div class="text-wrapper-10">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</div>
+          <div class="text-wrapper-10">+1 123 456 7890</div>
+        </div>
+        <img class="element-food-network" src="https://c.animaapp.com/ml82ec72lecewD/img/50px-food-network-logo-svg-1@2x.png" />
+        <div class="text-wrapper-11">Service</div>
+        <div class="text-wrapper-12">Landingpage</div>
+        <div class="text-wrapper-13">Documentation</div>
+        <div class="text-wrapper-14">Referral Program</div>
+        <img class="img" src="https://c.animaapp.com/ml82ec72lecewD/img/group-116.png" />
+        <img class="group-3" src="https://c.animaapp.com/ml82ec72lecewD/img/group-115.png" />
+        <img class="twitter" src="https://c.animaapp.com/ml82ec72lecewD/img/twitter.png" />
+      </footer>
+      <div class="contact">
+        <div class="rectangle-2"></div>
+        <div class="group-4">
+          <div class="contact-2">CONTACT</div>
+          <p class="p">Get In Touch With us for your service</p>
+          <div class="group-5">
+            <div class="group-6">
+              <div class="rectangle-3"></div>
+              <div class="text-wrapper-15">Enter your message</div>
+            </div>
+            <div class="group-7">
+              <div class="rectangle-4"></div>
+              <div class="text-wrapper-16">Send</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="group-8">
+          <div class="testimonial-2">TESTIMONIAL</div>
+          <div class="text-wrapper-17">What They Say</div>
+          <p class="text-wrapper-18">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry&#39;s standard dummy text ever since the 1500s,
+          </p>
+        </div>
+        <img class="group-9" src="https://c.animaapp.com/ml82ec72lecewD/img/group-114.png" />
+        <img class="group-10" src="https://c.animaapp.com/ml82ec72lecewD/img/group-113.png" />
+        <div class="group-11">
+          <div class="group-wrapper">
+            <div class="group-12">
+              <p class="text-wrapper-19">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry&#39;s standard dummy text ever since the 1500s,
+              </p>
+              <img class="group-13" src="https://c.animaapp.com/ml82ec72lecewD/img/group-112.png" />
+              <div class="group-14">
+                <div class="augusta-w-reynoso">Augusta W. Reynoso</div>
+                <div class="UI-UX-designer">UI UX Designer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="group-15" src="https://c.animaapp.com/ml82ec72lecewD/img/group-111.png" />
+        <img class="group-16" src="https://c.animaapp.com/ml82ec72lecewD/img/group-110.png" />
+      </div>
+      <div class="app-download">
+        <img class="mask-group" src="https://c.animaapp.com/ml82ec72lecewD/img/mask-group-1@2x.png" />
+        <div class="group-17">
+          <div class="rectangle-5"></div>
+          <div class="div-wrapper">
+            <div class="group-18">
+              <div class="take-away">TAKE AWAY</div>
+              <p class="food-stalls-with">Food Stalls with Persons but to Product marketing plane catlogues etc to.</p>
+              <p class="there-are-many">
+                There are many things are needed to start the Fast Food Business. You need not only Just Food Stalls
+                with Persons but also equipment make your marketing plane Effective.
+              </p>
+              <div class="group-19">
+                <div class="group-20">
+                  <div class="group-21">
+                    <img class="img-2" src="https://c.animaapp.com/ml82ec72lecewD/img/group-109.png" />
+                    <div class="group-22">
+                      <div class="group-23"><div class="text-wrapper-20">App Store</div></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="group-24">
+                  <div class="group-25">
+                    <img class="img-2" src="https://c.animaapp.com/ml82ec72lecewD/img/group-108.png" />
+                    <div class="group-22">
+                      <div class="group-23"><div class="text-wrapper-21">Google Play</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="mask-group-2" src="https://c.animaapp.com/ml82ec72lecewD/img/mask-group@2x.png" />
+      </div>
+      <div class="menu">
+        <div class="div-2">
+          <div class="group-26">
+            <div class="group-27">
+              <div class="group-28">
+                <div class="group-29">
+                  <div class="menu-2">MENU</div>
+                  <div class="text-wrapper-22">Food Full of treaty Love</div>
+                  <p class="text-wrapper-23">
+                    There are many things are needed to start the Fast Food Business. You need not only Just Food Stalls
+                    with Persons but also specialized equipment,
+                  </p>
+                </div>
+                <div class="group-30">
+                  <div class="group-31">
+                    <div class="group-32">
+                      <div class="rectangle-6"></div>
+                      <div class="text-wrapper-24">Cheese Burger</div>
+                      <div class="text-wrapper-25">$3.99</div>
+                      <p class="text-wrapper-26">There are many things are needed to start</p>
+                      <div class="button"></div>
+                    </div>
+                  </div>
+                  <div class="group-33">
+                    <div class="group-32">
+                      <div class="rectangle-6"></div>
+                      <div class="text-wrapper-24">Toffe&#39;s Cake</div>
+                      <div class="text-wrapper-27">$4.99</div>
+                      <p class="text-wrapper-26">There are many things are needed to start</p>
+                      <div class="button"></div>
+                    </div>
+                  </div>
+                  <div class="group-34">
+                    <div class="group-32">
+                      <div class="rectangle-6"></div>
+                      <div class="text-wrapper-24">Dancake</div>
+                      <div class="text-wrapper-25">$1.99</div>
+                      <p class="text-wrapper-26">There are many things are needed to start</p>
+                      <div class="button"></div>
+                    </div>
+                  </div>
+                  <div class="group-35">
+                    <div class="group-32">
+                      <div class="rectangle-6"></div>
+                      <div class="text-wrapper-24">Crispy Sandwitch</div>
+                      <div class="text-wrapper-28">$3.00</div>
+                      <p class="text-wrapper-26">There are many things are needed to start</p>
+                      <div class="button"></div>
+                    </div>
+                  </div>
+                  <div class="group-36">
+                    <div class="group-32">
+                      <div class="rectangle-6"></div>
+                      <div class="text-wrapper-24">Thai Soup</div>
+                      <div class="text-wrapper-25">$2.99</div>
+                      <p class="text-wrapper-26">There are many things are needed to start</p>
+                      <div class="button"></div>
+                    </div>
+                  </div>
+                  <div class="group-37">
+                    <div class="group-32">
+                      <div class="rectangle-7"></div>
+                      <div class="text-wrapper-24">Dancake</div>
+                      <div class="text-wrapper-25">$1.99</div>
+                      <p class="text-wrapper-26">There are many things are needed to start</p>
+                      <div class="button"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="group-38">
+                <div class="group-39"><div class="text-wrapper-29">Learn More</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="group-40">
+            <div class="group-41">
+              <img class="group-42" src="https://c.animaapp.com/ml82ec72lecewD/img/group-107.png" />
+              <img class="group-43" src="https://c.animaapp.com/ml82ec72lecewD/img/group-107.png" />
+              <img class="group-44" src="https://c.animaapp.com/ml82ec72lecewD/img/group-107.png" />
+              <img class="group-45" src="https://c.animaapp.com/ml82ec72lecewD/img/group-107.png" />
+              <img class="group-46" src="https://c.animaapp.com/ml82ec72lecewD/img/group-107.png" />
+            </div>
+          </div>
+          <img class="mask-group-3" src="https://c.animaapp.com/ml82ec72lecewD/img/mask-group-6@2x.png" />
+          <img class="mask-group-4" src="https://c.animaapp.com/ml82ec72lecewD/img/mask-group-5@2x.png" />
+          <img class="mask-group-5" src="https://c.animaapp.com/ml82ec72lecewD/img/mask-group-4@2x.png" />
+          <img class="mask-group-6" src="https://c.animaapp.com/ml82ec72lecewD/img/mask-group-3@2x.png" />
+          <img class="mask-group-7" src="https://c.animaapp.com/ml82ec72lecewD/img/mask-group-2@2x.png" />
+          <img class="mask-group-8" src="https://c.animaapp.com/ml82ec72lecewD/img/mask-group-7@2x.png" />
+        </div>
+      </div>
+      <div class="about-us">
+        <img class="vector" src="https://c.animaapp.com/ml82ec72lecewD/img/vector-1.svg" />
+        <div class="group-47">
+          <img class="mask-group-9" src="https://c.animaapp.com/ml82ec72lecewD/img/mask-group-8@2x.png" />
+          <div class="group-48">
+            <div class="about-us-2">ABOUT US</div>
+            <p class="food-stalls-with-2">
+              Food Stalls with Persons but to Product marketing plane catlogues etc to.
+            </p>
+            <p class="there-are-many-2">
+              There are many things are needed to start the Fast Food Business. You need not only Just Food Stalls with
+              Persons but also specialized equipment, Skills to manage Customers,
+            </p>
+            <button class="button-2">
+              <div class="text-wrapper-30">Read More</div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="features">
+        <div class="group-49">
+          <div class="features-2">FEATURES</div>
+          <div class="food-with-a-new">Food with a <br />new look</div>
+          <div class="group-50">
+            <div class="group-51"></div>
+            <div class="group-52">
+              <div class="text-wrapper-31">Quality Food</div>
+              <p class="text-wrapper-32">
+                It can be a very secure path to earn good money and make you very successful creative entrepreneur.
+              </p>
+            </div>
+          </div>
+          <div class="group-53">
+            <div class="group-54"></div>
+            <div class="group-52">
+              <div class="text-wrapper-33">Food Delivery</div>
+              <p class="text-wrapper-32">
+                It can be a very secure path to earn good money and make you very successful creative entrepreneur.
+              </p>
+            </div>
+          </div>
+          <div class="group-55">
+            <div class="group-56"></div>
+            <div class="group-52">
+              <div class="text-wrapper-34">Super Taste</div>
+              <p class="text-wrapper-32">
+                It can be a very secure path to earn good money and make you very successful creative entrepreneur.
+              </p>
+            </div>
+          </div>
+          <img class="food-delivery" src="https://c.animaapp.com/ml82ec72lecewD/img/food-delivery-1.png" />
+          <img class="group-57" src="https://c.animaapp.com/ml82ec72lecewD/img/group-106.png" />
+          <img class="group-58" src="https://c.animaapp.com/ml82ec72lecewD/img/group-105.png" />
+        </div>
+      </div>
+      <div class="hero-aria">
+        <img class="csmjntefxm" src="https://c.animaapp.com/ml82ec72lecewD/img/csmjntefxm-1@2x.png" />
+        <div class="group-59">
+          <div class="hero-text">
+            <p class="text-wrapper-35">Making time a good time by making food the good food.</p>
+            <p class="text-wrapper-36">
+              There are many things are needed to start the Fast Food Business. You need not only Just Food Stalls with
+              Persons
+            </p>
+          </div>
+          <div class="button-3">
+            <div class="battun">
+              <div class="rectangle-8"></div>
+              <div class="rectangle-9"></div>
+              <div class="group-60">
+                <div class="group-61"><div class="text-wrapper-37">Order Now</div></div>
+              </div>
+              <div class="group-62">
+                <div class="group-63"><div class="text-wrapper-38">Food Details</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ellipse"></div>
+      </div>
+      <div class="header">
+        <img class="element-px-food-network" src="https://c.animaapp.com/ml82ec72lecewD/img/50px-food-network-logo-svg-1@2x.png" />
+        <div class="navbar">
+          <div class="text-wrapper-39">Home</div>
+          <div class="text-wrapper-40">About us</div>
+          <div class="text-wrapper-41">Menu</div>
+          <div class="text-wrapper-42">Features</div>
+          <div class="text-wrapper-43">Contact us</div>
+        </div>
+        <div class="battun-2">
+          <div class="rectangle-10"></div>
+          <div class="text-wrapper-44">Booking Now</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

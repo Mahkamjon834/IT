@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 Functions Example</title>
+    <script src="./script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border: 2px solid #4CAF50;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 14px;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .positional {
+            background-color: #2196F3; /* Blue */
+        }
+        .keyword {
+            background-color: #FF9800; /* Orange */
+        }
+        .combined {
+            background-color: #9C27B0; /* Purple */
+        }
+    </style>
+</head>
+<body>
+    <h1>30 Functions Example</h1>
+
+    <div>
+        <h2>Positional Arguments</h2>
+        <button class="positional" onclick="showResult(add(5, 3))">Add (5 + 3)</button>
+        <button class="positional" onclick="showResult(subtract(10, 4))">Subtract (10 - 4)</button>
+        <button class="positional" onclick="showResult(multiply(6, 7))">Multiply (6 * 7)</button>
+        <button class="positional" onclick="showResult(divide(20, 4))">Divide (20 / 4)</button>
+        <button class="positional" onclick="showResult(max(15, 25))">Max (15, 25)</button>
+        <button class="positional" onclick="showResult(min(15, 25))">Min (15, 25)</button>
+        <button class="positional" onclick="showResult(power(2, 3))">Power (2^3)</button>
+        <button class="positional" onclick="showResult(concatStrings('Hello', ' World'))">Concat ('Hello', 'World')</button>
+        <button class="positional" onclick="showResult(areaOfRectangle(5, 10))">Area of Rectangle (5, 10)</button>
+        <button class="positional" onclick="showResult(perimeterOfRectangle(5, 10))">Perimeter of Rectangle (5, 10)</button>
+    </div>
+
+    <div>
+        <h2>Keyword Arguments</h2>
+        <button class="keyword" onclick="showResult(greet({ name: 'John', age: 30 }))">Greet (John, 30)</button>
+        <button class="keyword" onclick="showResult(calculateBMI({ weight: 70, height: 1.75 }))">BMI (70kg, 1.75m)</button>
+        <button class="keyword" onclick="showResult(JSON.stringify(createUser({ username: 'johndoe', email: 'john@example.com' })))">Create User</button>
+        <button class="keyword" onclick="showResult(formatDate({ date: new Date() }))">Format Date</button>
+        <button class="keyword" onclick="showResult(calculateCircleArea({ radius: 5 }))">Circle Area (radius 5)</button>
+        <button class="keyword" onclick="showResult(calculateCircleCircumference({ radius: 5 }))">Circle Circumference (radius 5)</button>
+        <button class="keyword" onclick="showResult(generateGreeting({ firstName: 'John', lastName: 'Doe' }))">Greeting (John Doe)</button>
+        <button class="keyword" onclick="showResult(calculateSpeed({ distance: 100, time: 2 }))">Speed (100m, 2s)</button>
+        <button class="keyword" onclick="showResult(calculateDiscount({ price: 100, discountPercentage: 20 }))">Discount (100, 20%)</button>
+        <button class="keyword" onclick="showResult(createFullName({ firstName: 'John', lastName: 'Doe' }))">Full Name (John Doe)</button>
+    </div>
+
+    <div>
+        <h2>Combined Arguments</h2>
+        <button class="combined" onclick="showResult(calculateTotal(100, { taxRate: 0.15, discount: 10 }))">Total (100, 15% tax, 10 discount)</button>
+        <button class="combined" onclick="showResult(introduce('John', { age: 30, city: 'New York' }))">Introduce (John, 30, New York)</button>
+        <button class="combined" onclick="showResult(calculateRectangle(5, 10, { unit: 'cm' }))">Rectangle Area (5, 10, cm)</button>
+        <button class="combined" onclick="showResult(calculateTriangle(5, 10, { unit: 'cm' }))">Triangle Area (5, 10, cm)</button>
+        <button class="combined" onclick="showResult(calculateLoan(1000, 0.05, { years: 2 }))">Loan (1000, 5%, 2 years)</button>
+        <button class="combined" onclick="showResult(JSON.stringify(createProfile('John', { age: 30, country: 'USA' })))">Profile (John, 30, USA)</button>
+        <button class="combined" onclick="showResult(calculateTravelTime(100, 50, { unit: 'hours' }))">Travel Time (100km, 50km/h)</button>
+        <button class="combined" onclick="showResult(calculateSavings(2000, 1500, { months: 12 }))">Savings (2000, 1500, 12 months)</button>
+        <button class="combined" onclick="showResult(generateReport('Annual Report', { author: 'John', date: new Date() }))">Report</button>
+        <button class="combined" onclick="showResult(calculateGrade(85, { maxScore: 100 }))">Grade (85/100)</button>
+    </div>
+
+    <div class="result" id="result">Result will be displayed here</div>
+
+    <script>
+        function showResult(result) {
+            document.getElementById('result').innerText = `Result: ${result}`;
+        }
+    </script>
+</body>
+</html>

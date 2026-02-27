@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: "Arial", sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Основные стили */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: black;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Анимированные неоновые волны */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.gifer.com/3FXP.gif') no-repeat center;
+            background-size: cover;
+            opacity: 0.2;
+            animation: pulseBg 10s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulseBg {
+            0% { opacity: 0.2; }
+            100% { opacity: 0.4; }
+        }
+
+        /* Неоновые частицы */
+        body::after {
+            content: "";
+            position: absolute;
+            width: 85%;
+            height: 85%;
+            background: url('https://i.gifer.com/XOsX.gif') no-repeat center;
+            background-size: cover;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        ul {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10;
+        }
+
+        ul li {
+            list-style-type: none;
+            position: relative;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Стеклянные кнопки */
+        ul li a {
+            position: relative;
+            display: inline-block;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #00ffcc;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 50px;
+            backdrop-filter: blur(8px);
+            transition: 0.5s ease-in-out;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+            border: 2px solid rgba(0, 255, 204, 0.3);
+        }
+
+        /* Градиентное свечение */
+        ul li a:hover {
+            color: #ff1493;
+            border-color: rgba(255, 20, 147, 0.7);
+            box-shadow: 0 0 30px rgba(255, 20, 147, 1);
+            text-shadow: 0 0 20px rgba(255, 20, 147, 1);
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        /* Двигающийся текст на заднем фоне */
+        ul li::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(255, 255, 255, 0.05);
+            font-size: 9em;
+            font-weight: 900;
+            pointer-events: none;
+            opacity: 0;
+            transition: 0.5s ease-in-out;
+            text-shadow: 0 0 40px rgba(255,255,255,0.2);
+            animation: floatText 5s infinite alternate ease-in-out;
+        }
+
+        @keyframes floatText {
+            0% { transform: translate(-50%, -50%) scale(1); }
+            100% { transform: translate(-50%, -45%) scale(1.1); }
+        }
+
+        ul li:hover::before {
+            opacity: 0.7;
+        }
+    </style>
+    <title>Futuristic Neon Menu</title>
+</head>
+<body>
+    <ul>
+        <li data-text="💫 MAHKAM - ЭНЕРГИЯ"><a href="#">Mahkam</a></li>
+        <li data-text="🔮 IBROHIM - МУДРОСТЬ"><a href="#">Ibrohim</a></li>
+        <li data-text="✨ SUHROB - ТВОРЧЕСТВО"><a href="#">Suhrob</a></li>
+        <li data-text="👑 MALIKA - КОРОЛЕВА"><a href="#">Malika</a></li>
+        <li data-text="🧠 ALBERT - ГЕНИЙ"><a href="#">Albert</a></li>
+    </ul>
+</body>
+</html>

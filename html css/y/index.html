@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #111;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5% 5%;
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    .block {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .text-block {
+      width: 48%;
+    }
+
+    .text-block h1 {
+      font-size: 2.3vw;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .text-block p {
+      font-size: 1.1vw;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .features li {
+      font-size: 1.1vw;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .image-block {
+      width: 48%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-block img {
+      width: 100%;
+      height: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 30px;
+      background-color: #ff4d4f;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      margin-top: 20px;
+      font-size: 1vw;
+    }
+
+    @media screen and (max-width: 768px) {
+      .block {
+        flex-direction: column;
+      }
+
+      .text-block, .image-block {
+        width: 100%;
+        text-align: center;
+      }
+
+      .text-block h1 {
+        font-size: 5vw;
+      }
+
+      .text-block p, .features li {
+        font-size: 3.5vw;
+      }
+
+      .btn {
+        font-size: 3.5vw;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Discover Block -->
+  <div class="block">
+    <div class="text-block">
+      <h1>Discover & growth<br>with analysis.</h1>
+      <p>Software with new dimensions. The better future and information about the virtual world.</p>
+      <ul class="features">
+        <li><img src="/Group 9.png" alt=""> Software with new dimensions the better.</li>
+        <li><img src="/Group 9.png" alt=""> Effortlessly manages all your information.</li>
+        <li><img src="/Group 9.png" alt=""> Simple Solutions for Complex Connections.</li>
+        <li><img src="/Group 9.png" alt=""> Complete business solutions for customers.</li>
+      </ul>
+    </div>
+    <div class="image-block">
+      <img style="width: 1000%; height: 70%; margin-top: 20%;" src="/Group 68.png" alt="Analytics Dashboard" />
+    </div>
+  </div>
+
+  <!-- Security Block -->
+  <div class="block">
+    <div class="image-block">
+      <img  style="width: 1000%; height: 70%; " src="/Group 132.png" alt="Secure Info View" />
+    </div>
+    <div class="text-block">
+      <h1>Serving information<br>with security.</h1>
+      <p>The source of powerful grid and making future sure. It’s a straightforward software. Paired with dynamic image of the actual tool for you.</p>
+      <p>Where possibilities are made possible. We must expand possibilities of a better tomorrow. The directly secure of your network delivering services.</p>
+    </div>
+  </div>
+
+  <!-- Software Download Block -->
+  <div class="block" style="background-color: #f3fdfa; padding: 60px 5%; border-radius: 12px;">
+    <div class="text-block">
+      <h1>Get our software</h1>
+      <p>The source of powerful grid and making your future sure. It’s a straightforward software for you.</p>
+      <p>Paired with dynamic image of the actual tool and the performance.</p>
+      <a href="#" class="btn">Download now</a>
+    </div>
+    <div class="image-block">
+      <img  style="width: 150%; height: 70%; ;" src="/1458 copy 1.png" alt="Laptop Screenshot" />
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

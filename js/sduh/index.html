@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <h1>setTimeout, setInterval, destructuring</h1>
+
+    <h2>Lorem, ipsum. <span class="q1">0</span></h2>
+    
+    <script>
+        const q1 = document.querySelector(".q1"); // Исправлено: добавлена точка перед классом
+        let count = 0; // Счетчик
+
+        // Увеличиваем значение каждые 500 мс
+        let hisob = setInterval(() => {
+            count += 500; // Увеличиваем счетчик
+            q1.innerHTML = count; // Обновляем содержимое элемента
+        }, 500);
+
+        // Останавливаем интервал через 5 секунд
+        setTimeout(() => {
+            clearInterval(hisob);
+        }, 5000);
+    </script>
+</body>
+</html>

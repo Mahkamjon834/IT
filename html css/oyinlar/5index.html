@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPS O'yini</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let player = {
+            x: canvas.width / 2,
+            y: canvas.height / 2,
+            width: 50,
+            height: 50,
+            speed: 5,
+            dx: 0,
+            dy: 0
+        };
+
+        let bullets = [];
+
+        // Player movement
+        function movePlayer() {
+            player.x += player.dx;
+            player.y += player.dy;
+        }
+
+        // Draw player
+        function drawPlayer() {
+            ctx.fillStyle = "blue";
+            ctx.fillRect(player.x, player.y, player.width, player.height);
+        }
+
+        // Bullet mechanics
+        function createBullet() {
+            let bullet = {
+                x: player.x + player.width / 2,
+                y: player.y,
+                speed: 10,
+                radius: 5,
+                dx: 0,
+                dy: -10 // This makes the bullet move upwards
+            };
+            bullets.push(bullet);
+        }
+
+        function drawBullet(bullet) {
+            ctx.beginPath();
+            ctx.arc(bullet.x, bullet.y, bullet.radius, 0, Math.PI * 2);
+            ctx.fillStyle = "red";
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        function moveBullets() {
+            for (let i = 0; i < bullets.length; i++) {
+                bullets[i].y += bullets[i].dy;
+                drawBullet(bullets[i]);
+            }
+        }
+
+        // Check collisions between bullets and player
+        function checkCollisions() {
+            for (let i = 0; i < bullets.length; i++) {
+                if (bullets[i].x > player.x && bullets[i].x < player.x + player.width &&
+                    bullets[i].y > player.y && bullets[i].y < player.y + player.height) {
+                    console.log("To'qnashuv! O'yinchi zarba oldi!");
+                    bullets.splice(i, 1); // Remove bullet after collision
+                }
+            }
+        }
+
+        // Update game objects
+        function update() {
+            movePlayer();
+            moveBullets();
+            checkCollisions();
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawPlayer();
+            requestAnimationFrame(update);
+        }
+
+        // Keyboard event listeners
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'w') player.dy = -player.speed; // Up
+            if (e.key === 's') player.dy = player.speed; // Down
+            if (e.key === 'a') player.dx = -player.speed; // Left
+            if (e.key === 'd') player.dx = player.speed; // Right
+            if (e.key === ' ') {
+                createBullet(); // Shoot bullet on space key press
+            }
+        });
+
+        window.addEventListener('keyup', (e) => {
+            if (e.key === 'w' || e.key === 's') player.dy = 0;
+            if (e.key === 'a' || e.key === 'd') player.dx = 0;
+        });
+
+        update(); // Start the game loop
+    </script>
+</body>
+</html>

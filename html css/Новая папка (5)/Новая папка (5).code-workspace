@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "Новая папка (5)",
+			"path": "."
+		},
+		{
+			"name": "test",
+			"path": "../test"
+		},
+		{
+			"name": "Image small",
+			"path": "../Image small"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Новая папка (5)"
+	}
+}

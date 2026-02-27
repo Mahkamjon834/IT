@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .search-bar input {
+            width: 50%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            background: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background: #0056b3;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .product-card button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            background: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .product-card button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Welcome to Our Online Store
+    </header>
+
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Search for products...">
+        <button onclick="searchProducts()">Search</button>
+    </div>
+
+    <div class="products" id="product-list">
+        <!-- Product cards will be dynamically generated here -->
+    </div>
+
+    <script>
+        // Sample product data
+        const products = [
+            { id: 1, name: "Laptop", price: "$999", image: "https://via.placeholder.com/200" },
+            { id: 2, name: "Smartphone", price: "$699", image: "https://via.placeholder.com/200" },
+            { id: 3, name: "Headphones", price: "$199", image: "https://via.placeholder.com/200" },
+            { id: 4, name: "Smartwatch", price: "$299", image: "https://via.placeholder.com/200" },
+            { id: 5, name: "Camera", price: "$499", image: "https://via.placeholder.com/200" },
+            { id: 6, name: "Tablet", price: "$399", image: "https://via.placeholder.com/200" },
+            { id: 7, name: "Gaming Console", price: "$499", image: "https://via.placeholder.com/200" },
+            { id: 8, name: "Keyboard", price: "$49", image: "https://via.placeholder.com/200" },
+            { id: 9, name: "Mouse", price: "$29", image: "https://via.placeholder.com/200" },
+            { id: 10, name: "Monitor", price: "$199", image: "https://via.placeholder.com/200" }
+        ];
+
+        // Function to display products
+        function displayProducts(productList) {
+            const productContainer = document.getElementById('product-list');
+            productContainer.innerHTML = ""; // Clear previous products
+            productList.forEach(product => {
+                const productCard = `
+                    <div class="product-card">
+                        <img src="${product.image}" alt="${product.name}">
+                        <h3>${product.name}</h3>
+                        <p>Price: ${product.price}</p>
+                        <button>Add to Cart</button>
+                    </div>
+                `;
+                productContainer.innerHTML += productCard;
+            });
+        }
+
+        // Initial display of all products
+        displayProducts(products);
+
+        // Search function
+        function searchProducts() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const filteredProducts = products.filter(product =>
+                product.name.toLowerCase().includes(searchInput)
+            );
+            displayProducts(filteredProducts);
+        }
+    </script>
+</body>
+</html>

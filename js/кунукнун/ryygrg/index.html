@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+     
+<h1>Takrorlash </h1>
+
+
+
+
+
+
+
+    <script>
+//1 mavzu
+        // var let const ozgaruvchilar makumot saqlash va ozgartirish uchun
+        let name1 = "sardor";
+        let name = "mahmud";
+        console.log(name1);
+//2 mavzu
+        // alert
+        alert("son yozing");
+        // prompt narsa soram qiymatni qabul qilish
+        prompt("ismingiz");
+        // confirm
+        confirm("siz talabamisiz");
+//3 mavzu 
+//data tayplari(ma'lumot turlari) 8 ta bor 
+// number string boolean null undefined object symbol bigint
+//premitive faqat 1 ta dan malumot saqlaydi 
+//reference data type 2 ta yoki undan koproq malumot saqlaydi
+
+//premitive namber string boolean null undefined symbol bigint
+//reference object
+//object = object arrey function
+//4 mavzu
+        // object bir narsa yoki odamga tegishli bolgan narsalarni birdaniga saqlaydi {key:value}
+        let user = {
+            name: "MAx",
+            age: 25
+        };
+        user.name = "ali"; // ozgartirish uchun
+        // Aray bir nechira qiymatni bitta ozgaruvchida saqlash uchun ishlatiladi
+        let arr = ["olma", "anor", "shaftoli"];
+//5 mavzu
+        //function decloresh biror ishni bajarish uchun ishlatiladi
+        function salomBer(){
+            console.log("salom");
+        }
+        //function expression       
+        let salomBer2 = function(){
+            console.log("salom2");
+        }
+        //fonction arrow
+        let salomBer3 = () => {
+            console.log("salom3");
+        }
+//6 mavzu
+        //DOM document object model htmlni ozgartirish 
+        //dom selector
+        // getelementbyid
+        // getelementbyclass
+        // getelementbytagname
+        // queryselector
+//7 mavzu
+        //settimeout va setinterval
+        // settimeout bir marta bajaradi    
+        // setinterval takroriy bajaradi
+        setTimeout(() => {
+            console.log("salom");
+        }, 2000);
+        setInterval(() => {
+            console.log("dunyo");
+        }, 1000);
+
+//8 mavzu
+        //date va time
+        let sana = new Date();
+        console.log(sana);
+        console.log(sana.getFullYear());
+        console.log(sana.getMonth() + 1);
+        console.log(sana.getDate());
+        console.log(sana.getHours());
+        console.log(sana.getMinutes());
+        console.log(sana.getSeconds());
+
+//9 mavzu
+         // compareson operators taqqoslash amallari
+         let a = 5; 
+            let b = 10;
+            console.log(a == b); // tengmi
+            console.log(a != b); // teng emasmi
+            console.log(a > b); // katta
+            console.log(a < b); // kichik
+            console.log(a >= b); // katta yoki teng 
+            console.log(a <= b); // kichik yoki teng
+            
+            //arithmetic operators arifmetik amallar
+            console.log(a + b); // qo'shish
+            console.log(a - b); // ayirish
+            console.log(a * b); // ko'paytirish
+            console.log(a / b); // bo'lish
+            console.log(a % b); // qoldiq
+            console.log(a++); // oshirish
+            console.log(b--); // kamaytirish
+            
+            //logical operators mantiqiy amallar
+            console.log(a > 0 && b > 0); // va
+            console.log(a > 0 || b < 0); // yoki
+            console.log(!(a > 0)); // emas
+            
+
+
+
+
+
+
+
+
+
+
+        //math object matematik amallar uchun ishlatiladi
+        console.log(Math.PI);
+        console.log(Math.round(4.6));
+        console.log(Math.ceil(4.2));
+        console.log(Math.floor(4.8));
+        console.log(Math.sqrt(16));
+        console.log(Math.pow(2, 3));
+        console.log(Math.min(1, 2, 3, 4, 5));
+        console.log(Math.max(1, 2, 3, 4, 5));
+        console.log(Math.random());
+        
+
+    </script>
+</body>
+</html>

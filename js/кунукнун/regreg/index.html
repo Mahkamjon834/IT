@@ -1,0 +1,170 @@
+..M.., [23.12.2025 6:33]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+<h1> random amaliyot</h1>
+
+    <script>
+        // console.log("Hello, World!");
+         
+        // Math.random()
+        // Math.floor()
+        // trank() floor() round() ceil() seqrt() pow()
+
+        // let son = 13.6;
+        // console.log(son); 
+        // console.log(Math.round(son)); //yahlitlas
+        // console.log(Math.floor(son));//odiy soni yahlitlas
+        // console.log(Math.ceil(son));//butun sondan balat bolsa 1 ta baland boladi 2=3
+        // console.log(Math.trunc(son));//faqat sonni oladi
+        // console.log(Math.sqrt(16)); //ildiz
+        // console.log(Math.pow(2, 3)); //daraja
+
+
+        // console.log(Math.random() * 1000); //0-1 gacha tasodifiy son
+
+
+
+    
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Omad Shov</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="luckButton">Omad Shov</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('luckButton').addEventListener('click', function() {
+            const randomNumber = Math.floor(Math.random() * 50) + 1;
+            document.getElementById('result').textContent = 'Sizning raqamingiz: ' + randomNumber;
+        });
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           
+           *{
+            margin: 0;
+            padding: 0;     
+            box-sizing: border-box;
+
+           }
+              body{
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #000000;
+                color: aliceblue;
+                text-align: center;
+                margin-top: -10%;
+                font-size: 20px;
+              }
+              .pit{
+                width: 150px;
+                height: 50px;
+                background-color: rgb(12, 12, 12);
+                border: 2px solid aqua;
+                border-radius: 10px;
+                cursor: pointer;
+                color: azure;
+
+                font-size: 20px;
+              }
+              .tel{
+                font-size: 600%;
+              }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>random sonlar omad shov</h1><br>
+        <h2 class="tel">+998 00 000 00 00</h2><br><br>
+        <button class="pit" onclick="nana()">Bosing</button>
+    </div>
+
+
+    <script>
+//37 75
+//17 42
+//9 87
+// 2 31
+        const tel = document.querySelector('.tel');
+
+        const index = [
+             '+998 90 123 45 67',
+             '+998 91 234 56 78',
+             '+998 93 345 67 89',
+             '+998 94 456 78 90',
+             '+998 95 567 89 01',
+             '+998 97 678 90 12',
+             '+998 99 789 01 23'
+        ];
+
+
+function nana() {
+            tel.textContent = index[Math.floor(Math.random() * index.length)];  
+        }
+    </script>
+
+</body>
+</html>

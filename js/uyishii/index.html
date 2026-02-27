@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bizning Manzillarimiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.1) rotate(180deg); }
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: white;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            color: rgba(255,255,255,0.95);
+            font-size: 18px;
+            position: relative;
+            z-index: 1;
+            font-weight: 400;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 0;
+            min-height: 600px;
+        }
+
+        .map-section {
+            background: #f8f9fa;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-section iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 600px;
+            border: none;
+            filter: grayscale(0%) contrast(1.1);
+        }
+
+        .locations-section {
+            padding: 40px 35px;
+            background: white;
+            overflow-y: auto;
+            max-height: 600px;
+        }
+
+        .locations-section::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .locations-section::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .locations-section::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 10px;
+        }
+
+        .location-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+            border: 2px solid transparent;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+
+
+.location-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+            border-color: #667eea;
+        }
+
+        .location-card:hover::before {
+            opacity: 0.05;
+        }
+
+        .location-card:active {
+            transform: translateY(-4px) scale(1);
+        }
+
+        .location-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .location-card:hover .location-icon {
+            transform: rotate(15deg) scale(1.1);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.5);
+        }
+
+        .location-icon::before {
+            content: "📍";
+            font-size: 28px;
+        }
+
+        .location-info {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .location-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            letter-spacing: -0.3px;
+            transition: color 0.3s ease;
+        }
+
+        .location-card:hover .location-name {
+            color: #667eea;
+        }
+
+        .location-address {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .location-actions {
+            display: flex;
+            gap: 12px;
+            margin-left: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .action-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-size: 18px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .btn-location {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF5252 100%);
+            color: white;
+        }
+
+        .btn-phone {
+            background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+            color: white;
+        }
+
+        .btn-share {
+            background: linear-gradient(135deg, #A8E6CF 0%, #3DDC97 100%);
+            color: white;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-4px) scale(1.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .action-btn:active {
+            transform: translateY(-2px) scale(1.05);
+        }
+
+        /* Badge dizayni */
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-left: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+
+
+        /* Animatsiya */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .location-card {
+            animation: slideIn 0.5s ease-out backwards;
+        }
+
+        .location-card:nth-child(1) { animation-delay: 0.1s; }
+        .location-card:nth-child(2) { animation-delay: 0.2s; }
+        .location-card:nth-child(3) { animation-delay: 0.3s; }
+        .location-card:nth-child(4) { animation-delay: 0.4s; }
+        .location-card:nth-child(5) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗺️ BIZNING MANZILLARIMIZ</h1>
+            <p>Filiallarimiz Dushanbadan-Shanbagacha, soat 7:30 dan 20:00 gacha ishlaydi.</p>
+        </div>
+
+        <div class="content">
+            <div class="map-section">
+                <iframe class="aa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95942.48002517316!2d69.19696639704058!3d41.28269707463925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2z0KLQsNGI0LrQtdC90YIsINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1764946221452!5m2!1sru!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="locations-section">
+                <div onclick="OYBEK()" class="location-card">
+                    <div class="location-icon"></div>
+                    <div class="location-info">
+                        <div class="location-name">OYBEK <span class="badge">Metro</span></div>
+                        <div class="location-address">
+                            16 Afrosiyob ko'ch.<br>
+                            sobiq "Angel's Food" (OYBEK metro bekati)
+                        </div>
+                    </div>
+                    <div class="location-actions">
+                        <button class="action-btn btn-location" title="Xaritada ko'rish">📍</button>
+                        <button class="action-btn btn-phone" title="Qo'ng'iroq qilish">📞</button>
+                        <button class="action-btn btn-share" title="Ulashish">📤</button>
+                    </div>
+                </div>
+
+                <div onclick="XALQLAR()" class="location-card">
+                    <div class="location-icon"></div>
+                    <div class="location-info">
+                        <div class="location-name">XALQLAR DO'STLIGI <span class="badge">Metro</span></div>
+                        <div class="location-address">
+                            8/1 Islom Karimov ko'ch.<br>
+                            XALQLAR DO'STLIGI metro bekati, sobiq 'UzBowling'
+                        </div>
+                    </div>
+                    <div class="location-actions">
+                        <button class="action-btn btn-location" title="Xaritada ko'rish">📍</button>
+                        <button class="action-btn btn-phone" title="Qo'ng'iroq qilish">📞</button>
+                        <button class="action-btn btn-share" title="Ulashish">📤</button>
+                    </div>
+                </div>
+
+                <div onclick="C1()" class="location-card">
+                    <div class="location-icon"></div>
+
+
+<div class="location-info">
+                        <div class="location-name">C1 <span class="badge">Markaz</span></div>
+                        <div class="location-address">
+                            1 Shakhrisabz St., C1<br>
+                            sobiq "Detsky Mir"
+                        </div>
+                    </div>
+                    <div class="location-actions">
+                        <button class="action-btn btn-location" title="Xaritada ko'rish">📍</button>
+                        <button class="action-btn btn-phone" title="Qo'ng'iroq qilish">📞</button>
+                        <button class="action-btn btn-share" title="Ulashish">📤</button>
+                    </div>
+                </div>
+
+                <div onclick="WESTMINSTER()" class="location-card">
+                    <div class="location-icon"></div>
+                    <div class="location-info">
+                        <div class="location-name">WESTMINSTER <span class="badge">Universitet</span></div>
+                        <div class="location-address">
+                            14 Istiqlol ko'ch.<br>
+                            Westminster universiteti, O'zbeknetgaz
+                        </div>
+                    </div>
+                    <div class="location-actions">
+                        <button class="action-btn btn-location" title="Xaritada ko'rish">📍</button>
+                        <button class="action-btn btn-phone" title="Qo'ng'iroq qilish">📞</button>
+                        <button class="action-btn btn-share" title="Ulashish">📤</button>
+                    </div>
+                </div>
+
+                <div onclick="GORKIY()" class="location-card">
+                    <div class="location-icon"></div>
+                    <div class="location-info">
+                        <div class="location-name">MAKSIM GORKIY</div>
+                        <div class="location-address">
+                            Buyuk Ipak Yo'li ko'ch, 105B
+                        </div>
+                    </div>
+                    <div class="location-actions">
+                        <button class="action-btn btn-location" title="Xaritada ko'rish">📍</button>
+                        <button class="action-btn btn-phone" title="Qo'ng'iroq qilish">📞</button>
+                        <button class="action-btn btn-share" title="Ulashish">📤</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const xariita = document.querySelector('.aa');
+        
+        function OYBEK(){
+            xariita.setAttribute('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196633.99703657482!2d66.8030777658843!3d39.64057190070248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d191960077df7%3A0x487636d9d13f2f57!2sSamarqand%2C%20Samarqand%20viloyati%2C%20O%CA%BBzbekiston!5e0!3m2!1suz!2s!4v1764851889233!5m2!1suz!2s');
+        }
+        
+        function XALQLAR(){
+            xariita.setAttribute('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191881.76173837244!2d68.95400516685079!3d41.28378477674378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8abf914c5093%3A0x2d3479470727d354!2sToshkent%2C%20O%CA%BBzbekiston!5e0!3m2!1suz!2s!4v1764852979586!5m2!1suz!2s');
+        }
+
+        function C1(){
+            xariita.setAttribute('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96400.13555142278!2d71.56222156473669!3d40.97043826595707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb4c1b2e60eea5%3A0x36ef7252c4c12106!2sNamangan%2C%20Namangan%20viloyati%2C%20O%CA%BBzbekiston!5e0!3m2!1suz!2s!4v1764852093269!5m2!1suz!2s');
+        }
+        
+        function WESTMINSTER(){
+            xariita.setAttribute('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196633.99703657482!2d66.8030777658843!3d39.64057190070248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d191960077df7%3A0x487636d9d13f2f57!2sSamarqand%2C%20Samarqand%20viloyati%2C%20O%CA%BBzbekiston!5e0!3m2!1suz!2s!4v1764851889233!5m2!1suz!2s')
+
+
+
+        }
+        
+        function GORKIY(){
+            xariita.setAttribute('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191881.76173837244!2d68.95400516685079!3d41.28378477674378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8abf914c5093%3A0x2d3479470727d354!2sToshkent%2C%20O%CA%BBzbekiston!5e0!3m2!1suz!2s!4v1764852979586!5m2!1suz!2s');
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OMEGA Watches - Luxury Swiss Watches</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #555;
+  line-height: 1.6;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Cookie Banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 40px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  z-index: 9999;
+  max-width: 622px;
+  margin: 0 auto;
+}
+
+.cookie-content h3 {
+  color: #c40d2e;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1.92px;
+}
+
+.cookie-content p {
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 35px;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: #c40d2e;
+  color: #fff;
+  padding: 12px 20px;
+  border: 1px solid #c40d2e;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: #a00b26;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #f9f9f9;
+  z-index: 1000;
+}
+
+.top-banner {
+  background: #f9f9f9;
+  padding: 14px 50px;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+}
+
+.top-banner a {
+  text-decoration: underline;
+}
+
+.close-banner {
+  position: absolute;
+  right: 7px;
+  top: 10px;
+  font-size: 24px;
+  padding: 6px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background: #fff;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  color: #fff;
+  background: #000;
+  padding: 12px 8px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+  height: 35px;
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.category-nav {
+  background: #000;
+  padding: 0;
+}
+
+.category-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.category-nav li {
+  padding: 0 20px;
+}
+
+.category-nav a {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  display: block;
+  padding: 15px 0;
+  transition: color 0.3s;
+}
+
+.category-nav a:hover {
+  color: #c40d2e;
+}
+
+/* Hero Slider */
+.hero-slider {
+  margin-top: 149px;
+  height: 951px;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.slide {
+  display: none;
+  position: relative;
+  height: 100%;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: #fff;
+  max-width: 344px;
+}
+
+.slide-subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2.8px;
+  margin-bottom: 8px;
+}
+
+.slide-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 4.8px;
+  line-height: 36px;
+  margin-bottom: 30px;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s;
+  min-height: 40px;
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.slider-controls {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.slider-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.slider-dot.active {
+  background: #fff;
+  height: 35px;
+  border-radius: 9px;
+}
+
+/* Product Section */
+.product-section {
+  padding: 100px 40px;
+  background: #fff;
+  text-align: center;
+}
+
+.section-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 8px 0;
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.tab.active {
+  color: #c40d2e;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #c40d2e;
+}
+
+.product-carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 20px;
+  padding: 0 60px;
+}
+
+.product-card {
+  background: #f9f9f9;
+  padding: 9px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.badge {
+  position: absolute;
+  top: 17.5px;
+  left: 17.5px;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 210px;
+  height: auto;
+  margin: 52px auto;
+  display: block;
+}
+
+.product-card h3 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.product-card p {
+  font-size: 12px;
+  line-height: 18px;
+  margin: 10px 0;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.shop-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  color: #555;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.product-card:hover .shop-link {
+  opacity: 1;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: #f9f9f9;
+  border: 1px solid #f9f9f9;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: #fff;
+  box-shadow: 0 0 0 1px #c40d2e inset;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Milano Section */
+.milano-section {
+  padding: 100px 40px;
+  background: #fff;
+}
+
+.milano-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.milano-image {
+  flex: 1;
+}
+
+.milano-image img {
+  width: 100%;
+  height: auto;
+}
+
+.milano-text {
+  flex: 1;
+  padding: 0 60px;
+}
+
+.subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3.84px;
+  margin-bottom: 33.6px;
+}
+
+.milano-text h2 {
+  font-size: 38px;
+  color: #c40d2e;
+  text-transform: uppercase;
+  letter-spacing: 6.08px;
+  line-height: 45.6px;
+  margin-bottom: 26.6px;
+}
+
+.milano-text p {
+  font-size: 17px;
+  line-height: 25.5px;
+  margin-bottom: 35.7px;
+}
+
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 40px;
+  border: 1px solid #e2e2e2;
+  color: #555;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  background: #fff;
+  transition: all 0.3s;
+  min-height: 50px;
+}
+
+.btn-outline-dark:hover {
+  box-shadow: 0 0 0 1px #c40d2e inset;
+}
+
+/* Gift Section */
+.gift-section {
+  padding: 100px 40px;
+  background: #fff;
+  text-align: center;
+}
+
+.gift-section h2 {
+  font-size: 38px;
+  color: #c40d2e;
+  text-transform: uppercase;
+  letter-spacing: 6.08px;
+  margin-bottom: 15px;
+}
+
+.gift-section > p {
+  font-size: 17px;
+  line-height: 25.5px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gift-card {
+  position: relative;
+  overflow: hidden;
+  height: 499px;
+}
+
+.gift-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gift-overlay {
+  position: absolute;
+  bottom: 39px;
+  left: 39px;
+  color: #fff;
+}
+
+.gift-overlay h3 {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.88px;
+  line-height: 26.4px;
+}
+
+/* Gift Finder Section */
+.gift-finder-section {
+  padding: 100px 40px;
+  background: #fff;
+}
+
+.gift-finder-content {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.gift-finder-visual {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+  height: 547px;
+}
+
+.circle-outer {
+  width: 100%;
+  max-width: 645px;
+  animation: rotate 60s linear infinite;
+}
+
+.circle-inner {
+  position: absolute;
+  width: 60%;
+  max-width: 366px;
+  animation: rotate 40s linear infinite reverse;
+}
+
+.center-logo {
+  position: absolute;
+  width: 15%;
+  max-width: 86px;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.gift-finder-text {
+  flex: 1;
+  padding: 0 40px;
+}
+
+.gift-finder-text h2 {
+  font-size: 38px;
+  color: #c40d2e;
+  text-transform: uppercase;
+  letter-spacing: 6.08px;
+  line-height: 45.6px;
+  margin-bottom: 26.6px;
+}
+
+.gift-finder-text p {
+  font-size: 17px;
+  line-height: 25.5px;
+  margin-bottom: 35.7px;
+}
+
+/* Strap Section */
+.strap-section {
+  padding: 100px 40px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.strap-content {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.strap-text {
+  flex: 1;
+  padding: 0 40px;
+}
+
+.strap-text h2 {
+  font-size: 38px;
+  color: #c40d2e;
+  text-transform: uppercase;
+  letter-spacing: 6.08px;
+  line-height: 45.6px;
+  margin-bottom: 26.6px;
+}
+
+.strap-text p {
+  font-size: 17px;
+  line-height: 25.5px;
+  margin-bottom: 35.7px;
+}
+
+.strap-visual {
+  flex: 1;
+  background: #f9f9f9;
+}
+
+.strap-visual img {
+  width: 100%;
+  height: auto;
+}
+
+/* Ambassador Section */
+.ambassador-section {
+  padding: 100px 40px;
+  background: #fff;
+}
+
+.ambassador-content {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+}
+
+.ambassador-image {
+  flex: 1;
+}
+
+.ambassador-image img {
+  width: 100%;
+  height: auto;
+}
+
+.ambassador-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ambassador-text h2 {
+  font-size: 30px;
+  color: #c40d2e;
+  text-transform: uppercase;
+  letter-spacing: 4.8px;
+  line-height: 36px;
+  margin-bottom: 21px;
+}
+
+.ambassador-text > p {
+  font-size: 17px;
+  line-height: 25.5px;
+  margin-bottom: 35.7px;
+}
+
+.ambassador-product {
+  display: flex;
+  gap: 16px;
+  background: #f9f9f9;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.ambassador-product img {
+  width: 200px;
+  height: auto;
+}
+
+.product-info {
+  flex: 1;
+  text-align: left;
+}
+
+.product-info h4 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+/* News Section */
+.news-section {
+  padding: 100px 40px;
+  background: #fff;
+  text-align: center;
+}
+
+.news-section h2 {
+  font-size: 38px;
+  color: #c40d2e;
+  text-transform: uppercase;
+  letter-spacing: 6.08px;
+  margin-bottom: 15px;
+}
+
+.see-all {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  margin-bottom: 40px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news-card {
+  text-align: left;
+  background: #fff;
+  transition: transform 0.3s;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+.news-card img {
+  width: 100%;
+  height: auto;
+  background: #f9f9f9;
+}
+
+.news-category {
+  display: inline-block;
+  color: #c40d2e;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin: 16px 0;
+  padding: 7px 0;
+}
+
+.news-card h3 {
+  font-size: 20px;
+  color: #c40d2e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 24px;
+  margin: 20px 0;
+}
+
+.news-card p {
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 12px;
+}
+
+/* Footer */
+.footer {
+  background: #fff;
+  padding-top: 70px;
+}
+
+.footer-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 1250px;
+  margin: 0 auto 70px;
+  padding: 35px 40px;
+  background: #f9f9f9;
+}
+
+.feature {
+  text-align: center;
+  padding: 15px 8px;
+}
+
+.feature-icon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 16px;
+  letter-spacing: 0.8px;
+}
+
+.footer-newsletter {
+  display: flex;
+  max-width: 1250px;
+  margin: 0 auto 50px;
+  padding: 0 40px;
+  gap: 50px;
+}
+
+.newsletter-form {
+  flex: 1;
+}
+
+.newsletter-form h3 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.newsletter-form form {
+  display: flex;
+  max-width: 464px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0 20px;
+  border: 1px solid #e2e2e2;
+  height: 49px;
+  font-size: 16px;
+}
+
+.newsletter-form button {
+  width: 56px;
+  height: 49px;
+  background: #c40d2e;
+  color: #fff;
+  border: 1px solid #c40d2e;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social {
+  border-left: 1px solid #e5e5e5;
+  padding-left: 50px;
+}
+
+.footer-social h3 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.social-links {
+  display: flex;
+  gap: 22px;
+}
+
+.social-links a {
+  font-size: 24px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #c40d2e;
+}
+
+.footer-links {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 50px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.footer-column h4 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.64px;
+  margin-bottom: 15px;
+  padding: 2px 0;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 3px;
+}
+
+.footer-column a {
+  display: inline-block;
+  padding: 2px 0;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: #c40d2e;
+}
+
+.btn-outline-small {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 40px;
+  border: 1px solid #e2e2e2;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  margin-top: 30px;
+  transition: all 0.3s;
+  min-height: 50px;
+}
+
+.btn-outline-small:hover {
+  box-shadow: 0 0 0 1px #c40d2e inset;
+}
+
+.footer-bottom {
+  background: #f9f9f9;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 80px;
+}
+
+.footer-bottom p {
+  font-size: 11px;
+  line-height: 13.75px;
+}
+
+.legal-links {
+  display: flex;
+  list-style: none;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.legal-links li {
+  display: inline-block;
+}
+
+.legal-links a,
+.legal-links button {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 11px;
+  line-height: 13.75px;
+  transition: color 0.3s;
+}
+
+.legal-links a:hover,
+.legal-links button:hover {
+  color: #c40d2e;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 2px 10px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.65px;
+  height: 44px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .milano-content,
+  .gift-finder-content,
+  .strap-content,
+  .ambassador-content {
+    flex-direction: column;
+  }
+  
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .gift-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    padding: 10px 20px;
+  }
+  
+  .category-nav ul {
+    flex-wrap: wrap;
+  }
+  
+  .hero-slider {
+    height: 600px;
+  }
+  
+  .slide-title {
+    font-size: 24px;
+  }
+  
+  .product-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+  
+  .footer-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-newsletter {
+    flex-direction: column;
+  }
+  
+  .footer-social {
+    border-left: none;
+    border-top: 1px solid #e5e5e5;
+    padding-left: 0;
+    padding-top: 30px;
+  }
+  
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <h3>Cookie policy</h3>
+      <p>I agree that this Website uses cookies and similar technologies for providing me this Website and its functionalities, for obtaining insights about its use and for providing me relevant advertisements.</p>
+      <div class="cookie-buttons">
+        <button class="btn-primary">Accept all</button>
+        <button class="btn-primary">Reject all</button>
+        <button class="btn-primary">Settings</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="top-banner">
+      <p>Extended returns: Orders placed from 12.08.25 through 12.19.25 may be returned by 01.05.26. <a href="#">Standard terms and conditions apply</a>.</p>
+      <button class="close-banner">×</button>
+    </div>
+    
+    <nav class="main-nav">
+      <div class="nav-left">
+        <a href="#" class="nav-link">Find a Boutique</a>
+        <a href="#" class="nav-link">Contact us</a>
+      </div>
+      
+      <div class="logo">
+        <a href="#">
+          <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/icon-1.svg" alt="OMEGA Logo">
+        </a>
+      </div>
+      
+      <div class="nav-right">
+        <button class="icon-btn">🔍</button>
+        <button class="icon-btn">👤</button>
+        <button class="icon-btn">🛒</button>
+      </div>
+    </nav>
+    
+    <nav class="category-nav">
+      <ul>
+        <li><a href="#">Watches</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Gifts</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">World of OMEGA</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Slider -->
+  <section class="hero-slider">
+    <div class="slide active">
+      <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/image-1.png" alt="Festive season campaign">
+      <div class="slide-content">
+        <p class="slide-subtitle">festive season</p>
+        <h1 class="slide-title">Time to<br>celebrate</h1>
+        <a href="#" class="btn-outline">Discover the selection</a>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="slider-dot active"></button>
+      <button class="slider-dot"></button>
+    </div>
+  </section>
+
+  <!-- Product Carousel -->
+  <section class="product-section">
+    <div class="section-tabs">
+      <button class="tab">Best sellers</button>
+      <button class="tab active">in living color</button>
+      <button class="tab">40 MM AND UNDER</button>
+    </div>
+    
+    <div class="product-carousel">
+      <button class="carousel-btn prev">‹</button>
+      <div class="product-grid">
+        <div class="product-card">
+          <span class="badge">New</span>
+          <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/29.avif" alt="Seamaster Aqua Terra">
+          <h3>Seamaster Aqua Terra 150M</h3>
+          <p>30 mm, steel on steel</p>
+          <p class="price">$7,100</p>
+          <a href="#" class="shop-link">Shop now →</a>
+        </div>
+        
+        <div class="product-card">
+          <span class="badge">New</span>
+          <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/30.avif" alt="Seamaster Aqua Terra">
+          <h3>Seamaster Aqua Terra 150M</h3>
+          <p>30 mm, steel on steel</p>
+          <p class="price">$7,100</p>
+          <a href="#" class="shop-link">Shop now →</a>
+        </div>
+        
+        <div class="product-card">
+          <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/31.avif" alt="Seamaster Aqua Terra Shades">
+          <h3>Seamaster Aqua Terra Shades</h3>
+          <p>34 mm, steel on steel</p>
+          <p class="price">$7,400</p>
+          <a href="#" class="shop-link">Shop now →</a>
+        </div>
+        
+        <div class="product-card">
+          <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/32.avif" alt="Seamaster Aqua Terra Shades">
+          <h3>Seamaster Aqua Terra Shades</h3>
+          <p>38 mm, steel on steel</p>
+          <p class="price">$7,400</p>
+          <a href="#" class="shop-link">Shop now →</a>
+        </div>
+      </div>
+      <button class="carousel-btn next">›</button>
+    </div>
+  </section>
+
+  <!-- Milano Cortina Section -->
+  <section class="milano-section">
+    <div class="milano-content">
+      <div class="milano-image">
+        <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/image-1.png" alt="Milano Cortina 2026">
+      </div>
+      <div class="milano-text">
+        <p class="subtitle">MILANO CORTINA 2026</p>
+        <h2>THE OLYMPIC AND PARALYMPIC GAMES</h2>
+        <p>Get set for a winter of sporting action as OMEGA fulfils the role of Official Timekeeper at Milano Cortina 2026.</p>
+        <a href="#" class="btn-outline-dark">Read more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gift Section -->
+  <section class="gift-section">
+    <h2>The season of giving</h2>
+    <p>Explore our handpicked collection of watches, fine jewellery, and accessories this holiday. From our celebrated icons to our latest arrivals. Find your next gift, all wrapped-up and ready to give.</p>
+    
+    <div class="gift-grid">
+      <div class="gift-card">
+        <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/image-1.png" alt="Men's selection">
+        <div class="gift-overlay">
+          <h3><strong>MEN'S</strong> SELECTION</h3>
+        </div>
+      </div>
+      
+      <div class="gift-card">
+        <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/image-1.png" alt="Women's selection">
+        <div class="gift-overlay">
+          <h3><strong>WOMEN'S</strong> SELECTION</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gift Finder Section -->
+  <section class="gift-finder-section">
+    <div class="gift-finder-content">
+      <div class="gift-finder-visual">
+        <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/cercle-ext-1000-4.png" alt="Gift finder" class="circle-outer">
+        <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/cercle-int-600-4.png" alt="" class="circle-inner">
+        <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/logo.png" alt="Products" class="center-logo">
+      </div>
+      <div class="gift-finder-text">
+        <h2>Find the perfect gift</h2>
+        <p>If you know who you're buying for and why, our Gift Finder will help you find the perfect present in just a few clicks.</p>
+        <a href="#" class="btn-primary">Find your gift</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strap Finder Section -->
+  <section class="strap-section">
+    <div class="strap-content">
+      <div class="strap-text">
+        <h2>Find the perfect strap</h2>
+        <p>Explore our full collection of OMEGA straps to personalize your timepiece with different materials and colours.</p>
+        <a href="#" class="btn-primary">Shop now</a>
+      </div>
+      <div class="strap-visual">
+        <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/image-3.png" alt="Watch straps">
+      </div>
+    </div>
+  </section>
+
+  <!-- Ambassador Section -->
+  <section class="ambassador-section">
+    <div class="ambassador-content">
+      <div class="ambassador-image">
+        <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/image-1.png" alt="Aaron Taylor-Johnson">
+      </div>
+      <div class="ambassador-text">
+        <h2>Aaron Taylor-Johnson wears a Moonwatch</h2>
+        <p>The British actor and OMEGA brand ambassador wears a Speedmaster Moonwatch with white dial. With its contrasting black details and glossy lacquered finish – it's the ideal timepiece for a modern leading man.</p>
+        <div class="ambassador-product">
+          <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/6.avif" alt="Speedmaster Moonwatch">
+          <div class="product-info">
+            <h4>Speedmaster Moonwatch Professional</h4>
+            <p>42 mm, steel on steel</p>
+            <p class="price">$9,100</p>
+            <a href="#" class="shop-link">Shop now →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section class="news-section">
+    <h2>News & Stories</h2>
+    <a href="#" class="see-all">See all articles →</a>
+    
+    <div class="news-grid">
+      <article class="news-card">
+        <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/000-TH-400x320-PO-Chongqing.jpg" alt="Planet Ocean Chongqing">
+        <span class="news-category">Events</span>
+        <h3>OMEGA Celebrates the Planet Ocean in Chongqing, China</h3>
+        <p>Continuing the global launch of the new Planet Ocean redesign, OMEGA has hosted a special celebration in Chongqing, China.</p>
+      </article>
+      
+      <article class="news-card">
+        <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/000_TH-jonathan-bailey-sydney-800x640.jpg" alt="Jonathan Bailey">
+        <span class="news-category">People</span>
+        <h3>OMEGA Celebrates Planet Ocean with Jonathan Bailey</h3>
+        <p>OMEGA marked the launch of the fourth-generation Planet Ocean with an oceanside event in Sydney.</p>
+      </article>
+      
+      <article class="news-card">
+        <img src="https://c.animaapp.com/mj5usc8khiq3iM/assets/Rory-McIlroy_GettyImages-2246942621_400x320_thumbnail.jpg" alt="Rory McIlroy">
+        <span class="news-category">Sports</span>
+        <h3>Rory McIlroy has won this year's Race to Dubai title</h3>
+        <p>It's the seventh time in his career that Rory has finished at the top of the overall European leaderboard.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-features">
+      <div class="feature">
+        <span class="feature-icon">📦</span>
+        <p>Complimentary Delivery and Returns</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">🇨🇭</span>
+        <p>Swiss made</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">✓</span>
+        <p>5-Year Warranty</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">🔒</span>
+        <p>Secure payment</p>
+      </div>
+    </div>
+    
+    <div class="footer-newsletter">
+      <div class="newsletter-form">
+        <h3>Subscribe to our newsletter</h3>
+        <form>
+          <input type="email" placeholder="Email" required>
+          <button type="submit" class="btn-primary">→</button>
+        </form>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#">📷</a>
+          <a href="#">f</a>
+          <a href="#">🐦</a>
+          <a href="#">📌</a>
+          <a href="#">🎵</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>The Collection</h4>
+        <ul>
+          <li><a href="#">Globemaster</a></li>
+          <li><a href="#">Constellation</a></li>
+          <li><a href="#">Aqua terra 150M</a></li>
+          <li><a href="#">Seamaster 300</a></li>
+          <li><a href="#">Planet Ocean 600M</a></li>
+          <li><a href="#">Moonwatch</a></li>
+          <li><a href="#">Dark side of the Moon</a></li>
+          <li><a href="#">Ladymatic</a></li>
+          <li><a href="#">Hour Vision</a></li>
+          <li><a href="#">Trésor</a></li>
+          <li><a href="#">Prestige</a></li>
+          <li><a href="#">Tourbillon</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Find your OMEGA</h4>
+        <ul>
+          <li><a href="#">Women's Watches</a></li>
+          <li><a href="#">Men's Watches</a></li>
+          <li><a href="#">Gold Watches</a></li>
+          <li><a href="#">Chronograph Watches</a></li>
+          <li><a href="#">Dress Watches</a></li>
+          <li><a href="#">Dive Watches</a></li>
+          <li><a href="#">Automatic Watches</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Gift Ideas</h4>
+        <ul>
+          <li><a href="#">Gifts for Her</a></li>
+          <li><a href="#">Gifts for Him</a></li>
+          <li><a href="#">Festive Gifts</a></li>
+          <li><a href="#">007 Essentials</a></li>
+          <li><a href="#">View all</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>World of OMEGA</h4>
+        <ul>
+          <li><a href="#">Watchmaking</a></li>
+          <li><a href="#">Space</a></li>
+          <li><a href="#">Sport</a></li>
+          <li><a href="#">James Bond</a></li>
+          <li><a href="#">The OMEGA Museum</a></li>
+          <li><a href="#">Chronicle</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Master Chronometer</h4>
+        <ul>
+          <li><a href="#">Certification</a></li>
+          <li><a href="#">Access my Test Results</a></li>
+          <li><a href="#">iPhone Card Scanner App</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Store Locator</h4>
+        <ul>
+          <li><a href="#">Find a Store</a></li>
+          <li><a href="#">Locate me</a></li>
+          <li><a href="#">Boutique Appointment</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">Interventions and Prices</a></li>
+          <li><a href="#">Preserve your OMEGA</a></li>
+          <li><a href="#">Find a Service Center</a></li>
+          <li><a href="#">Order a Catalogue</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Glossary</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>More</h4>
+        <ul>
+          <li><a href="#">Press Room</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#" class="btn-outline-small">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>Copyright OMEGA SA. All rights reserved.</p>
+      <ul class="legal-links">
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Conditions of Sale</a></li>
+        <li><a href="#">Returns Policy</a></li>
+        <li><a href="#">Privacy Notice</a></li>
+        <li><a href="#">Supplement Privacy Notice</a></li>
+        <li><a href="#">Accessibility</a></li>
+        <li><a href="#">Cookie Notice</a></li>
+        <li><button id="cookieSettings">Cookies Settings</button></li>
+      </ul>
+      <button class="language-selector">🌐 United States</button>
+    </div>
+  </footer>
+
+  <script src="script.js">
+    // Cookie Banner
+const cookieBanner = document.getElementById('cookieBanner');
+const cookieSettings = document.getElementById('cookieSettings');
+
+// Hide cookie banner on button click
+if (cookieBanner) {
+  const cookieButtons = cookieBanner.querySelectorAll('button');
+  cookieButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      cookieBanner.style.display = 'none';
+    });
+  });
+}
+
+// Show cookie banner from settings
+if (cookieSettings) {
+  cookieSettings.addEventListener('click', () => {
+    if (cookieBanner) {
+      cookieBanner.style.display = 'block';
+    }
+  });
+}
+
+// Close top banner
+const closeBanner = document.querySelector('.close-banner');
+if (closeBanner) {
+  closeBanner.addEventListener('click', () => {
+    document.querySelector('.top-banner').style.display = 'none';
+  });
+}
+
+// Hero Slider
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.slider-dot');
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentSlide = index;
+    showSlide(currentSlide);
+  });
+});
+
+// Auto-advance slider
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}, 5000);
+
+// Product Carousel
+const productGrid = document.querySelector('.product-grid');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+
+if (prevBtn && nextBtn && productGrid) {
+  let scrollAmount = 0;
+  
+  nextBtn.addEventListener('click', () => {
+    productGrid.scrollBy({ left: 320, behavior: 'smooth' });
+  });
+  
+  prevBtn.addEventListener('click', () => {
+    productGrid.scrollBy({ left: -320, behavior: 'smooth' });
+  });
+}
+
+// Tabs
+const tabs = document.querySelectorAll('.tab');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+  });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href !== '#' && href !== 'javascript://void(0);') {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+});
+
+// Add scroll effect to header
+let lastScroll = 0;
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  
+  if (currentScroll > 100) {
+    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+  } else {
+    header.style.boxShadow = 'none';
+  }
+  
+  lastScroll = currentScroll;
+});
+
+// Product card hover effects
+const productCards = document.querySelectorAll('.product-card');
+productCards.forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    card.style.borderColor = '#c40d2e';
+  });
+  
+  card.addEventListener('mouseleave', () => {
+    card.style.borderColor = 'transparent';
+  });
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шахматы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            flex-direction: column;
+        }
+        .chess-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .chess-board {
+            display: grid;
+            grid-template-columns: repeat(8, 60px);
+            grid-template-rows: repeat(8, 60px);
+            gap: 1px;
+            background-color: #333;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .chess-square {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0d9b5;
+            position: relative;
+        }
+        .chess-square:nth-child(odd) {
+            background-color: #b58863;
+        }
+        .chess-square:nth-child(even) {
+            background-color: #f0d9b5;
+        }
+        .piece {
+            font-size: 32px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .status {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chess-container">
+    <div class="chess-board" id="chessBoard">
+        <!-- Шахматная доска будет генерироваться через JS -->
+    </div>
+</div>
+
+<div class="status" id="status">Ход белых</div>
+
+<script>
+    const board = [
+        ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'],
+        ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'],
+        ['.', '.', '.', '.', '.', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.', '.', '.'],
+        ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
+        ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R']
+    ];
+
+    const pieces = {
+        'r': '♜', 'n': '♞', 'b': '♝', 'q': '♛', 'k': '♚', 'p': '♟',
+        'R': '♖', 'N': '♘', 'B': '♗', 'Q': '♕', 'K': '♔', 'P': '♙'
+    };
+
+    let selectedPiece = null;
+    let currentPlayer = 'white';  // Играют белые
+
+    function createBoard() {
+        const chessBoard = document.getElementById('chessBoard');
+        chessBoard.innerHTML = '';
+        for (let row = 0; row < 8; row++) {
+            for (let col = 0; col < 8; col++) {
+                const square = document.createElement('div');
+                square.classList.add('chess-square');
+                square.dataset.row = row;
+                square.dataset.col = col;
+
+                const piece = board[row][col];
+                if (piece !== '.') {
+                    const pieceElem = document.createElement('span');
+                    pieceElem.classList.add('piece');
+                    pieceElem.textContent = pieces[piece];
+                    pieceElem.onclick = () => selectPiece(row, col);
+                    square.appendChild(pieceElem);
+                }
+
+                chessBoard.appendChild(square);
+            }
+        }
+    }
+
+    function selectPiece(row, col) {
+        const piece = board[row][col];
+        const isWhiteTurn = currentPlayer === 'white';
+        
+        // Проверяем, что выбранная фигура принадлежит текущему игроку
+        if ((isWhiteTurn && piece === piece.toUpperCase()) || (!isWhiteTurn && piece === piece.toLowerCase())) {
+            if (selectedPiece) {
+                movePiece(row, col);
+            } else {
+                selectedPiece = { row, col };
+            }
+        }
+    }
+
+    function movePiece(row, col) {
+        const piece = board[selectedPiece.row][selectedPiece.col];
+        const targetPiece = board[row][col];
+
+
+// Проверка на захват своей фигуры
+        if ((currentPlayer === 'white' && targetPiece === targetPiece.toUpperCase()) ||
+            (currentPlayer === 'black' && targetPiece === targetPiece.toLowerCase())) {
+            alert("Нельзя съесть свою фигуру!");
+            return;
+        }
+
+        // Внесение хода
+        board[row][col] = board[selectedPiece.row][selectedPiece.col];
+        board[selectedPiece.row][selectedPiece.col] = '.';
+        currentPlayer = currentPlayer === 'white' ? 'black' : 'white';  // Меняем игрока
+        selectedPiece = null;
+        updateStatus();
+        createBoard();
+    }
+
+    function updateStatus() {
+        const statusElem = document.getElementById('status');
+        statusElem.textContent = currentPlayer === 'white' ? 'Ход белых' : 'Ход черных';
+    }
+
+    // Инициализация доски
+    createBoard();
+    updateStatus();
+</script>
+
+</body>
+</html>

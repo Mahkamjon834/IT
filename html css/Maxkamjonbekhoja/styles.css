@@ -1,0 +1,227 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    padding-top: 15px;
+    padding-bottom: 14px;
+    background: #404040;
+}
+.container {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.header-container {
+}
+.navbar {
+    
+}
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-card-one {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.con-text {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.63px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+
+}
+.a {
+    border: 1px solid #FFFFFF;
+    width: 0px;
+    height: 45px;
+    top: 17px;
+    left: 553px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+
+}
+.nav-text {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.63px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+
+}
+.nav-btn {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.5px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000000;
+    border: none;
+    border-radius: 30px;
+    opacity: 0px;
+    background: #FFFFFF;
+    padding: 15px 54px;
+    
+}
+.main {
+}
+.container {
+}
+.main-container {
+}
+.head {
+    padding: 12px;
+    background-color: #fff;
+}
+.head-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.head-text {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.63px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000000;
+
+}
+.kat {
+    padding: 135px;
+    background: url(./img/kat-background.png) no-repeat center / cover;
+    
+}
+.container {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.kat-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.kat-title {
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48.76px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+    width: 782px;
+    margin-bottom: 20px;
+}
+.kat-text {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.07px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+    width: 745px;
+    margin-bottom: 32px;
+}
+.kat-btn {
+    padding: 20px 85px;
+    height: 60px;
+    top: 494px;
+    left: 680px;
+    gap: 0px;
+    border-radius: 30px;
+    opacity: 0px;
+    background: #E05100;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.5px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+    border: none;
+}
+.pro {
+    padding: 120px;
+    background: #FFFFFF;
+
+}
+.container {
+}
+.pro-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.pro-title {
+    font-family: Montserrat;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 42.67px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000000;
+    margin-bottom: 56px;
+}
+.pro-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 56px;
+}
+.pro-card {
+    width: 240px;
+
+    border-radius: 30px;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 20px 0px #00000040;
+    padding: 60px 32px 29px 31px;
+}
+.card-text {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.07px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000000;
+
+}
+.pro-btn {
+    margin-top: 72px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.5px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+    background: #E05100;
+    padding: 20px 61px;
+    border-radius: 30px;
+    border: none;
+}

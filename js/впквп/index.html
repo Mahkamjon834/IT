@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .vaqt {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .time {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <h1>Destructuring va new Date()</h1>
+
+    <div class="vaqt">
+        <span class="time">0000-00-00 00:00:00</span>
+    </div>
+
+    <script>
+        function formatTime(value) {
+            return value < 10 ? `0${value}` : value; // Agar qiymat 10 dan kichik bo'lsa, oldiga 0 qo'shadi
+        }
+
+        function getTimes() {
+            let vaqt = new Date();
+            let yil = vaqt.getFullYear();
+            let oy = formatTime(vaqt.getMonth() + 1); // Oy 0 dan boshlanadi, shuning uchun +1
+            let kun = formatTime(vaqt.getDate());
+            let soat = formatTime(vaqt.getHours());
+            let minut = formatTime(vaqt.getMinutes());
+            let sekund = formatTime(vaqt.getSeconds());
+
+            const tims = document.querySelector(".time");
+            tims.innerHTML = `${yil}-${oy}-${kun} ${soat}:${minut}:${sekund}`;
+        }
+
+        setInterval(getTimes, 1000); // Har 1 soniyada vaqtni yangilaydi
+        getTimes(); // Dastlabki chaqiruv
+
+
+
+
+//            let mevalar = ["olma","gilos","olcha","banan","nok"]
+//               console.log(mevalar);
+// ... res operatori qolga elemetlarni barchasini oladi
+// let olma = mevalar[0]
+// let gilos = mevalar[1]
+// let olcha = mevalar[2]
+// let banan = mevalar[3]
+// let nok = mevalar[4]
+
+// console.log(olma, gilos, olcha, banan, nok)
+
+//           let [olma, gilos, olcha, banan, nok] = ["olma","gilos","olcha","banan","nok"];
+// console.log(olma, gilos, olcha);
+// object destruktion
+//  let {name:ism, ...boshqa}= {
+//     name:"alex",
+//     age:25,
+//     job:"enjiner",
+//  }
+//  let obj = {
+//     name:"alex",
+//     age:25,
+//     job:"enjiner",
+//  }
+//  console.log(obj)
+
+
+// let ism = obj.name
+// let yosh = obj.age
+// let kasb = obj.job
+
+// console.log(ism, yosh, kasb);
+
+// Data = Date 
+
+// let now = new Date()
+// let yil = now.getFullYear()
+// let oy = now.getMonth() 
+// let soat = now.getHours()
+// let minut = now.getMinutes()
+// let secund = now.getSeconds()
+// console.log(yil,oy,soat,minut, secund,)
+
+
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+header {
+  width: 100%;
+  background-color: rgba(35, 37, 54, 1);
+  height: 100px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+header nav h1 {
+  font-size: 48px;
+  color: white;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  justify-content: space-between;
+}
+header nav ul {
+  height: 100%;
+}
+header nav ul li {
+  float: left;
+  color: white;
+  font-size: 20px;
+  list-style: none;
+  margin-left: 25px;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid transparent;
+}
+header nav ul li:hover {
+  border-color: rgba(255, 161, 85, 1);
+}
+header nav ul li:last-child {
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+
+.career{
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  margin: 0 auto;
+  padding: 135px;
+  
+  background: url(./img/kat-background.png) no-repeat center / cover;
+}
+.career .left, .career .right{
+  width: 45%;
+  padding: 50px;
+}
+
+.career .left span{
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.career .left h1{
+  font-size: 48px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+.career .left p{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.career .left button{
+  position: relative;
+  width: 182px;
+  height: 64px;
+  background-color: #FFD050;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  margin-top: 25px;
+}
+
+.career .left button {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

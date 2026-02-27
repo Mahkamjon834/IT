@@ -1,0 +1,149 @@
+.flex-itm{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px;
+}
+.flex{
+    display: flex;
+    justify-content:flex-end;
+    background-color: aqua;
+}
+.c1{
+    display: flex; justify-content: space-between;
+}
+.c11{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}
+.c2{
+    display: flex; justify-content: space-between;
+}
+.c22{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}
+.c3{
+    display: flex; justify-content: space-between;
+}
+.c33{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}
+.c4{
+    display: flex; justify-content: space-between; width: 300px;
+}
+.c44{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}
+.c5{
+    
+    display: flex; justify-content: space-between;
+}
+.card{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}
+.c6{
+    display: flex; justify-content: center;
+}
+.c7{
+    display: flex; justify-content: inherit;
+}
+.c8{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}
+.parent{
+    display: flex; justify-content: space-between;
+}
+.c9{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}
+.child{
+    display: flex;
+          justify-content: inherit;
+}
+
+.c10{
+    display: flex; justify-content:flex-start;
+}
+.c11{
+    display: flex; justify-content: inherit;
+}
+.c12{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}
+.c13{
+    display: flex; justify-content: space-around;
+}
+.c14{
+    display: flex; justify-content: inherit;
+}
+.c15{ background-color: blueviolet;
+color: rgb(0, 0, 0);
+margin: 40px;
+padding: 40px;} 
+.c16{
+    display: flex; justify-content: start; border: 1px solid #000;
+}
+.c17{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}  
+.c18{
+    display: flex; justify-content: start; background-color: lightgray;
+}.c19{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}
+.c20{
+    display: flex; justify-content: start; gap: 10px;
+}
+.c21{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px;   
+}
+.c22{
+    display: flex; justify-content: start; gap: 20px;
+}
+.xc{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}
+.c23{
+    display: flex; justify-content: start; width: 400px;
+}
+.c24{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}

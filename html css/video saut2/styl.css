@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    /* margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto; */
+    margin: 0 auto;
+  }
+  
+  .main ul {
+    background-color: red;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    list-style: none;
+  }
+  
+  li {
+    background-color: aqua;
+  }
+  

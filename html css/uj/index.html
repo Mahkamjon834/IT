@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #f8f8f8;
+            color: #336;
+            padding: 10px;
+            background-color: antiquewhite;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+            "hero hero"
+            "sidebar cards"
+            "sidebar testimology"
+            "footer footer";
+            grid-template-columns: 200px 1fr;
+            gap: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            background: wheat;
+            color: aquamarine;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.5s ease;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+        }
+
+        .cta-btn:hover {
+            background: #e3f2fd;
+            transform: scale(1.08);
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #fffccc;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: 0.5s;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .sidebar li:hover {
+            background-color: #e3f2fd;
+            color: #2196f3;
+        }
+
+        .cards {
+            grid-area: cards;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .card {
+            background-color: #fffbbb;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5 10px cyan;
+            text-align: center;
+            transition: y;
+        }
+        .card{
+            background-color: #fffccc;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5 15 aqua;
+            text-align: center;
+        }
+        .card:hover{
+            transform: translateY(-10px);
+        }
+        .imdd{
+            width: 100px;
+            height: 100px;
+        }
+       .card h3{
+        margin: 10px;
+        text-shadow: 3px 3px 6px black;
+
+       }
+       .card-btn{
+        margin-top: 10px;
+        background: #2196f3;
+        color: #e3f2fd;
+        padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+       }
+       .testimology{
+        grid-area: testimology;
+        background-color: aliceblue;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px ;
+       }
+       .testimology h2{
+        margin-bottom: 15px;
+        text-shadow: 3px 3px 6px black;
+       }
+       .footer{
+        grid-area: footer;
+        background-color: rgb(77, 75, 75);
+        color: #f8f8f8;
+        padding: 20px;
+        border-radius: 15px;
+       }
+       @media(max-width:768px){
+        .grid-container{
+            grid-template-areas: "hero""sidebar""cards""testimology""footer""";
+            grid-template-columns: 1fr;
+
+        }
+        .cards{
+            grid-template-columns: 1fr;
+        }
+       }
+       
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="hero">
+            <h1>The Superman</h1>
+            <p>Your Partner</p>
+            <button class="cta-btn">Call Us</button>
+        </header>
+        <nav class="sidebar">
+            <ul>
+                <li>Main</li>
+                <li>Services</li>
+                <li>Projects</li>
+                <li>Feedbacks</li>
+                <li>Contacts</li>
+            </ul>
+        </nav>
+        <main class="cards">
+            <div class="card">
+                <img class="imdd" src="/koko.jpg" alt="">
+                <h3>Our Product</h3>
+                <p>Create a Web Page</p>
+                <button class="card-btn">More Info</button>
+            </div>
+
+            <div class="card">
+                <img class="imdd"  src="/koko.jpg" alt="">
+                <h3>Our Services</h3>
+                <p>Create a cool Brand</p>
+                <button class="card-btn">More Info</button>
+            </div>
+
+            <div class="card">
+                <img class="imdd"  src="/koko.jpg" alt="">
+                <h3>Our Portfolio</h3>
+                <p>Enjoy our expierence</p>
+                <button class="card-btn">More Info</button>
+            </div>
+
+            <div class="card">
+                <img class="imdd"  src="/koko.jpg" alt="">
+                <h3>Contacts</h3>
+                <p>Join us</p>
+                <button class="card-btn">More Info</button>
+            </div>
+        </main>
+
+        <section class="testimology">
+            <h2>Feedbacks</h2>
+            <div class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, aliquid!</div>
+            <div class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, aliquid!</div>
+        </section>
+
+        <footer class="footer">Welcome to our Web World</footer>
+    </div>
+</body>
+</html>

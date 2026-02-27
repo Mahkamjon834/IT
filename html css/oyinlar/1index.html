@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mind Challenge: Puzzle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+      margin: 0;
+    }
+    .game-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .question {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    input {
+      padding: 10px;
+      width: 100%;
+      font-size: 18px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #ff0000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="game-container">
+    <h1>Mind Challenge: Puzzle</h1>
+    <div class="question" id="question"></div>
+    <input type="text" id="answer" placeholder="Javobni kiriting">
+    <button onclick="checkAnswer()">Javobni tekshirish</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    const questions = [
+      { question: "10 + 5", answer: 15 },
+      { question: "6 * 7", answer: 42 },
+      { question: "100 - 25", answer: 75 },
+      { question: "50 / 5", answer: 10 }
+    ];
+
+    let currentQuestionIndex = 0;
+
+    function displayQuestion() {
+      document.getElementById("question").innerText = questions[currentQuestionIndex].question;
+      document.getElementById("answer").value = '';
+      document.getElementById("result").innerText = '';
+    }
+
+    function checkAnswer() {
+      const userAnswer = parseInt(document.getElementById("answer").value);
+      const correctAnswer = questions[currentQuestionIndex].answer;
+
+      if (userAnswer === correctAnswer) {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+          displayQuestion();
+          document.getElementById("result").innerText = "To'g'ri javob!";
+        } else {
+          document.getElementById("result").innerText = "Tabriklaymiz! O'yinni tugatdingiz.";
+        }
+      } else {
+        document.getElementById("result").innerText = "Noto'g'ri javob. Qayta urinib ko'ring.";
+        // AI simulyatsiyasi: yangi, qiyinroq savol berish
+        setTimeout(() => {
+          const newQuestion = { question: "5 * 12", answer: 60 }; // AI qiyinroq savol
+          questions.push(newQuestion); // yangi savol qo'shildi
+          currentQuestionIndex++;
+          displayQuestion();
+        }, 1000);
+      }
+    }
+
+    displayQuestion();
+  </script>
+
+</body>
+</html>

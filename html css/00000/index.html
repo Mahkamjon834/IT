@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+ul li{
+    list-style-type: none;
+
+}
+
+ul li a{
+    position: relative;
+    display: inline-block;
+    padding: 6px 15px ;
+    text-decoration: none;
+    color: rgb(8, 93, 184);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    overflow: hidden;
+    z-index: 1;
+    font-size: 20px;
+    border-radius: 15px ;
+    margin-top: 15px;
+    padding: 10px;
+    transition: 2s;
+}
+ul:hover li a{
+    opacity: 0;
+
+}
+ul li a:hover{
+
+    transform: scale(2.5);
+    z-index: 1000;
+    opacity: 1;
+    color: rgb(156, 193, 20);
+    border-radius: 80%;
+    padding: 20px;
+    background-color: rgb(210, 228, 19);
+}
+ul li a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 85px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgb(212, 255, 255), transparent);
+    transform: skewX(42deg);
+    transition: 0s;
+
+
+
+}
+ul li a:hover::before{
+    left: calc(100% + 100px);
+    transition: 5s;
+    transition-delay: 0,3s;
+
+}
+ul li::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 8em;
+    font-weight: 800;
+    pointer-events: none;
+    opacity: 0;
+    letter-spacing: 25px;
+    transition: 1s;
+    white-space: none;
+
+}
+ul li:hover::before{
+    opacity: 0.8;
+    letter-spacing: 0;
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li  data-text="mahkam "><a  href="">mahkam</a></li>
+        <li data-text="Ibrohim pora shinoz"><a href="">Ibrohim </a></li>
+        <li data-text="suhrob talant"><a href="">suhrob </a></li>
+        <li data-text="malika belatrisa"><a href="">malika </a></li>
+        <li data-text="albert uyqichi" ><a href="">albert </a></li>
+        
+    </ul>
+</body>
+</html>

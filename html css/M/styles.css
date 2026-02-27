@@ -1,0 +1,255 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.main {
+    width: 1440px;
+height: 7322px;
+gap: 0px;
+opacity: 0px;
+
+
+}
+.container {
+}
+.main-container {
+}
+.negr {
+    padding: 0;
+    background: #1C1C33;
+
+}
+.negr-container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+.negr-left {
+
+}
+.negr-right {
+}
+.negr-right-title {
+    font-family: Source code Pro;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 52.8px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #F6F6F8;
+    width: 530px;
+    margin-bottom: 16px;
+
+}
+.a {
+    width: 150px;
+    height: 2px;
+    top: 120.34px;
+    gap: 0px;
+    opacity: 0px;
+    background: #57D9A6;
+    margin-bottom: 50px;
+}
+.negr-right-text {
+    font-family: Source code Pro;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 618px;
+    color: #F6F6F8;
+    margin-bottom: 46px;
+
+}
+.negr-btn {
+    font-family: Source code Pro;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #1C1C33;
+    background: #57D9A6;
+    padding: 16px 24px;
+    border: none;
+}
+
+
+
+
+
+.Upkoming{
+    width: 1372px;
+    height: 676px;
+    top: 2986.66px;
+    left: 34px;
+    padding: 0px 48px 0px 48px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+.sectionn{
+    padding: 0;
+    background: white;  
+}
+.Free{
+    width: 686px;
+    height: 324px;
+    left: 343px;
+    gap: 0px;
+    opacity: 0px;    
+
+
+}
+.mana{
+    width: 526px;
+    height: 53px;
+    top: -1.66px;
+    left: 80px;
+    gap: 0px;
+    opacity: 0px;
+    
+
+}
+.mini{
+
+    font-family: Source Sans Pro;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 52.8px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #1C1C33;
+    
+
+}
+.pnman{
+    width: 644px;
+    height: 99px;
+    top: 120.34px;
+    left: 21px;
+    gap: 0px;
+    opacity: 0px;    
+
+}
+.manosha{
+    font-family: Source Sans Pro;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:  #4E4E65;
+
+
+}
+.Kotes{
+    width: 247px;
+    height: 59px;
+    top: 265.34px;
+    left: 220px;
+    gap: 0px;
+    opacity: 0px;
+    color: #57D9A6;
+    ;
+}
+.Kotess{
+    width: 199px;
+    height: 27px;
+    top: 16px;
+    left: 24px;
+    gap: 0px;
+    opacity: 0px;
+    
+
+}
+.buttonn{
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:  #1C1C33;
+    ;    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

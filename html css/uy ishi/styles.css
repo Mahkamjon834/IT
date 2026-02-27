@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+.container {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logos {
+
+}
+.uls {
+}
+.uls-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+}
+.uls-item {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.09px;
+    text-align: left;
+    color: #1F2E35CC;
+
+}
+.a {
+    width: 13px;
+height: 9px;
+top: 46px;
+left: 815px;
+gap: 0px;
+opacity: 0px;
+color: #1F2E35CC;
+
+}
+.end {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.d {
+    width: 20px;
+    height: 18.59px;
+    top: 41px;
+    left: 1171px;
+    gap: 0px;
+    opacity: 0px;
+    color: #1F2E35CC;
+
+}
+.m {
+    width: 20px;
+height: 16px;
+top: 42px;
+left: 1215px;
+gap: 0px;
+opacity: 0px;
+color: #1F2E35CC;
+
+}
+.s {
+    width: 16px;
+height: 16px;
+top: 42px;
+left: 1259px;
+gap: 0px;
+opacity: 0px;
+color: #1F2E35CC;
+
+}
+/* main start */
+.main {
+}
+.container {
+}
+.main-container {
+}
+.make {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.make-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.make-left {
+
+}
+.make-title {
+    font-family: Roboto;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64.17px;
+    text-align: left;
+    width: 545px;
+    margin-bottom: 24px;
+    color: #000000;
+}
+.span {
+    font-family: Roboto;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64.17px;
+    text-align: left;
+    color: red;
+}
+.make-text {
+    width: 520px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28.94px;
+    text-align: left;
+    color: #30444E;
+    margin-bottom: 24px;
+
+}
+.make-btn {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28.94px;
+    text-align: left;
+    color: #FFFFFF;
+    padding: 12px 32px;
+    background: #EE4248;
+    border: none;
+
+}
+.make-right {
+
+}
+/* main end */

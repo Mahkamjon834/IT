@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .q{
+            text-align: center;
+            color: red;
+            size: 30px;
+        }
+        .qq{
+            margin-left: 40px;
+        }
+        .main{
+            border-radius: 30px;
+            width: 80%;
+            height: 550px;
+            border: 3px solid blue;
+            margin: 30px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .text{
+            line-height: 50px;
+
+        }
+        .text h1{
+            cursor: pointer;
+
+        }
+        .text h1:hover{
+            color: blue;
+        }
+        .loc{
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="q">setAtribut location<span class="qq">perentElementSibling</span> </h1><br><br><br>
+
+
+    <div class="main">
+        <div class="text">
+            <h1 onclick="samarqan()">samarqand</h1>
+            <h1 onclick="Toshkent()">toshkent</h1>
+            <h1 onclick="namangan()">namangan</h1>
+        </div>
+        <div class="location">
+            <iframe class="loc" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6142444.458845198!2d59.32298398526652!3d41.26010006315995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b20a5d676b1%3A0xca0a6dad7e841e20!2sO%CA%BBzbekiston!5e0!3m2!1suz!2s!4v1764853533087!5m2!1suz!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+        </div>
+    </div>
+
+
+
+
+    <script>
+        const xariita = document.querySelector('.loc')
+        function samarqan(){
+            xariita.setAttribute('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196633.99703657482!2d66.8030777658843!3d39.64057190070248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d191960077df7%3A0x487636d9d13f2f57!2sSamarqand%2C%20Samarqand%20viloyati%2C%20O%CA%BBzbekiston!5e0!3m2!1suz!2s!4v1764851889233!5m2!1suz!2s')
+        }
+       
+       const xarita = document.querySelector('.loc')
+        function Toshkent(){
+            xarita.setAttribute('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191881.76173837244!2d68.95400516685079!3d41.28378477674378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8abf914c5093%3A0x2d3479470727d354!2sToshkent%2C%20O%CA%BBzbekiston!5e0!3m2!1suz!2s!4v1764852979586!5m2!1suz!2s')
+        }
+
+        const xarta = document.querySelector('.loc')
+        function namangan(){
+            xarta.setAttribute('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96400.13555142278!2d71.56222156473669!3d40.97043826595707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb4c1b2e60eea5%3A0x36ef7252c4c12106!2sNamangan%2C%20Namangan%20viloyati%2C%20O%CA%BBzbekiston!5e0!3m2!1suz!2s!4v1764852093269!5m2!1suz!2s')
+        }
+       
+
+    </script>
+</body>
+</html>

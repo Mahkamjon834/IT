@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <h1>getAtribute, setAtribute, add, robove</h1>
+    
+    <h1 class="title">salom</h1>
+
+    <a class="aa" href="https://www.google.com/?hl=Ru">google</a>
+    
+
+<br>
+<br>
+    <div>
+        <button onclick="tesla()">tesla</button>
+        <button onclick="bmw()">bmw</button>
+        <button onclick="mers()">mers</button><br><br>
+        <img style="width: 300px;" class="rasim" src="https://cdnstatic.rg.ru/uploads/images/2025/10/08/tesla_model_3_standart9-1_cf9.jpg" alt="">
+    </div>
+
+
+
+
+
+
+
+
+
+    <script >
+        // const title = document.querySelector('.title')
+        // // title.innerHTML='hello world'
+        // // title.textContent = 'asalobe aleykum'
+        //  title.innerHTML='<i>hello world</i>'
+
+        //  const aa = document.querySelector('.aa')
+        //  console.log(aa.getAttribute('href'))
+        //  aa.setAttribute('href','https://www.yandex.com/?hl=Ru')
+
+         const rasim = document.querySelector('.rasim')
+
+         
+         function tesla(){
+            rasim.setAttribute('src','https://cdnstatic.rg.ru/uploads/images/2025/10/08/tesla_model_3_standart9-1_cf9.jpg')
+         }
+
+         function bmw(){
+            rasim.setAttribute('src','https://yandex.ru/images/search?text=bmw&pos=17&rpt=simage&img_url=https%3A%2F%2Fbmw.scene7.com%2Fis%2Fimage%2FBMW%2Fg90_electric-driving_range%3Fwid%3D3000%26hei%3D3000&from=tabbar&lr=10335z')
+         }
+
+         function mers(){
+            rasim.setAttribute('src','https://yandex.ru/images/search?text=mers&pos=3&rpt=simage&img_url=https%3A%2F%2Fhdpic.club%2Fphoto%2Fuploads%2Fposts%2F2023-11%2F1699944550_hdpic-club-p-mersedes-sls-banan-64.jpg&from=tabbar&lr=10335')
+         }
+        
+    </script>
+</body>
+</html>

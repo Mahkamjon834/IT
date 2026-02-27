@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: black;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Анимированные звезды */
+        body::before, body::after {
+            content: "";
+            position: absolute;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 60%);
+            animation: moveStars 10s infinite linear;
+        }
+
+        @keyframes moveStars {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        ul {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        ul li {
+            list-style-type: none;
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        ul li a {
+            position: relative;
+            display: inline-block;
+            padding: 12px 30px;
+            text-decoration: none;
+            color: #00ffcc;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 22px;
+            border-radius: 15px;
+            margin-top: 20px;
+            transition: 0.5s ease-in-out;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(0, 255, 204, 0.5));
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Эффект проблеска */
+        ul li a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100px;
+            width: 85px;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+            transform: skewX(42deg);
+            transition: 0.7s;
+        }
+
+        ul li a:hover::before {
+            left: calc(100% + 100px);
+        }
+
+        /* Эффект "разрыва" при наведении */
+        ul li a:hover {
+            transform: scale(1.5);
+            color: #288cb6;
+            background: rgba(255, 20, 147, 0.8);
+            box-shadow: 0 0 30px rgb(250, 54, 110);
+            text-shadow: 0 0 20px rgba(255, 20, 147, 1);
+        }
+
+        /* Текст на заднем фоне */
+        ul li::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(255, 255, 255, 0.05);
+            font-size: 9em;
+            font-weight: 900;
+            pointer-events: none;
+            opacity: 0;
+            transition: 0.5s ease-in-out;
+            white-space: nowrap;
+            text-shadow: 0 0 40px rgba(255,255,255,0.2);
+            animation: pulseText 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulseText {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            }
+            to {
+                text-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        ul li:hover::before {
+            opacity: 0.6;
+        }
+
+    </style>
+    <title>Neon Animated Menu</title></head>
+    <body>
+        <ul>
+            <li data-text="MAHKAM - СИЛА И СВЕТ"><a href="#">Mahkam</a></li>
+            <li data-text="IBROHIM - ПОЗНАНИЕ"><a href="#">Ibrohim</a></li>
+            <li data-text="SUHROB - ТАЛАНТ И КРЕАТИВ"><a href="#">Suhrob</a></li>
+            <li data-text="MALIKA - КОРОЛЕВА"><a href="#">Malika</a></li>
+            <li data-text="ALBERT - ГЕНИЙ И ИНТЕЛЛЕКТ"><a href="#">Albert</a></li>
+        </ul>
+    </body>
+    </html>

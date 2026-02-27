@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+<style>
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700|Inter:400,500,700,600");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+
+    .thousand-sunny {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.thousand-sunny .div {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 1600px;
+  height: 5588px;
+  position: relative;
+}
+
+.thousand-sunny .footer {
+  position: absolute;
+  width: 1640px;
+  height: 482px;
+  top: 5107px;
+  left: 0;
+  background-color: transparent;
+}
+
+.thousand-sunny .overlap {
+  position: relative;
+  width: 1644px;
+  height: 482px;
+}
+
+.thousand-sunny .rectangle {
+  position: absolute;
+  width: 1600px;
+  height: 482px;
+  top: 0;
+  left: 0;
+  background-color: #f8f9fa;
+}
+
+.thousand-sunny .destinations {
+  position: absolute;
+  width: 395px;
+  height: 249px;
+  top: 70px;
+  left: 689px;
+}
+
+.thousand-sunny .overlap-group {
+  position: relative;
+  width: 391px;
+  height: 249px;
+}
+
+.thousand-sunny .text-wrapper {
+  position: absolute;
+  width: 391px;
+  top: 59px;
+  left: 0;
+  font-family: "Muli-Light", Helvetica;
+  font-weight: 300;
+  color: #838383;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 38px;
+}
+
+.thousand-sunny .text-wrapper-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Muli-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 19px;
+  letter-spacing: 0;
+  line-height: 60px;
+  white-space: nowrap;
+}
+
+.thousand-sunny .shop {
+  position: absolute;
+  width: 395px;
+  height: 287px;
+  top: 70px;
+  left: 962px;
+}
+
+.thousand-sunny .overlap-2 {
+  position: relative;
+  width: 391px;
+  height: 287px;
+}
+
+.thousand-sunny .interests {
+  position: absolute;
+  width: 395px;
+  height: 249px;
+  top: 70px;
+  left: 1249px;
+}
+
+.thousand-sunny .ts {
+  position: absolute;
+  width: 395px;
+  height: 237px;
+  top: 78px;
+  left: 190px;
+}
+
+.thousand-sunny .plan-and-book-your {
+  position: absolute;
+  width: 391px;
+  top: 70px;
+  left: 0;
+  font-family: "Muli-Light", Helvetica;
+  font-weight: 300;
+  color: #838383;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+.thousand-sunny .p {
+  position: absolute;
+  width: 391px;
+  top: 209px;
+  left: 0;
+  font-family: "Muli-Light", Helvetica;
+  font-weight: 300;
+  color: #838383;
+  font-size: 17px;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+.thousand-sunny .group {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  top: 0;
+  left: 1px;
+  background-color: #19be83;
+  border-radius: 22px;
+}
+
+.thousand-sunny .ellipse {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  top: 11px;
+  left: 11px;
+  background-color: #fb8f1d;
+  border-radius: 11.05px;
+  border: 3px solid;
+  border-color: #ffffff;
+}
+
+.thousand-sunny .rectangle-2 {
+  position: absolute;
+  width: 1219px;
+  height: 1px;
+  top: 396px;
+  left: 191px;
+  background-color: #c4c4c4;
+}
+
+.thousand-sunny .social-media {
+  position: absolute;
+  width: 248px;
+  height: 23px;
+  top: 427px;
+  left: 644px;
+}
+
+.thousand-sunny .section {
+  position: absolute;
+  width: 1224px;
+  height: 684px;
+  top: 4227px;
+  left: 143px;
+}
+
+.thousand-sunny .text-wrapper-3 {
+  position: absolute;
+  width: 481px;
+  top: 57px;
+  left: 97px;
+  font-family: "Playfair Display", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: 50px;
+}
+
+.thousand-sunny .view-all {
+  top: 57px;
+  left: 1138px;
+  position: absolute;
+  width: 81px;
+  height: 60px;
+}
+
+.thousand-sunny .text-wrapper-4 {
+  position: absolute;
+  height: 60px;
+  top: 0;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #fb8f1d;
+  font-size: 17px;
+  letter-spacing: 0;
+  line-height: 60px;
+  white-space: nowrap;
+}
+
+.thousand-sunny .vector {
+  position: absolute;
+  width: 6px;
+  height: 11px;
+  top: 25px;
+  left: 74px;
+}
+
+.thousand-sunny .element {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 425px;
+  left: 0;
+}
+
+.thousand-sunny .img {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 664px;
+  left: 837px;
+}
+
+.thousand-sunny .element-2 {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 0;
+  left: 501px;
+}
+
+.thousand-sunny .blog {
+  position: absolute;
+  width: 272px;
+  height: 446px;
+  top: 163px;
+  left: 97px;
+}
+
+.thousand-sunny .overlap-group-2 {
+  position: absolute;
+  width: 266px;
+  height: 395px;
+  top: 0;
+  left: 0;
+}
+
+.thousand-sunny .mask-group {
+  position: absolute;
+  width: 261px;
+  height: 332px;
+  top: 0;
+  left: 0;
+}
+
+.thousand-sunny .text-wrapper-5 {
+  position: absolute;
+  top: 244px;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 19px;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.thousand-sunny .text-wrapper-6 {
+  position: absolute;
+  width: 266px;
+  top: 317px;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #7c7987;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.thousand-sunny .text-wrapper-7 {
+  position: absolute;
+  width: 266px;
+  top: 418px;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #fb8f1d;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+.thousand-sunny .blog-2 {
+  position: absolute;
+  width: 274px;
+  height: 446px;
+  top: 163px;
+  left: 383px;
+}
+
+.thousand-sunny .rectangle-3 {
+  position: absolute;
+  width: 261px;
+  height: 306px;
+  top: 0;
+  left: 0;
+  background-color: #c4c4c4;
+  border-radius: 8px;
+}
+
+.thousand-sunny .div-2 {
+  position: absolute;
+  height: 50px;
+  top: 287px;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 17px;
+  letter-spacing: 0;
+  line-height: 17px;
+}
+
+.thousand-sunny .span {
+  font-weight: 600;
+  color: #032520;
+  line-height: 0.1px;
+}
+
+.thousand-sunny .text-wrapper-8 {
+  font-weight: 500;
+  color: #80908e;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.thousand-sunny .blog-3 {
+  position: absolute;
+  width: 274px;
+  height: 446px;
+  top: 163px;
+  left: 670px;
+}
+
+.thousand-sunny .blog-4 {
+  position: absolute;
+  width: 274px;
+  height: 446px;
+  top: 163px;
+  left: 956px;
+}
+
+.thousand-sunny .section-2 {
+  position: absolute;
+  width: 1182px;
+  height: 616px;
+  top: 3398px;
+  left: 96px;
+}
+
+.thousand-sunny .text-wrapper-9 {
+  position: absolute;
+  width: 481px;
+  top: 0;
+  left: 11px;
+  font-family: "Playfair Display", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 50px;
+}
+
+.thousand-sunny .testimonials {
+  position: absolute;
+  width: 456px;
+  height: 321px;
+  top: 195px;
+  left: 144px;
+}
+
+.thousand-sunny .text-wrapper-10 {
+  position: absolute;
+  width: 450px;
+  top: 54px;
+  left: 0;
+  font-family: "Muli-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+
+.thousand-sunny .overlap-group-3 {
+  position: absolute;
+  width: 183px;
+  height: 83px;
+  top: 238px;
+  left: 0;
+}
+
+.thousand-sunny .text-wrapper-11 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: 48px;
+  white-space: nowrap;
+}
+
+.thousand-sunny .text-wrapper-12 {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #000000d9;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 48px;
+  white-space: nowrap;
+}
+
+.thousand-sunny .stars {
+  position: absolute;
+  width: 189px;
+  height: 24px;
+  top: 0;
+  left: 0;
+}
+
+.thousand-sunny .photo {
+  position: absolute;
+  width: 417px;
+  height: 523px;
+  top: 93px;
+  left: 763px;
+}
+
+.thousand-sunny .vector-2 {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 299px;
+  left: 0;
+}
+
+.thousand-sunny .section-3 {
+  position: absolute;
+  width: 1206px;
+  height: 542px;
+  top: 2608px;
+  left: 240px;
+}
+
+.thousand-sunny .overlap-3 {
+  position: absolute;
+  width: 487px;
+  height: 303px;
+  top: 152px;
+  left: 0;
+}
+
+.thousand-sunny .guides-by {
+  position: absolute;
+  width: 487px;
+  height: 303px;
+  top: 0;
+  left: 0;
+}
+
+.thousand-sunny .overlap-group-4 {
+  position: absolute;
+  width: 164px;
+  height: 60px;
+  top: 243px;
+  left: 0;
+}
+
+.thousand-sunny .rectangle-4 {
+  position: absolute;
+  width: 164px;
+  height: 48px;
+  top: 6px;
+  left: 0;
+  background-color: #fb8f1d;
+  border-radius: 8px;
+}
+
+.thousand-sunny .text-wrapper-13 {
+  position: absolute;
+  height: 60px;
+  top: 0;
+  left: 43px;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 60px;
+  white-space: nowrap;
+}
+
+.thousand-sunny .text-wrapper-14 {
+  position: absolute;
+  width: 481px;
+  top: 0;
+  left: 0;
+  font-family: "Playfair Display", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: 50px;
+}
+
+.thousand-sunny .text-wrapper-15 {
+  position: absolute;
+  width: 450px;
+  top: 120px;
+  left: 0;
+  font-family: "Muli-Light", Helvetica;
+  font-weight: 300;
+  color: #7c7987;
+  font-size: 17px;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.thousand-sunny .element-3 {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 268px;
+  left: 416px;
+}
+
+.thousand-sunny .thousand {
+  position: absolute;
+  width: 599px;
+  height: 542px;
+  top: 0;
+  left: 530px;
+  object-fit: cover;
+}
+
+.thousand-sunny .element-4 {
+  top: 85px;
+  left: 45px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.thousand-sunny .element-5 {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: 37px;
+  left: 1187px;
+}
+
+.thousand-sunny .section-4 {
+  position: absolute;
+  width: 1241px;
+  height: 532px;
+  top: 1903px;
+  left: 121px;
+}
+
+.thousand-sunny .text-wrapper-16 {
+  position: absolute;
+  width: 481px;
+  top: 30px;
+  left: 119px;
+  font-family: "Playfair Display", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: 50px;
+}
+
+.thousand-sunny .raja-ampat {
+  position: absolute;
+  width: 263px;
+  height: 337px;
+  top: 136px;
+  left: 119px;
+}
+
+.thousand-sunny .overlap-group-5 {
+  position: relative;
+  width: 261px;
+  height: 337px;
+}
+
+.thousand-sunny .fanjingshan {
+  position: absolute;
+  width: 263px;
+  height: 337px;
+  top: 136px;
+  left: 405px;
+}
+
+.thousand-sunny .vevey {
+  position: absolute;
+  width: 263px;
+  height: 337px;
+  top: 136px;
+  left: 692px;
+}
+
+.thousand-sunny .skadar {
+  position: absolute;
+  width: 263px;
+  height: 337px;
+  top: 136px;
+  left: 978px;
+}
+
+.thousand-sunny .view-all-2 {
+  top: 30px;
+  left: 1160px;
+  position: absolute;
+  width: 81px;
+  height: 60px;
+}
+
+.thousand-sunny .element-6 {
+  top: 0;
+  left: 1048px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.thousand-sunny .element-7 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 512px;
+  left: 622px;
+}
+
+.thousand-sunny .element-8 {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 329px;
+  left: 0;
+}
+
+.thousand-sunny .section-5 {
+  position: absolute;
+  width: 1242px;
+  height: 550px;
+  top: 1091px;
+  left: 141px;
+}
+
+.thousand-sunny .overlap-4 {
+  position: absolute;
+  width: 485px;
+  height: 333px;
+  top: 112px;
+  left: 761px;
+}
+
+.thousand-sunny .a-new-way {
+  position: absolute;
+  width: 485px;
+  height: 333px;
+  top: 0;
+  left: 0;
+}
+
+.thousand-sunny .learn-more-btn {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 166px;
+  height: 60px;
+  top: 273px;
+  left: 0;
+}
+
+.thousand-sunny .overlap-group-6 {
+  position: relative;
+  width: 164px;
+  height: 60px;
+}
+
+.thousand-sunny .text-wrapper-17 {
+  position: absolute;
+  height: 60px;
+  top: 0;
+  left: 39px;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 60px;
+  white-space: nowrap;
+}
+
+.thousand-sunny .element-9 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 266px;
+  left: 327px;
+}
+
+.thousand-sunny .thousand-2 {
+  position: absolute;
+  width: 659px;
+  height: 534px;
+  top: 16px;
+  left: 0;
+  object-fit: cover;
+}
+
+.thousand-sunny .element-10 {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 0;
+  left: 685px;
+}
+
+.thousand-sunny .header {
+  position: absolute;
+  width: 1417px;
+  height: 786px;
+  top: 35px;
+  left: 80px;
+  background-color: transparent;
+}
+
+.thousand-sunny .explore-and-travel {
+  position: absolute;
+  top: 165px;
+  left: 109px;
+  font-family: "Playfair Display", Helvetica;
+  font-weight: 700;
+  color: #1f2336;
+  font-size: 64px;
+  letter-spacing: 0;
+  line-height: 80px;
+}
+
+.thousand-sunny .navbar {
+  position: absolute;
+  width: 671px;
+  height: 60px;
+  top: 0;
+  left: 667px;
+}
+
+.thousand-sunny .text-wrapper-18 {
+  left: 0;
+  font-weight: 500;
+  color: #202336;
+  position: absolute;
+  top: 21px;
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.thousand-sunny .text-wrapper-19 {
+  left: 81px;
+  font-weight: 400;
+  color: #b8becd;
+  position: absolute;
+  top: 21px;
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.thousand-sunny .text-wrapper-20 {
+  left: 210px;
+  font-weight: 400;
+  color: #b8becd;
+  position: absolute;
+  top: 21px;
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.thousand-sunny .text-wrapper-21 {
+  left: 290px;
+  font-weight: 400;
+  color: #b8becd;
+  position: absolute;
+  top: 21px;
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.thousand-sunny .register-btn {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 134px;
+  height: 60px;
+  top: 0;
+  left: 531px;
+}
+
+.thousand-sunny .overlap-group-7 {
+  position: relative;
+  width: 132px;
+  height: 60px;
+}
+
+.thousand-sunny .rectangle-5 {
+  position: absolute;
+  width: 132px;
+  height: 44px;
+  top: 8px;
+  left: 0;
+  background-color: #fb8f1d;
+  border-radius: 8px;
+}
+
+.thousand-sunny .text-wrapper-22 {
+  position: absolute;
+  height: 60px;
+  top: 0;
+  left: 36px;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 60px;
+  white-space: nowrap;
+}
+
+.thousand-sunny .login-btn {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 134px;
+  height: 60px;
+  top: 0;
+  left: 381px;
+}
+
+.thousand-sunny .rectangle-6 {
+  position: absolute;
+  width: 132px;
+  height: 44px;
+  top: 8px;
+  left: 0;
+  border-radius: 8px;
+  border: 1px solid;
+  border-color: #fb8f1d;
+}
+
+.thousand-sunny .text-wrapper-23 {
+  position: absolute;
+  height: 60px;
+  top: 0;
+  left: 46px;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #fb8f1d;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 60px;
+  white-space: nowrap;
+}
+
+.thousand-sunny .thousand-3 {
+  position: absolute;
+  width: 687px;
+  height: 654px;
+  top: 132px;
+  left: 728px;
+  object-fit: cover;
+}
+
+.thousand-sunny .element-11 {
+  top: 185px;
+  left: 577px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.thousand-sunny .element-12 {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 459px;
+  left: 0;
+}
+
+.thousand-sunny .element-13 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 748px;
+  left: 652px;
+}
+
+.thousand-sunny .holiday-finder {
+  position: absolute;
+  width: 471px;
+  height: 344px;
+  top: 399px;
+  left: 110px;
+}
+
+.thousand-sunny .btn {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 182px;
+  height: 60px;
+  top: 284px;
+  left: 0;
+}
+
+.thousand-sunny .overlap-group-8 {
+  position: relative;
+  width: 180px;
+  height: 60px;
+}
+
+.thousand-sunny .rectangle-7 {
+  position: absolute;
+  width: 180px;
+  height: 52px;
+  top: 4px;
+  left: 0;
+  background-color: #fb8f1d;
+  border-radius: 8px;
+}
+
+.thousand-sunny .text-wrapper-24 {
+  position: absolute;
+  height: 60px;
+  top: 0;
+  left: 60px;
+  font-family: "Muli-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 17px;
+  letter-spacing: 0;
+  line-height: 60px;
+  white-space: nowrap;
+}
+
+.thousand-sunny .holiday-finder-2 {
+  width: 480px;
+  height: 237px;
+  left: 1px;
+  position: absolute;
+  top: 0;
+}
+
+.thousand-sunny .overlap-5 {
+  position: absolute;
+  width: 220px;
+  height: 52px;
+  top: 98px;
+  left: 0;
+  border-radius: 6px;
+}
+
+.thousand-sunny .text-wrapper-25 {
+  position: absolute;
+  width: 68px;
+  height: 10px;
+  top: 21px;
+  left: 31px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #4a4c53;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.thousand-sunny .rectangle-8 {
+  position: absolute;
+  width: 220px;
+  height: 52px;
+  top: 0;
+  left: 0;
+  border-radius: 6px;
+  border: 0.8px solid;
+  border-color: #aeb0b8;
+}
+
+.thousand-sunny .frame {
+  position: absolute;
+  width: 9px;
+  height: 6px;
+  top: 26px;
+  left: 180px;
+  background-image: url(https://c.animaapp.com/mdcovwa6t15fS7/img/vector.svg);
+  background-size: 100% 100%;
+}
+
+.thousand-sunny .text-wrapper-26 {
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #202336;
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.thousand-sunny .rectangle-9 {
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  top: 48px;
+  left: 0;
+  background-color: #202336;
+  border-radius: 4px;
+}
+
+.thousand-sunny .overlap-6 {
+  position: absolute;
+  width: 220px;
+  height: 52px;
+  top: 98px;
+  left: 250px;
+  border-radius: 6px;
+}
+
+.thousand-sunny .text-wrapper-27 {
+  position: absolute;
+  width: 60px;
+  height: 10px;
+  top: 21px;
+  left: 31px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #4a4c53;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.thousand-sunny .overlap-7 {
+  position: absolute;
+  width: 220px;
+  height: 52px;
+  top: 185px;
+  left: 0;
+  border-radius: 6px;
+}
+
+.thousand-sunny .overlap-8 {
+  position: absolute;
+  width: 220px;
+  height: 52px;
+  top: 185px;
+  left: 250px;
+  border-radius: 6px;
+}
+
+.thousand-sunny .logo {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  top: 10px;
+  left: 111px;
+  background-color: #19be83;
+  border-radius: 20.5px;
+}
+
+.thousand-sunny .ellipse-2 {
+  position: relative;
+  width: 21px;
+  height: 21px;
+  top: 10px;
+  left: 10px;
+  background-color: #fb8f1d;
+  border-radius: 10.5px;
+  border: 3px solid;
+  border-color: #ffffff;
+}
+
+</style>
+  </head>
+  <body>
+    <div class="thousand-sunny">
+      <div class="div">
+        <footer class="footer">
+          <div class="overlap">
+            <div class="rectangle"></div>
+            <div class="destinations">
+              <div class="overlap-group">
+                <div class="text-wrapper">Africa<br />Antarctica<br />Asia<br />Europe<br />America</div>
+                <div class="text-wrapper-2">Destinations</div>
+              </div>
+            </div>
+            <div class="shop">
+              <div class="overlap-2">
+                <p class="text-wrapper">
+                  Destination Guides<br />Pictorial &amp; Gifts<br />Special Offers<br />Delivery Times<br />FAQs
+                </p>
+                <div class="text-wrapper-2">Shop</div>
+              </div>
+            </div>
+            <div class="interests">
+              <div class="overlap-group">
+                <p class="text-wrapper">
+                  Adventure Travel<br />Art And Culture<br />Wildlife And Nature<br />Family Holidays<br />Food And
+                  Drink
+                </p>
+                <div class="text-wrapper-2">Interests</div>
+              </div>
+            </div>
+            <div class="ts">
+              <p class="plan-and-book-your">
+                Plan and book your perfect trip with <br />expert advice, travel tips destination<br />information from
+                us
+              </p>
+              <p class="p">©2020 Thousand Sunny. All rights reserved</p>
+              <div class="group"><div class="ellipse"></div></div>
+            </div>
+            <div class="rectangle-2"></div>
+            <img class="social-media" src="https://c.animaapp.com/mdcovwa6t15fS7/img/social-media.png" />
+          </div>
+        </footer>
+        <div class="section">
+          <div class="text-wrapper-3">Trending stories</div>
+          <div class="view-all">
+            <div class="text-wrapper-4">View all</div>
+            <img class="vector" src="https://c.animaapp.com/mdcovwa6t15fS7/img/vector-1-1.svg" />
+          </div>
+          <img class="element" src="https://c.animaapp.com/mdcovwa6t15fS7/img/element2.svg" />
+          <img class="img" src="https://c.animaapp.com/mdcovwa6t15fS7/img/element2.svg" />
+          <img class="element-2" src="https://c.animaapp.com/mdcovwa6t15fS7/img/element-2.svg" />
+          <div class="blog">
+            <div class="overlap-group-2">
+              <img class="mask-group" src="https://c.animaapp.com/mdcovwa6t15fS7/img/mask-group.png" />
+              <p class="text-wrapper-5">The many benefits of&nbsp;&nbsp;<br />taking a healing holiday</p>
+              <p class="text-wrapper-6">
+                ‘Helaing holidays’ are on the rise <br />tohelp maximise your health and happines...
+              </p>
+            </div>
+            <div class="text-wrapper-7">Read more</div>
+          </div>
+          <div class="blog-2">
+            <div class="overlap-group-2">
+              <div class="rectangle-3"></div>
+              <p class="div-2">
+                <span class="span">Fanjingshan<br /></span> <span class="text-wrapper-8">China</span>
+              </p>
+              <img class="mask-group" src="https://c.animaapp.com/mdcovwa6t15fS7/img/mask-group-1.png" />
+              <p class="text-wrapper-5">The best Kyoto restaurant<br />to try Japanese food</p>
+              <p class="text-wrapper-6">
+                From tofu to teahouses, here’s our guide to Kyoto’s best restaurants<br />to visit...
+              </p>
+            </div>
+            <div class="text-wrapper-7">Read more</div>
+          </div>
+          <div class="blog-3">
+            <div class="overlap-group-2">
+              <div class="rectangle-3"></div>
+              <p class="div-2">
+                <span class="span">Vevey<br /></span> <span class="text-wrapper-8">Switzerland</span>
+              </p>
+              <img class="mask-group" src="https://c.animaapp.com/mdcovwa6t15fS7/img/mask-group-2.png" />
+              <p class="text-wrapper-5">Skip Chichen Itza and head<br />to this remote Yucatan</p>
+              <p class="text-wrapper-6">
+                It’s remote and challenging to get,<br />but braving the jungle and exploring<br />these ruins without
+                the...
+              </p>
+            </div>
+            <div class="text-wrapper-7">Read more</div>
+          </div>
+          <div class="blog-4">
+            <div class="overlap-group-2">
+              <div class="rectangle-3"></div>
+              <p class="div-2">
+                <span class="span">Skadar<br /></span> <span class="text-wrapper-8">Montenegro</span>
+              </p>
+              <img class="mask-group" src="https://c.animaapp.com/mdcovwa6t15fS7/img/mask-group-3.png" />
+              <p class="text-wrapper-5">Surf’s up at these beginner<br />spots around the world</p>
+              <p class="text-wrapper-6">
+                If learning to surf has in on your to-<br />do list for a while, the good news<br />is: it’s never too
+                late...
+              </p>
+            </div>
+            <div class="text-wrapper-7">Read more</div>
+          </div>
+        </div>
+        <div class="section-2">
+          <div class="text-wrapper-9">Testimonials</div>
+          <div class="testimonials">
+            <p class="text-wrapper-10">
+              “Quisque in lacus a urna fermentum euismod. Integer mi nibh, dapibus ac scelerisque eu, facilisis quis
+              purus. Morbi blandit sit amet turpis nec”
+            </p>
+            <div class="overlap-group-3">
+              <div class="text-wrapper-11">Edward Newgate</div>
+              <div class="text-wrapper-12">Founder Circle</div>
+            </div>
+            <img class="stars" src="https://c.animaapp.com/mdcovwa6t15fS7/img/stars.png" />
+          </div>
+          <img class="photo" src="https://c.animaapp.com/mdcovwa6t15fS7/img/photo.png" />
+          <img class="vector-2" src="https://c.animaapp.com/mdcovwa6t15fS7/img/vector-5.svg" />
+        </div>
+        <div class="section-3">
+          <div class="overlap-3">
+            <div class="guides-by">
+              <div class="overlap-group-4">
+                <div class="rectangle-4"></div>
+                <div class="text-wrapper-13">Download</div>
+              </div>
+              <div class="text-wrapper-14">Guides by Thousand <br />Sunny</div>
+              <p class="text-wrapper-15">
+                Packed with tips and advice from our on-the-ground experts, our city guides app (iOS and Android) is the
+                ultimate resource before and during a trip.
+              </p>
+            </div>
+            <img class="element-3" src="https://c.animaapp.com/mdcovwa6t15fS7/img/element2-3.svg" />
+          </div>
+          <img class="thousand" src="https://c.animaapp.com/mdcovwa6t15fS7/img/thousand-03.png" />
+          <img class="element-4" src="https://c.animaapp.com/mdcovwa6t15fS7/img/element2.svg" />
+          <img class="element-5" src="https://c.animaapp.com/mdcovwa6t15fS7/img/element-1.svg" />
+        </div>
+        <div class="section-4">
+          <div class="text-wrapper-16">Featured destinations</div>
+          <div class="raja-ampat">
+            <div class="overlap-group-5">
+              <img class="mask-group" src="https://c.animaapp.com/mdcovwa6t15fS7/img/mask-group-4.png" />
+              <p class="div-2">
+                <span class="span">Raja Ampat <br /></span> <span class="text-wrapper-8">Indonesia</span>
+              </p>
+            </div>
+          </div>
+          <div class="fanjingshan">
+            <div class="overlap-group-5">
+              <div class="rectangle-3"></div>
+              <img class="mask-group" src="https://c.animaapp.com/mdcovwa6t15fS7/img/mask-group-5.png" />
+              <p class="div-2">
+                <span class="span">Fanjingshan<br /></span> <span class="text-wrapper-8">China</span>
+              </p>
+            </div>
+          </div>
+          <div class="vevey">
+            <div class="overlap-group-5">
+              <div class="rectangle-3"></div>
+              <img class="mask-group" src="https://c.animaapp.com/mdcovwa6t15fS7/img/mask-group-6.png" />
+              <p class="div-2">
+                <span class="span">Vevey<br /></span> <span class="text-wrapper-8">Switzerland</span>
+              </p>
+            </div>
+          </div>
+          <div class="skadar">
+            <div class="overlap-group-5">
+              <div class="rectangle-3"></div>
+              <img class="mask-group" src="https://c.animaapp.com/mdcovwa6t15fS7/img/mask-group-7.png" />
+              <p class="div-2">
+                <span class="span">Skadar<br /></span> <span class="text-wrapper-8">Montenegro</span>
+              </p>
+            </div>
+          </div>
+          <div class="view-all-2">
+            <div class="text-wrapper-4">View all</div>
+            <img class="vector" src="https://c.animaapp.com/mdcovwa6t15fS7/img/vector-1-1.svg" />
+          </div>
+          <img class="element-6" src="https://c.animaapp.com/mdcovwa6t15fS7/img/element2.svg" />
+          <img class="element-7" src="https://c.animaapp.com/mdcovwa6t15fS7/img/element2.svg" />
+          <img class="element-8" src="https://c.animaapp.com/mdcovwa6t15fS7/img/element-2.svg" />
+        </div>
+        <div class="section-5">
+          <div class="overlap-4">
+            <div class="a-new-way">
+              <button class="learn-more-btn">
+                <div class="overlap-group-6">
+                  <div class="rectangle-4"></div>
+                  <div class="text-wrapper-17">Learn more</div>
+                </div>
+              </button>
+              <p class="text-wrapper-14">A new way to explore the world</p>
+              <p class="text-wrapper-15">
+                For decades travellers have reached for Lonely Planet books when looking to plan and execute their
+                perfect <br />trip, but now, they can also let Lonely Planet Experiences lead the way
+              </p>
+            </div>
+            <img class="element-9" src="https://c.animaapp.com/mdcovwa6t15fS7/img/element2.svg" />
+          </div>
+          <img class="thousand-2" src="https://c.animaapp.com/mdcovwa6t15fS7/img/thousand-02-1.png" />
+          <img class="element-10" src="https://c.animaapp.com/mdcovwa6t15fS7/img/element-2.svg" />
+        </div>
+        <header class="header">
+          <div class="explore-and-travel">Explore and<br />Travel</div>
+          <div class="navbar">
+            <div class="text-wrapper-18">Home</div>
+            <div class="text-wrapper-19">Destinations</div>
+            <div class="text-wrapper-20">About</div>
+            <div class="text-wrapper-21">Partner</div>
+            <button class="register-btn">
+              <div class="overlap-group-7">
+                <div class="rectangle-5"></div>
+                <div class="text-wrapper-22">Register</div>
+              </div>
+            </button>
+            <button class="login-btn">
+              <div class="overlap-group-7">
+                <div class="rectangle-6"></div>
+                <div class="text-wrapper-23">Login</div>
+              </div>
+            </button>
+          </div>
+          <img class="thousand-3" src="https://c.animaapp.com/mdcovwa6t15fS7/img/thousand-01-1.png" />
+          <img class="element-11" src="https://c.animaapp.com/mdcovwa6t15fS7/img/element3.svg" />
+          <img class="element-12" src="https://c.animaapp.com/mdcovwa6t15fS7/img/element2-2.svg" />
+          <img class="element-13" src="https://c.animaapp.com/mdcovwa6t15fS7/img/element2.svg" />
+          <div class="holiday-finder">
+            <button class="btn">
+              <div class="overlap-group-8">
+                <div class="rectangle-7"></div>
+                <div class="text-wrapper-24">Explore</div>
+              </div>
+            </button>
+            <div class="holiday-finder-2">
+              <div class="overlap-5">
+                <div class="text-wrapper-25">Location</div>
+                <div class="rectangle-8"></div>
+                <div class="frame"></div>
+              </div>
+              <div class="text-wrapper-26">Holiday finder</div>
+              <div class="rectangle-9"></div>
+              <div class="overlap-6">
+                <div class="text-wrapper-27">Activity</div>
+                <div class="rectangle-8"></div>
+                <div class="frame"></div>
+              </div>
+              <div class="overlap-7">
+                <div class="text-wrapper-27">Grade</div>
+                <div class="rectangle-8"></div>
+                <div class="frame"></div>
+              </div>
+              <div class="overlap-8">
+                <div class="text-wrapper-27">Date</div>
+                <div class="rectangle-8"></div>
+                <div class="frame"></div>
+              </div>
+            </div>
+          </div>
+          <div class="logo"><div class="ellipse-2"></div></div>
+        </header>
+      </div>
+    </div>
+  </body>
+</html>

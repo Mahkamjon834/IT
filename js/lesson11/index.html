@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background: url("https://images.prismic.io/bmw-eurokarscoid/Zwi5ooF3NbkBXO1M_P90548561_highRes_the-all-new-bmw-m4-c.jpg?auto=format,compress") no-repeat center/cover;
+}
+.show-btn{
+    width: 200px;
+    height: 45px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal{
+    width: 500px;
+    height: 300px;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+.title{
+    width: 90%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(3px);
+}
+
+.remover{
+    display: none;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <button class="show-btn">Show Modal</button>
+        <div class="modal remover">
+            <div class="title">
+                <h2> Car BMW M5</h2>
+                <span class="close"> X </span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo eaque sapiente, magni iusto sequi tempore id est. Soluta neque excepturi dicta enim voluptas quas animi aliquid minus inventore, corrupti, ex voluptates qui? Numquam nisi, culpa nesciunt quia, veniam earum placeat minus ex expedita, soluta dolor cupiditate debitis commodi. Repellendus!</p>
+            <a href="">Go to Home</a>
+        </div>
+    </div>
+    <div class="overlay remover"></div>
+    
+    <script >
+        console.log("hello world");
+
+const btn = document.querySelector(".show-btn")
+const modal = document.querySelector(".modal")
+const close = document.querySelector(".close")
+const overlay = document.querySelector(".overlay")
+
+btn.addEventListener("click", ()=>{
+    modal.classList.remove("remover")
+    overlay.classList.remove("remover")
+    btn.classList.add("remover")
+})    
+
+close.addEventListener("click", ()=>{
+    modal.classList.add("remover")
+    overlay.classList.add("remover")
+    btn.classList.remove("remover")
+})
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

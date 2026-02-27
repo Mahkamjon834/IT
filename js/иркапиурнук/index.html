@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <style>
+        /* Sizning CSS kodingizni o'zgartirmadim, chunki u to'g'ri ishlayapti */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f0f0f;
+            color: white;
+        }
+
+        header {
+            background-color: #212121;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        .search-box {
+            display: flex;
+        }
+
+        .search-box input {
+            width: 400px;
+            padding: 10px 16px;
+            font-size: 15px;
+            background: #121212;
+            border: 1px solid #555;
+            border-radius: 20px 0 0 20px;
+            color: white;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: #3ea6ff;
+        }
+
+        .search-box button {
+            padding: 10px 20px;
+            background: #333;
+            border: 1px solid #555;
+            border-left: none;
+            border-radius: 0 20px 20px 0;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .search-box button:hover {
+            background: #555;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 30px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .video-card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            background: #252525;
+        }
+
+        .video-card img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .no-image {
+            width: 100%;
+            height: 170px;
+            background: linear-gradient(135deg, #ff0000, #aa0000);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .card-info {
+            padding: 12px;
+        }
+
+        .card-info h3 {
+            font-size: 15px;
+            margin-bottom: 6px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-info p {
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        .card-info .rating {
+            margin-top: 6px;
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        #loading {
+            text-align: center;
+            padding: 60px;
+            font-size: 18px;
+            color: #aaa;
+            display: none;
+        }
+
+        #error {
+            text-align: center;
+            padding: 40px;
+            color: #ff4444;
+            display: none;
+        }
+
+        #empty {
+            text-align: center;
+            padding: 80px;
+            color: #555;
+            display: none;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            z-index: 999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        .modal {
+            background: #1a1a1a;
+            border-radius: 16px;
+            max-width: 600px;
+            width: 90%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .modal img {
+            width: 100%;
+            max-height: 320px;
+            object-fit: cover;
+        }
+
+        .modal-body {
+            padding: 20px;
+        }
+
+        .modal-body h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .modal-body p {
+            color: #bbb;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: rgba(0,0,0,0.6);
+            border: none;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+        }
+
+        @media (max-width: 600px) {
+            .search-box input { width: 180px; }
+            header { flex-wrap: wrap; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">You<span>Tube</span></div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Video qidiring..." />
+            <button onclick="qidirish()">🔍</button>
+        </div>
+    </header>
+
+    <div id="loading">⏳ Yuklanmoqda...</div>
+    <div id="error">❌ Xato yuz berdi!</div>
+    <div id="empty"><h2>🔍 Hech narsa topilmadi</h2></div>
+    <div id="container"></div>
+
+    <div class="modal-overlay" id="modalOverlay" onclick="modalYop(event)">
+        <div class="modal">
+            <button class="modal-close" onclick="modalYopTugma()">✕</button>
+            <img id="modalImg" src="" alt="">
+            <div class="modal-body">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDesc"></p>
+                <p id="modalRating" style="color:#ff0000; margin-top:8px; font-weight:bold;"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+        const loading   = document.getElementById('loading');
+        const error     = document.getElementById('error');
+        const empty     = document.getElementById('empty');
+
+        // ===== API DAN MA'LUMOT OLISH =====
+        const getData = async (nom) => {
+            loading.style.display = 'block';
+            error.style.display   = 'none';
+            empty.style.display   = 'none';
+            container.innerHTML   = '';
+
+            try {
+                const response = await fetch(`https://api.tvmaze.com/search/shows?q=${nom}`);
+                const movies = await response.json();
+                loading.style.display = 'none';
+
+                if (movies.length === 0) {
+                    empty.style.display = 'block';
+                    return;
+                }
+
+                makeCards(movies);
+                console.log(movies);
+
+            } catch (err) {
+                loading.style.display = 'none';
+                error.style.display   = 'block';
+            }
+        };
+
+        // ===== KARTALAR YASASH =====
+        function makeCards(movies) {
+            for (let movie of movies) {
+                const rasm    = movie.show.image?.medium;
+                const nomi    = movie.show.name;
+                const tasnif  = movie.show.summary?.replace(/<[^>]*>/g, '') || 'Tasnif yoq';
+                const reyting = movie.show.rating?.average;
+                const janr    = movie.show.genres?.join(', ') || "Janr noma'lum";
+
+                const card = document.createElement('div');
+                card.className = 'video-card';
+
+                if (rasm) {
+                    const img = document.createElement('img');
+                    img.src = rasm;
+                    img.alt = nomi;
+                    card.appendChild(img);
+                } else {
+                    const placeholder = document.createElement('div');
+                    placeholder.className = 'no-image';
+                    placeholder.innerHTML = '▶';
+                    card.appendChild(placeholder);
+                }
+
+                const info = document.createElement('div');
+                info.className = 'card-info';
+                info.innerHTML = `
+                    <h3>${nomi}</h3>
+                    <p>${janr}</p>
+                    ${reyting ? `<p class="rating">⭐ ${reyting} / 10</p>` : ''}
+                `;
+                card.appendChild(info);
+
+                card.onclick = () => modalOch(rasm, nomi, tasnif, reyting);
+                container.appendChild(card);
+            }
+        }
+
+        // ===== QIDIRISH =====
+        function qidirish() {
+            const qidiruv = document.getElementById('searchInput').value.trim();
+            if (qidiruv) getData(qidiruv);
+        }
+
+        document.getElementById('searchInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') qidirish();
+        });
+
+        // ===== MODAL =====
+        function modalOch(rasm, nomi, tasnif, reyting) {
+            const modalImg = document.getElementById('modalImg');
+            modalImg.src = rasm || '';
+            modalImg.style.display = rasm ? 'block' : 'none';
+            document.getElementById('modalTitle').textContent  = nomi;
+            document.getElementById('modalDesc').textContent   = tasnif;
+            document.getElementById('modalRating').textContent = reyting ? `⭐ Reyting: ${reyting}/10` : '';
+            document.getElementById('modalOverlay').classList.add('open');
+        }
+
+        function modalYop(event) {
+            if (event.target === document.getElementById('modalOverlay')) {
+                document.getElementById('modalOverlay').classList.remove('open');
+            }
+        }
+
+        function modalYopTugma() {
+            document.getElementById('modalOverlay').classList.remove('open');
+        }
+
+        // ===== SAHIFA OCHILGANDA =====
+        getData('music');
+    </script>
+</body>
+</html>

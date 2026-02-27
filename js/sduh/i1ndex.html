@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Certificates</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 60px 20px;
+            color: #333;
+        }
+
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: clamp(24px, 4vw, 36px);
+            margin-bottom: 60px;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            line-height: 1.5;
+            font-weight: 700;
+            padding: 0 20px;
+        }
+
+        h1 span {
+            color: #ffd700;
+            text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.5);
+            font-weight: 800;
+        }
+
+        .contayner {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .q1 {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .q1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+            transition: left 0.6s;
+        }
+
+        .q1:hover::before {
+            left: 100%;
+        }
+
+        .q1 img {
+            transition: all 0.3s ease;
+            filter: grayscale(10%);
+        }
+
+        .q1:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+            border: 2px solid #667eea;
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .q1:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        .q1:active {
+            transform: translateY(-4px) scale(1);
+        }
+
+        /* Partner cards */
+        .card:nth-child(1) .q1,
+        .card:nth-child(3) .q1 {
+            width: 300px;
+            height: 85px;
+        }
+
+        .card:nth-child(1) .q1 img,
+        .card:nth-child(3) .q1 img {
+            width: 250px;
+            height: auto;
+        }
+
+        /* Certificate card */
+        .card:nth-child(2) .q1 {
+            width: 350px;
+            height: 500px;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 255, 0.95));
+        }
+
+        .card:nth-child(2) .q1 img {
+            width: 300px;
+            height: 450px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card:nth-child(2) .q1:hover {
+            transform: translateY(-10px) rotate(1deg) scale(1.02);
+            box-shadow: 0 20px 50px rgba(255, 215, 0, 0.4);
+        }
+
+        .card:nth-child(2) .q1:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Footer text */
+
+p {
+            text-align: center;
+            color: white;
+            font-size: clamp(12px, 2vw, 14px);
+            line-height: 1.6;
+            margin-top: 60px;
+            padding: 0 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .q1 {
+            animation: fadeInUp 0.6s ease backwards;
+        }
+
+        .card:nth-child(1) .q1:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(1) .q1:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(1) .q1:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(1) .q1:nth-child(4) { animation-delay: 0.4s; }
+        .card:nth-child(1) .q1:nth-child(5) { animation-delay: 0.5s; }
+        .card:nth-child(2) .q1 { animation-delay: 0.6s; }
+        .card:nth-child(3) .q1:nth-child(1) { animation-delay: 0.7s; }
+        .card:nth-child(3) .q1:nth-child(2) { animation-delay: 0.8s; }
+        .card:nth-child(3) .q1:nth-child(3) { animation-delay: 0.9s; }
+        .card:nth-child(3) .q1:nth-child(4) { animation-delay: 1s; }
+        .card:nth-child(3) .q1:nth-child(5) { animation-delay: 1.1s; }
+
+        p {
+            animation: fadeInUp 0.8s ease 1.2s backwards;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <main>
+        <h1>
+            <span>МЕЖДУНАРОДНЫЕ</span> СЕРТИФИКАТЫ<br>BILAN IMTIHONLARSIZ TALABA BOLING
+        </h1>
+
+        <section class="contayner">
+            <section class="card">
+                <div class="q1" onclick="w1()">
+                    <img src="https://inter-nation.uz/_next/image?url=%2Fhome%2Fpartners%2F1.png&w=640&q=75" alt="Partner 1">
+                </div>
+                <div class="q1" onclick="w2()">
+                    <img src="https://inter-nation.uz/_next/image?url=%2Fhome%2Fpartners%2F2.png&w=640&q=75" alt="Partner 2">
+
+
+</div>
+                <div class="q1" onclick="w3()">
+                    <img src="https://inter-nation.uz/_next/image?url=%2Fhome%2Fpartners%2F3.png&w=640&q=75" alt="Partner 3">
+                </div>
+                <div class="q1" onclick="w4()">
+                    <img src="https://inter-nation.uz/_next/image?url=%2Fhome%2Fpartners%2F4.png&w=640&q=75" alt="Partner 4">
+                </div>
+                <div class="q1" onclick="w5()">
+                    <img src="https://inter-nation.uz/_next/image?url=%2Fhome%2Fpartners%2F5.png&w=640&q=75" alt="Partner 5">
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="q1" onclick="w6()">
+                    <img class="aa" src="https://inter-nation.uz/home/results/certificate.png" alt="Certificate">
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="q1" onclick="w7()">
+                    <img src="https://inter-nation.uz/_next/image?url=%2Fhome%2Fpartners%2F6.png&w=640&q=75" alt="Partner 6">
+                </div>
+                <div class="q1" onclick="w8()">
+                    <img src="https://inter-nation.uz/_next/image?url=%2Fhome%2Fpartners%2F7.png&w=640&q=75" alt="Partner 7">
+                </div>
+                <div class="q1" onclick="w9()">
+                    <img src="https://inter-nation.uz/_next/image?url=%2Fhome%2Fpartners%2F7.png&w=640&q=75" alt="Partner 8">
+                </div>
+                <div class="q1" onclick="w10()">
+                    <img src="https://inter-nation.uz/_next/image?url=%2Fhome%2Fpartners%2F9.png&w=640&q=75" alt="Partner 9">
+                </div>
+                <div class="q1" onclick="w11()">
+                    <img src="https://inter-nation.uz/_next/image?url=%2Fhome%2Fpartners%2F10.png&w=640&q=75" alt="Partner 10">
+                </div>
+            </section>
+        </section>
+        
+        <p>
+            * Сертификат обучения в университете томонидан кабул цилиньиш тартиби билан оммави предложение<br>
+            оркали танишиб чикинг.
+        </p>
+    </main>
+
+    <script>
+        const xariita = document.querySelector('.aa');
+
+        function w1() {
+            xariita.setAttribute('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5CYZVp-c669sd-Zi4X_NfxVW-y0c2qpssAA&s');
+        }
+
+        function w2() {
+            xariita.setAttribute('src', 'https://static.tuit.uz/uploads/1/720__t9xkJwinyzdlAV-3YerT-5_u_UnPd96o.jpg');
+        }
+
+        function w3() {
+            xariita.setAttribute('src', 'https://uzinfocom.uz/media/company-media/2024/06/25/%D0%A1%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82.jpg');
+        }
+
+        function w4() {
+            xariita.setAttribute('src', 'https://media.licdn.com/dms/image/v2/C4E22AQEgKd3iZQgzNA/feedshare-shrink_800/feedshare-shrink_800/0/1645113047242?e=2147483647&v=beta&t=dYaqpYxkhWT58JSOBI1Xz1v7Diwm_pmOeH57SiaJTW4');
+        }
+
+        function w5() {
+            xariita.setAttribute('src', 'https://inha.uz/wp-content/uploads/2023/03/aacsb-certificate-2019.jpg');
+        }
+
+        function w6() {
+            xariita.setAttribute('src', 'https://inter-nation.uz/home/results/certificate.png');
+        }
+
+        function w7() {
+            xariita.setAttribute('src', 'https://turin.uz/wp-content/uploads/2020/08/Certificate-2015.jpg');
+        }
+
+        function w8() {
+            xariita.setAttribute('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSaokLXZyB28h7gHiBnid39E9MrgmUpBZ7kQ&s');
+        }
+
+        function w9() {
+            xariita.setAttribute('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSaokLXZyB28h7gHiBnid39E9MrgmUpBZ7kQ&s');
+        }
+
+        function w10() {
+            xariita.setAttribute('src', 'https://media.licdn.com/dms/image/v2/D4D22AQGPWoFL-s-OVA/feedshare-shrink_800/B4DZj8qG60GgAk-/0/1756585564189?e=2147483647&v=beta&t=Whg9tO3jWVWuJOfiZ-Kl4sHzgh_lB55xsgxlHfaVsE8');
+        }
+
+function w11() {
+            xariita.setAttribute('src', 'https://turin.uz/wp-content/uploads/2023/01/DAH-Sertifikat-1.jpg');
+        }
+    </script>
+</body>
+</html>

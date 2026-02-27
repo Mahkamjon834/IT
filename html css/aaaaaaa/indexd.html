@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins:var(--heading-200-font-weight),var(--heading-400-font-weight),var(--paragraph-100-regular-font-weight),var(--heading-100-font-weight),var(--button-200-regular-font-weight),var(--paragraph-100-medium-font-weight),var(--paragraph-200-regular-font-weight),var(--button-100-medium-font-weight),var(--paragraph-200-medium-font-weight),400,var(--paragraph-300-regular-font-weight),var(--heading-300-font-weight)");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+    overflow-x: hidden;
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+.element {
+  display: flex;
+  height: 4376px;
+  align-items: flex-start;
+  position: relative;
+  background-color: var(--main-white);
+  width: 100%;
+  min-width: 1918px;
+}
+
+.element .grid {
+  position: absolute;
+  top: 0;
+  left: calc(50.00% - 720px);
+  width: 1440px;
+  height: 4338px;
+}
+
+.element .wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 1918px;
+  align-items: center;
+  position: relative;
+}
+
+.element .section-main {
+  border-radius: 0px 0px 64px 64px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1156px;
+  object-fit: cover;
+}
+
+.element .container {
+  flex-direction: column;
+  width: 1360px;
+  height: 822px;
+  align-items: center;
+  padding: 32px 0px 120px;
+  border-radius: 0px 0px 54px 54px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.element .header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: transparent;
+}
+
+.element .logo {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 4px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .frame {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .img {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.element .main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.element .menu-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 0px 24px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .placeholder {
+  margin-top: -1.00px;
+  opacity: 0.7;
+  font-weight: var(--paragraph-200-regular-font-weight);
+  color: var(--themewhite);
+  font-size: var(--paragraph-200-regular-font-size);
+  line-height: var(--paragraph-200-regular-line-height);
+  position: relative;
+  width: fit-content;
+  font-family: var(--paragraph-200-regular-font-family);
+  letter-spacing: var(--paragraph-200-regular-letter-spacing);
+  white-space: nowrap;
+  font-style: var(--paragraph-200-regular-font-style);
+}
+
+.element .user {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .user-data {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  opacity: 0.5;
+  font-family: var(--paragraph-200-regular-font-family);
+  font-weight: var(--paragraph-200-regular-font-weight);
+  color: var(--themewhite);
+  font-size: var(--paragraph-200-regular-font-size);
+  letter-spacing: var(--paragraph-200-regular-letter-spacing);
+  line-height: var(--paragraph-200-regular-line-height);
+  white-space: nowrap;
+  font-style: var(--paragraph-200-regular-font-style);
+}
+
+.element .div {
+  position: relative;
+  width: fit-content;
+  font-family: var(--paragraph-200-medium-font-family);
+  font-weight: var(--paragraph-200-medium-font-weight);
+  color: var(--themewhite);
+  font-size: var(--paragraph-200-medium-font-size);
+  letter-spacing: var(--paragraph-200-medium-letter-spacing);
+  line-height: var(--paragraph-200-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--paragraph-200-medium-font-style);
+}
+
+.element .avatar {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.element .user-photo {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.element .img-2 {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 108px;
+  height: 108px;
+  object-fit: cover;
+}
+
+.element .notification-dot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background-color: var(--themered);
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #161414;
+}
+
+.element .cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.element .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .p {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--heading-100-font-family);
+  font-weight: var(--heading-100-font-weight);
+  color: #ffffff;
+  font-size: var(--heading-100-font-size);
+  letter-spacing: var(--heading-100-letter-spacing);
+  line-height: var(--heading-100-line-height);
+  white-space: nowrap;
+  font-style: var(--heading-100-font-style);
+}
+
+.element .primary-icon-left {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: var(--themeprimary);
+  border-radius: 12px;
+}
+
+.element .img-3 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.element .div-2 {
+  display: inline-flex;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .label {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--button-100-medium-font-family);
+  font-weight: var(--button-100-medium-font-weight);
+  color: var(--themewhite);
+  font-size: var(--button-100-medium-font-size);
+  letter-spacing: var(--button-100-medium-letter-spacing);
+  line-height: var(--button-100-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--button-100-medium-font-style);
+}
+
+.element .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .search-row {
+  display: flex;
+  width: 1140px;
+  align-items: center;
+  padding: 8px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: var(--themewhite);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.element .input {
+  width: 300px;
+  display: flex;
+  height: 72px;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  position: relative;
+  background-color: var(--themewhite);
+  border-radius: 12px;
+}
+
+.element .content {
+  display: inline-flex;
+  justify-content: center;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+}
+
+.element .label-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -3.00px;
+  font-family: var(--paragraph-200-regular-font-family);
+  font-weight: var(--paragraph-200-regular-font-weight);
+  color: var(--themebodymuted);
+  font-size: var(--paragraph-200-regular-font-size);
+  letter-spacing: var(--paragraph-200-regular-letter-spacing);
+  line-height: var(--paragraph-200-regular-line-height);
+  white-space: nowrap;
+  font-style: var(--paragraph-200-regular-font-style);
+}
+
+.element .placeholder-2 {
+  margin-bottom: -1.00px;
+  font-weight: var(--paragraph-100-medium-font-weight);
+  color: var(--themebody);
+  font-size: var(--paragraph-100-medium-font-size);
+  line-height: var(--paragraph-100-medium-line-height);
+  position: relative;
+  width: fit-content;
+  font-family: var(--paragraph-100-medium-font-family);
+  letter-spacing: var(--paragraph-100-medium-letter-spacing);
+  white-space: nowrap;
+  font-style: var(--paragraph-100-medium-font-style);
+}
+
+.element .v-default {
+  position: relative;
+  width: 1px;
+  height: 46px;
+  background-image: url(https://c.animaapp.com/mgfd692rcyUzJT/img/divider.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.element .input-2 {
+  flex: 1;
+  flex-grow: 1;
+  display: flex;
+  height: 72px;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  position: relative;
+  background-color: var(--themewhite);
+  border-radius: 12px;
+}
+
+.element .primary-icon-left-2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: var(--themeprimary);
+  border-radius: 12px;
+}
+
+.element .section-popular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 120px 0px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .container-2 {
+  flex-direction: column;
+  width: 1360px;
+  align-items: flex-start;
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.element .title-2 {
+  display: flex;
+  align-items: center;
+  padding: 0px 0px 64px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .title-3 {
+  position: relative;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: var(--heading-200-font-family);
+  font-weight: var(--heading-200-font-weight);
+  color: var(--themebody);
+  font-size: var(--heading-200-font-size);
+  letter-spacing: var(--heading-200-letter-spacing);
+  line-height: var(--heading-200-line-height);
+  font-style: var(--heading-200-font-style);
+}
+
+.element .row-2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .popular-destinations {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.element .img-4 {
+  position: relative;
+  width: 200px;
+  height: 180px;
+  border-radius: 24px;
+  background-image: url(https://c.animaapp.com/mgfd692rcyUzJT/img/img-11.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.element .frame-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  width: 100%;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .name {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: var(--paragraph-100-medium-font-family);
+  font-weight: var(--paragraph-100-medium-font-weight);
+  color: var(--themebody);
+  font-size: var(--paragraph-100-medium-font-size);
+  letter-spacing: var(--paragraph-100-medium-letter-spacing);
+  line-height: var(--paragraph-100-medium-line-height);
+  font-style: var(--paragraph-100-medium-font-style);
+}
+
+.element .where {
+  position: relative;
+  align-self: stretch;
+  font-family: var(--paragraph-200-regular-font-family);
+  font-weight: var(--paragraph-200-regular-font-weight);
+  color: var(--themebodymuted);
+  font-size: var(--paragraph-200-regular-font-size);
+  letter-spacing: var(--paragraph-200-regular-letter-spacing);
+  line-height: var(--paragraph-200-regular-line-height);
+  font-style: var(--paragraph-200-regular-font-style);
+}
+
+.element .img-5 {
+  position: relative;
+  width: 200px;
+  height: 180px;
+  border-radius: 24px;
+  background-image: url(https://c.animaapp.com/mgfd692rcyUzJT/img/img-13.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.element .img-6 {
+  position: relative;
+  width: 200px;
+  height: 180px;
+  border-radius: 24px;
+  background-image: url(https://c.animaapp.com/mgfd692rcyUzJT/img/img-14.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.element .img-7 {
+  position: relative;
+  width: 200px;
+  height: 180px;
+  border-radius: 24px;
+  background-image: url(https://c.animaapp.com/mgfd692rcyUzJT/img/img-16.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.element .img-8 {
+  position: relative;
+  width: 200px;
+  height: 180px;
+  border-radius: 24px;
+  background-image: url(https://c.animaapp.com/mgfd692rcyUzJT/img/img-12.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.element .img-9 {
+  position: relative;
+  width: 200px;
+  height: 180px;
+  border-radius: 24px;
+  background-image: url(https://c.animaapp.com/mgfd692rcyUzJT/img/img-15.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.element .section-hotels-and {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .container-wrapper {
+  gap: 10px;
+  padding: 0px 0px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .secondary-icon-right {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: var(--themeprimarymuted);
+  border-radius: 12px;
+}
+
+.element .label-3 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--button-200-regular-font-family);
+  font-weight: var(--button-200-regular-font-weight);
+  color: var(--themeprimary);
+  font-size: var(--button-200-regular-font-size);
+  letter-spacing: var(--button-200-regular-letter-spacing);
+  line-height: var(--button-200-regular-line-height);
+  white-space: nowrap;
+  font-style: var(--button-200-regular-font-style);
+}
+
+.element .system-arrow-right {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.element .travel-tips-and {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.element .img-10 {
+  position: relative;
+  width: 316px;
+  height: 380px;
+  border-radius: 24px;
+  background-image: url(https://c.animaapp.com/mgfd692rcyUzJT/img/img-6.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.element .content-2 {
+  display: flex;
+  padding: 0px 0px 0px 32px;
+  flex: 1;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+}
+
+.element .row-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0px 0px 16px;
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.element .title-4 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .title-5 {
+  position: relative;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: var(--heading-300-font-family);
+  font-weight: var(--heading-300-font-weight);
+  color: var(--themebody);
+  font-size: var(--heading-300-font-size);
+  letter-spacing: var(--heading-300-letter-spacing);
+  line-height: var(--heading-300-line-height);
+  font-style: var(--heading-300-font-style);
+}
+
+.element .p-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  flex: 0 0 auto;
+  position: relative;
+  align-self: stretch;
+}
+
+.element .p-2 {
+  margin-top: -1.00px;
+  font-family: var(--paragraph-100-regular-font-family);
+  font-weight: var(--paragraph-100-regular-font-weight);
+  color: var(--themebodymuted);
+  font-size: var(--paragraph-100-regular-font-size);
+  letter-spacing: var(--paragraph-100-regular-letter-spacing);
+  line-height: var(--paragraph-100-regular-line-height);
+  position: relative;
+  align-self: stretch;
+  font-style: var(--paragraph-100-regular-font-style);
+}
+
+.element .post-info {
+  display: flex;
+  width: 320px;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+  flex: 0 0 auto;
+  margin-right: -4.00px;
+}
+
+.element .div-3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--paragraph-300-regular-font-family);
+  font-weight: var(--paragraph-300-regular-font-weight);
+  color: var(--themebodymuted);
+  font-size: var(--paragraph-300-regular-font-size);
+  letter-spacing: var(--paragraph-300-regular-letter-spacing);
+  line-height: var(--paragraph-300-regular-line-height);
+  white-space: nowrap;
+  font-style: var(--paragraph-300-regular-font-style);
+}
+
+.element .img-11 {
+  position: relative;
+  width: 316px;
+  height: 380px;
+  border-radius: 24px;
+  background-image: url(https://c.animaapp.com/mgfd692rcyUzJT/img/img-7.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.element .activities {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.element .img-12 {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 380px;
+  border-radius: 24px;
+  background-image: url(https://c.animaapp.com/mgfd692rcyUzJT/img/img-10.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.element .name-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .name-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--paragraph-100-medium-font-family);
+  font-weight: var(--paragraph-100-medium-font-weight);
+  color: var(--themebody);
+  font-size: var(--paragraph-100-medium-font-size);
+  letter-spacing: var(--paragraph-100-medium-letter-spacing);
+  line-height: var(--paragraph-100-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--paragraph-100-medium-font-style);
+}
+
+.element .img-13 {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 380px;
+  border-radius: 24px;
+  background-image: url(https://c.animaapp.com/mgfd692rcyUzJT/img/img-8.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.element .img-14 {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 380px;
+  border-radius: 24px;
+  background-image: url(https://c.animaapp.com/mgfd692rcyUzJT/img/img-5.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.element .img-15 {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 380px;
+  border-radius: 24px;
+  background-image: url(https://c.animaapp.com/mgfd692rcyUzJT/img/img-9.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.element .section-about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 0px 120px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .container-3 {
+  width: 1128px;
+  align-items: center;
+  gap: 32px;
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.element .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.element .text-wrapper-3 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Poppins", Helvetica;
+  font-weight: 400;
+  color: #5b5b5b;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 32px;
+}
+
+.element .img-wrapper {
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  height: 488px;
+  overflow: hidden;
+}
+
+.element .image-wrapper {
+  width: 556px;
+  display: flex;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.element .image {
+  width: 732px;
+  height: 488px;
+  margin-left: -107px;
+  object-fit: cover;
+}
+
+.element .section-footer {
+  justify-content: center;
+  padding: 120px 0px;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .row-wrapper {
+  flex-direction: column;
+  width: 1376px;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.element .row-4 {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .col-2 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .row-5 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .text-wrapper-4 {
+  position: relative;
+  width: 354.5px;
+  font-family: var(--paragraph-200-regular-font-family);
+  font-weight: var(--paragraph-200-regular-font-weight);
+  color: var(--themebodymuted);
+  font-size: var(--paragraph-200-regular-font-size);
+  letter-spacing: var(--paragraph-200-regular-letter-spacing);
+  line-height: var(--paragraph-200-regular-line-height);
+  font-style: var(--paragraph-200-regular-font-style);
+}
+
+.element .socials {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 32px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .img-16 {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.element .col-3 {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.element .div-4 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .text-wrapper-5 {
+  position: relative;
+  width: 119.32px;
+  margin-top: -1.00px;
+  font-family: var(--heading-400-font-family);
+  font-weight: var(--heading-400-font-weight);
+  color: var(--themebody);
+  font-size: var(--heading-400-font-size);
+  letter-spacing: var(--heading-400-letter-spacing);
+  line-height: var(--heading-400-line-height);
+  font-style: var(--heading-400-font-style);
+}
+
+.element .ul {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .text-wrapper-6 {
+  position: relative;
+  width: 125.83px;
+  margin-top: -1.00px;
+  font-family: var(--paragraph-200-regular-font-family);
+  font-weight: var(--paragraph-200-regular-font-weight);
+  color: var(--themebodymuted);
+  font-size: var(--paragraph-200-regular-font-size);
+  letter-spacing: var(--paragraph-200-regular-letter-spacing);
+  line-height: var(--paragraph-200-regular-line-height);
+  font-style: var(--paragraph-200-regular-font-style);
+}
+
+.element .text-wrapper-7 {
+  position: relative;
+  width: 123.66px;
+  font-family: var(--paragraph-200-regular-font-family);
+  font-weight: var(--paragraph-200-regular-font-weight);
+  color: var(--themebodymuted);
+  font-size: var(--paragraph-200-regular-font-size);
+  letter-spacing: var(--paragraph-200-regular-letter-spacing);
+  line-height: var(--paragraph-200-regular-line-height);
+  font-style: var(--paragraph-200-regular-font-style);
+}
+
+.element .text-wrapper-8 {
+  position: relative;
+  width: 75.93px;
+  font-family: var(--paragraph-200-regular-font-family);
+  font-weight: var(--paragraph-200-regular-font-weight);
+  color: var(--themebodymuted);
+  font-size: var(--paragraph-200-regular-font-size);
+  letter-spacing: var(--paragraph-200-regular-letter-spacing);
+  line-height: var(--paragraph-200-regular-line-height);
+  font-style: var(--paragraph-200-regular-font-style);
+}
+
+.element .text-wrapper-9 {
+  position: relative;
+  width: 78.1px;
+  font-family: var(--paragraph-200-regular-font-family);
+  font-weight: var(--paragraph-200-regular-font-weight);
+  color: var(--themebodymuted);
+  font-size: var(--paragraph-200-regular-font-size);
+  letter-spacing: var(--paragraph-200-regular-letter-spacing);
+  line-height: var(--paragraph-200-regular-line-height);
+  font-style: var(--paragraph-200-regular-font-style);
+}
+
+.element .text-wrapper-10 {
+  position: relative;
+  width: 115.66px;
+  margin-top: -1.00px;
+  font-family: var(--heading-400-font-family);
+  font-weight: var(--heading-400-font-weight);
+  color: var(--themebody);
+  font-size: var(--heading-400-font-size);
+  letter-spacing: var(--heading-400-letter-spacing);
+  line-height: var(--heading-400-line-height);
+  font-style: var(--heading-400-font-style);
+}
+
+.element .text-wrapper-11 {
+  position: relative;
+  width: 86.43px;
+  margin-top: -1.00px;
+  font-family: var(--paragraph-200-regular-font-family);
+  font-weight: var(--paragraph-200-regular-font-weight);
+  color: var(--themebodymuted);
+  font-size: var(--paragraph-200-regular-font-size);
+  letter-spacing: var(--paragraph-200-regular-letter-spacing);
+  line-height: var(--paragraph-200-regular-line-height);
+  font-style: var(--paragraph-200-regular-font-style);
+}
+
+.element .text-wrapper-12 {
+  position: relative;
+  width: 125.83px;
+  font-family: var(--paragraph-200-regular-font-family);
+  font-weight: var(--paragraph-200-regular-font-weight);
+  color: var(--themebodymuted);
+  font-size: var(--paragraph-200-regular-font-size);
+  letter-spacing: var(--paragraph-200-regular-letter-spacing);
+  line-height: var(--paragraph-200-regular-line-height);
+  font-style: var(--paragraph-200-regular-font-style);
+}
+
+.element .text-wrapper-13 {
+  position: relative;
+  width: 33.05px;
+  font-family: var(--paragraph-200-regular-font-family);
+  font-weight: var(--paragraph-200-regular-font-weight);
+  color: var(--themebodymuted);
+  font-size: var(--paragraph-200-regular-font-size);
+  letter-spacing: var(--paragraph-200-regular-letter-spacing);
+  line-height: var(--paragraph-200-regular-line-height);
+  font-style: var(--paragraph-200-regular-font-style);
+}
+
+.element .text-wrapper-14 {
+  position: relative;
+  width: 36.86px;
+  font-family: var(--paragraph-200-regular-font-family);
+  font-weight: var(--paragraph-200-regular-font-weight);
+  color: var(--themebodymuted);
+  font-size: var(--paragraph-200-regular-font-size);
+  letter-spacing: var(--paragraph-200-regular-letter-spacing);
+  line-height: var(--paragraph-200-regular-line-height);
+  font-style: var(--paragraph-200-regular-font-style);
+}
+
+.element .text-wrapper-15 {
+  width: 92.79px;
+  margin-top: -1.00px;
+  font-weight: var(--heading-400-font-weight);
+  color: var(--themebody);
+  font-size: var(--heading-400-font-size);
+  line-height: var(--heading-400-line-height);
+  position: relative;
+  font-family: var(--heading-400-font-family);
+  letter-spacing: var(--heading-400-letter-spacing);
+  font-style: var(--heading-400-font-style);
+}
+
+.element .text-wrapper-16 {
+  position: relative;
+  width: 69.91px;
+  margin-top: -1.00px;
+  font-family: var(--paragraph-200-regular-font-family);
+  font-weight: var(--paragraph-200-regular-font-weight);
+  color: var(--themebodymuted);
+  font-size: var(--paragraph-200-regular-font-size);
+  letter-spacing: var(--paragraph-200-regular-letter-spacing);
+  line-height: var(--paragraph-200-regular-line-height);
+  font-style: var(--paragraph-200-regular-font-style);
+}
+
+.element .text-wrapper-17 {
+  position: relative;
+  width: 81.35px;
+  font-family: var(--paragraph-200-regular-font-family);
+  font-weight: var(--paragraph-200-regular-font-weight);
+  color: var(--themebodymuted);
+  font-size: var(--paragraph-200-regular-font-size);
+  letter-spacing: var(--paragraph-200-regular-letter-spacing);
+  line-height: var(--paragraph-200-regular-line-height);
+  font-style: var(--paragraph-200-regular-font-style);
+}
+
+.element .text-wrapper-18 {
+  position: relative;
+  width: 91.52px;
+  font-family: var(--paragraph-200-regular-font-family);
+  font-weight: var(--paragraph-200-regular-font-weight);
+  color: var(--themebodymuted);
+  font-size: var(--paragraph-200-regular-font-size);
+  letter-spacing: var(--paragraph-200-regular-letter-spacing);
+  line-height: var(--paragraph-200-regular-line-height);
+  font-style: var(--paragraph-200-regular-font-style);
+}
+
+.element .text-wrapper-19 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: var(--heading-400-font-family);
+  font-weight: var(--heading-400-font-weight);
+  color: var(--themebody);
+  font-size: var(--heading-400-font-size);
+  letter-spacing: var(--heading-400-letter-spacing);
+  line-height: var(--heading-400-line-height);
+  font-style: var(--heading-400-font-style);
+}
+
+.element .row-6 {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  flex: 0 0 auto;
+}
+:root {
+  --themewhite: rgba(255, 255, 255, 1);
+  --themeprimary: rgba(123, 97, 255, 1);
+  --themered: rgba(255, 0, 0, 1);
+  --themebody: rgba(22, 20, 20, 1);
+  --themeyellow: rgba(255, 168, 0, 1);
+  --themebodymuted: rgba(151, 151, 151, 1);
+  --themeprimarymuted: rgba(246, 244, 255, 1);
+  --main-white: rgba(255, 255, 255, 1);
+  --paragraph-200-regular-font-family: "Poppins", Helvetica;
+  --paragraph-200-regular-font-weight: 400;
+  --paragraph-200-regular-font-size: 14px;
+  --paragraph-200-regular-letter-spacing: 0px;
+  --paragraph-200-regular-line-height: 20px;
+  --paragraph-200-regular-font-style: normal;
+  --paragraph-200-medium-font-family: "Poppins", Helvetica;
+  --paragraph-200-medium-font-weight: 500;
+  --paragraph-200-medium-font-size: 14px;
+  --paragraph-200-medium-letter-spacing: 0px;
+  --paragraph-200-medium-line-height: 20px;
+  --paragraph-200-medium-font-style: normal;
+  --heading-100-font-family: "Poppins", Helvetica;
+  --heading-100-font-weight: 600;
+  --heading-100-font-size: 48px;
+  --heading-100-letter-spacing: 0px;
+  --heading-100-line-height: 62px;
+  --heading-100-font-style: normal;
+  --button-100-medium-font-family: "Poppins", Helvetica;
+  --button-100-medium-font-weight: 500;
+  --button-100-medium-font-size: 18px;
+  --button-100-medium-letter-spacing: 0px;
+  --button-100-medium-line-height: 18px;
+  --button-100-medium-font-style: normal;
+  --paragraph-100-medium-font-family: "Poppins", Helvetica;
+  --paragraph-100-medium-font-weight: 500;
+  --paragraph-100-medium-font-size: 16px;
+  --paragraph-100-medium-letter-spacing: 0px;
+  --paragraph-100-medium-line-height: 24px;
+  --paragraph-100-medium-font-style: normal;
+  --heading-200-font-family: "Poppins", Helvetica;
+  --heading-200-font-weight: 600;
+  --heading-200-font-size: 32px;
+  --heading-200-letter-spacing: 0px;
+  --heading-200-line-height: 48px;
+  --heading-200-font-style: normal;
+  --button-200-regular-font-family: "Poppins", Helvetica;
+  --button-200-regular-font-weight: 400;
+  --button-200-regular-font-size: 16px;
+  --button-200-regular-letter-spacing: 0px;
+  --button-200-regular-line-height: 16px;
+  --button-200-regular-font-style: normal;
+  --heading-300-font-family: "Poppins", Helvetica;
+  --heading-300-font-weight: 600;
+  --heading-300-font-size: 24px;
+  --heading-300-letter-spacing: 0px;
+  --heading-300-line-height: 36px;
+  --heading-300-font-style: normal;
+  --paragraph-100-regular-font-family: "Poppins", Helvetica;
+  --paragraph-100-regular-font-weight: 400;
+  --paragraph-100-regular-font-size: 16px;
+  --paragraph-100-regular-letter-spacing: 0px;
+  --paragraph-100-regular-line-height: 24px;
+  --paragraph-100-regular-font-style: normal;
+  --paragraph-300-regular-font-family: "Poppins", Helvetica;
+  --paragraph-300-regular-font-weight: 400;
+  --paragraph-300-regular-font-size: 12px;
+  --paragraph-300-regular-letter-spacing: 0px;
+  --paragraph-300-regular-line-height: 16px;
+  --paragraph-300-regular-font-style: normal;
+  --heading-400-font-family: "Poppins", Helvetica;
+  --heading-400-font-weight: 500;
+  --heading-400-font-size: 18px;
+  --heading-400-letter-spacing: 0px;
+  --heading-400-line-height: 28px;
+  --heading-400-font-style: normal;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="element">
+      <div class="grid"></div>
+      <div class="wrapper">
+        <div class="section-main">
+          <img class="bg-image" src="https://c.animaapp.com/mgfd692rcyUzJT/img/bg-image.png" />
+          <div class="container">
+            <header class="header">
+              <div class="logo">
+                <img class="frame" src="https://c.animaapp.com/mgfd692rcyUzJT/img/frame-23.svg" />
+                <img class="img" src="https://c.animaapp.com/mgfd692rcyUzJT/img/business-send-plane-fill.svg" />
+              </div>
+              <div class="main-menu">
+                <div class="menu-item"><div class="placeholder">home</div></div>
+                <div class="menu-item"><div class="placeholder">hotels</div></div>
+                <div class="menu-item"><div class="placeholder">restaurants</div></div>
+                <div class="menu-item"><div class="placeholder">tours</div></div>
+                <div class="menu-item"><div class="placeholder">destinations</div></div>
+                <div class="menu-item"><div class="placeholder">activities</div></div>
+                <div class="menu-item"><div class="placeholder">contact</div></div>
+              </div>
+              <div class="user">
+                <div class="user-data">
+                  <div class="text-wrapper">Holla,</div>
+                  <div class="div">Ales Nesetril</div>
+                </div>
+                <div class="avatar">
+                  <div class="user-photo">
+                    <img class="img-2" src="https://c.animaapp.com/mgfd692rcyUzJT/img/img-4.png" />
+                  </div>
+                  <div class="notification-dot"></div>
+                </div>
+              </div>
+            </header>
+            <div class="cta">
+              <div class="title"><p class="p">Discover the most engaging places</p></div>
+              <div class="primary-icon-left">
+                <img class="img-3" src="https://c.animaapp.com/mgfd692rcyUzJT/img/system---search-line-1.svg" />
+                <div class="div-2"><div class="label">Discover on 3D Globe</div></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="search-row">
+                <div class="input">
+                  <div class="div-2">
+                    <img class="img-3" src="https://c.animaapp.com/mgfd692rcyUzJT/img/map---map-pin-line.svg" />
+                  </div>
+                  <div class="content">
+                    <div class="label-2">Location</div>
+                    <div class="placeholder-2">Explore nearby destinations</div>
+                  </div>
+                </div>
+                <div class="v-default"></div>
+                <div class="input-2">
+                  <div class="div-2">
+                    <img class="img-3" src="https://c.animaapp.com/mgfd692rcyUzJT/img/map---riding-line.svg" />
+                  </div>
+                  <div class="content">
+                    <div class="label-2">Activity</div>
+                    <div class="placeholder-2">All Activities</div>
+                  </div>
+                </div>
+                <div class="v-default"></div>
+                <div class="input-2">
+                  <div class="div-2">
+                    <img
+                      class="img-3"
+                      src="https://c.animaapp.com/mgfd692rcyUzJT/img/business-calendar-event-fill.svg"
+                    />
+                  </div>
+                  <div class="content">
+                    <div class="label-2">When</div>
+                    <div class="placeholder-2">Choose a Date</div>
+                  </div>
+                </div>
+                <div class="v-default"></div>
+                <div class="input-2">
+                  <div class="div-2">
+                    <img class="img-3" src="https://c.animaapp.com/mgfd692rcyUzJT/img/map---map-pin-line-2.svg" />
+                  </div>
+                  <div class="content">
+                    <div class="label-2">Guests</div>
+                    <div class="placeholder-2">1 guest</div>
+                  </div>
+                </div>
+                <div class="primary-icon-left-2">
+                  <img class="img-3" src="https://c.animaapp.com/mgfd692rcyUzJT/img/system---search-line.svg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-popular">
+          <div class="container-2">
+            <div class="title-2"><div class="title-3">Popular Destinations</div></div>
+            <div class="row-2">
+              <div class="popular-destinations">
+                <div class="img-4"></div>
+                <div class="frame-2">
+                  <div class="name">Big Sur</div>
+                  <div class="where">California, USA</div>
+                </div>
+              </div>
+              <div class="popular-destinations">
+                <div class="img-5"></div>
+                <div class="frame-2">
+                  <div class="name">Prescott</div>
+                  <div class="where">Arizona, USA</div>
+                </div>
+              </div>
+              <div class="popular-destinations">
+                <div class="img-6"></div>
+                <div class="frame-2">
+                  <div class="name">Fort Mayers</div>
+                  <div class="where">Florida, USA</div>
+                </div>
+              </div>
+              <div class="popular-destinations">
+                <div class="img-7"></div>
+                <div class="frame-2">
+                  <div class="name">Tucson</div>
+                  <div class="where">Arizona, USA</div>
+                </div>
+              </div>
+              <div class="popular-destinations">
+                <div class="img-8"></div>
+                <div class="frame-2">
+                  <div class="name">St. Joseph</div>
+                  <div class="where">Michigan, USA</div>
+                </div>
+              </div>
+              <div class="popular-destinations">
+                <div class="img-9"></div>
+                <div class="frame-2">
+                  <div class="name">Madrid</div>
+                  <div class="where">Spain</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          class="section-hotels-and"
+          src="https://c.animaapp.com/mgfd692rcyUzJT/img/section---hotels-and-restaurants.png"
+        />
+        <div class="container-wrapper">
+          <div class="container-2">
+            <div class="title-2">
+              <div class="title-3">Travel Tips and Advice</div>
+              <div class="secondary-icon-right">
+                <div class="div-2"><div class="label-3">View all</div></div>
+                <img
+                  class="system-arrow-right"
+                  src="https://c.animaapp.com/mgfd692rcyUzJT/img/system---arrow-right-line.svg"
+                />
+              </div>
+            </div>
+            <div class="row-2">
+              <div class="travel-tips-and">
+                <div class="img-10"></div>
+                <div class="content-2">
+                  <div class="row-3">
+                    <div class="title-4"><p class="title-5">East Village Ice Cream Crawl</p></div>
+                    <div class="p-wrapper">
+                      <p class="p-2">
+                        We will stop at five different world-class ice cream shops on this 1.5 mile 1.5 hour tour. At
+                        each ice cream store we&#39;ll explore the story behind the business and see what makes the ice
+                        cream unique as you savor every…
+                      </p>
+                    </div>
+                  </div>
+                  <div class="post-info">
+                    <div class="div-3">
+                      <img
+                        class="img"
+                        src="https://c.animaapp.com/mgfd692rcyUzJT/img/business---calendar-2-line-3.svg"
+                      />
+                      <div class="text-wrapper-2">Today</div>
+                    </div>
+                    <div class="div-3">
+                      <img class="img" src="https://c.animaapp.com/mgfd692rcyUzJT/img/user---user-line-1.svg" />
+                      <div class="text-wrapper-2">Maria Philips</div>
+                    </div>
+                    <div class="div-3">
+                      <img
+                        class="img"
+                        src="https://c.animaapp.com/mgfd692rcyUzJT/img/communication---chat-3-line.svg"
+                      />
+                      <div class="text-wrapper-2">2</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="travel-tips-and">
+                <div class="img-11"></div>
+                <div class="content-2">
+                  <div class="row-3">
+                    <div class="title-4"><p class="title-5">Brooklyn Bridge cinematic photo walk</p></div>
+                    <div class="p-wrapper">
+                      <p class="p-2">
+                        This experience takes place at the Brooklyn Bridge Park and Brooklyn Bridge, but I’m always open
+                        to capture clients at different locations upon request for an additional charge.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="post-info">
+                    <div class="div-3">
+                      <img
+                        class="img"
+                        src="https://c.animaapp.com/mgfd692rcyUzJT/img/business---calendar-2-line-1.svg"
+                      />
+                      <div class="text-wrapper-2">Today</div>
+                    </div>
+                    <div class="div-3">
+                      <img class="img" src="https://c.animaapp.com/mgfd692rcyUzJT/img/user---user-line-1.svg" />
+                      <div class="text-wrapper-2">James Calzoni</div>
+                    </div>
+                    <div class="div-3">
+                      <img
+                        class="img"
+                        src="https://c.animaapp.com/mgfd692rcyUzJT/img/communication---chat-3-line.svg"
+                      />
+                      <div class="text-wrapper-2">17</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-wrapper">
+          <div class="container-2">
+            <div class="title-2">
+              <div class="title-3">Activities</div>
+              <div class="secondary-icon-right">
+                <div class="div-2"><div class="label-3">View all</div></div>
+                <img
+                  class="system-arrow-right"
+                  src="https://c.animaapp.com/mgfd692rcyUzJT/img/system---arrow-right-line.svg"
+                />
+              </div>
+            </div>
+            <div class="row-2">
+              <div class="activities">
+                <div class="img-12"></div>
+                <div class="name-wrapper"><div class="name-2">Sailing</div></div>
+              </div>
+              <div class="activities">
+                <div class="img-13"></div>
+                <div class="name-wrapper"><div class="name-2">Climbing</div></div>
+              </div>
+              <div class="activities">
+                <div class="img-14"></div>
+                <div class="name-wrapper"><div class="name-2">Skiing</div></div>
+              </div>
+              <div class="activities">
+                <div class="img-15"></div>
+                <div class="name-wrapper"><div class="name-2">Hiking</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-about-us">
+          <div class="container-3">
+            <div class="col">
+              <div class="title-4"><div class="title-3">About Us</div></div>
+              <p class="text-wrapper-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a sapien justo. Nulla facilisis
+                tristique imperdiet. Nullam a placerat odio. Sed in ex augue. Aliquam porta consectetur lorem sit amet
+                ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+              </p>
+              <div class="secondary-icon-right">
+                <div class="div-2"><div class="label-3">Read more</div></div>
+                <img
+                  class="system-arrow-right"
+                  src="https://c.animaapp.com/mgfd692rcyUzJT/img/system---arrow-right-line.svg"
+                />
+              </div>
+            </div>
+            <div class="img-wrapper">
+              <div class="image-wrapper">
+                <img class="image" src="https://c.animaapp.com/mgfd692rcyUzJT/img/image-23.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-footer">
+          <div class="row-wrapper">
+            <div class="row-4">
+              <div class="col-2">
+                <div class="row-5">
+                  <div class="logo">
+                    <img class="frame" src="https://c.animaapp.com/mgfd692rcyUzJT/img/frame-23.svg" />
+                    <img class="img" src="https://c.animaapp.com/mgfd692rcyUzJT/img/business-send-plane-fill.svg" />
+                  </div>
+                  <p class="text-wrapper-4">
+                    We always make our customers happy by providing as many choises as possible
+                  </p>
+                </div>
+                <div class="socials">
+                  <img class="img-16" src="https://c.animaapp.com/mgfd692rcyUzJT/img/group-1.png" />
+                  <img class="img-16" src="https://c.animaapp.com/mgfd692rcyUzJT/img/logos-twitter-fill.svg" />
+                  <img class="img-16" src="https://c.animaapp.com/mgfd692rcyUzJT/img/logos-instagram-fill.svg" />
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="div-4">
+                  <div class="text-wrapper-5">About</div>
+                  <div class="ul">
+                    <div class="text-wrapper-6">About Us</div>
+                    <div class="text-wrapper-7">Features</div>
+                    <div class="text-wrapper-8">News</div>
+                    <div class="text-wrapper-9">Menu</div>
+                  </div>
+                </div>
+                <div class="div-4">
+                  <div class="text-wrapper-10">Company</div>
+                  <div class="ul">
+                    <div class="text-wrapper-11">Why 2rism</div>
+                    <div class="text-wrapper-12">Partner With Us</div>
+                    <div class="text-wrapper-13">FAQ</div>
+                    <div class="text-wrapper-14">Blog</div>
+                  </div>
+                </div>
+                <div class="div-4">
+                  <div class="text-wrapper-15">Support</div>
+                  <div class="ul">
+                    <div class="text-wrapper-16">Account</div>
+                    <div class="text-wrapper-12">Support Center</div>
+                    <div class="text-wrapper-17">Feedback</div>
+                    <div class="text-wrapper-18">Contact Us</div>
+                  </div>
+                </div>
+              </div>
+              <div class="div-4">
+                <p class="text-wrapper-19">Subscribe on our destination review newsletters</p>
+                <div class="row-6">
+                  <div class="input">
+                    <div class="div-2">
+                      <img class="img-3" src="https://c.animaapp.com/mgfd692rcyUzJT/img/business---mail-line.svg" />
+                    </div>
+                    <div class="content">
+                      <div class="label-2">Your Email</div>
+                      <div class="placeholder-2">johndoe@gmail.com</div>
+                    </div>
+                  </div>
+                  <div class="primary-icon-left">
+                    <img class="img-3" src="https://c.animaapp.com/mgfd692rcyUzJT/img/system-arrow-right-fill.svg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

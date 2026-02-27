@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Details Form</title>
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2FD4A7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h1 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+}
+
+p {
+    margin: 10px 0;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+form input, form select, form textarea, form button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form button {
+    background-color: #2FD4A7;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #28b791;
+}
+
+form span {
+    color: red;
+}
+
+.radio-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Client Details</h1>
+        <p>Enter the details of all incoming clients.</p>
+        <form>
+            <label>Client Name <span>*</span></label>
+            <input type="text" name="client-name" required>
+
+            <label>Company <span>*</span></label>
+            <input type="text" name="company" required>
+
+            <label>Title</label>
+            <input type="text" name="title">
+
+            <label>Department <span>*</span></label>
+            <select name="department" required>
+                <option value="" disabled selected>-Select-</option>
+                <option>Marketing</option>
+                <option>Sales</option>
+                <option>IT</option>
+            </select>
+
+            <label>Preferred contact method</label>
+            <div class="radio-group">
+                <input type="radio" name="contact-method" value="email" id="email">
+                <label for="email">Email</label>
+                <input type="radio" name="contact-method" value="phone" id="phone">
+                <label for="phone">Phone</label>
+            </div>
+
+            <label>Company address <span>*</span></label>
+            <input type="text" name="address-line-1" placeholder="Street Address" required>
+            <input type="text" name="address-line-2" placeholder="Address Line 2">
+            <input type="text" name="city" placeholder="City" required>
+            <input type="text" name="state" placeholder="State/Region/Province" required>
+            <input type="text" name="zip" placeholder="Postal / Zip Code" required>
+            <input type="text" name="country" placeholder="Country" required>
+
+            <label>Company website <span>*</span></label>
+            <input type="url" name="website" required>
+
+            <label>Company logo</label>
+            <input type="file" name="logo" accept="image/*">
+
+            <label>Working Hours <span>*</span></label>
+            <input type="text" name="working-hours" required>
+
+            <label>Working Days</label>
+            <input type="text" name="working-days">
+
+            <label>Billing Cycle</label>
+            <input type="date" name="billing-cycle">
+
+            <label>Additional Information</label>
+            <textarea name="additional-info"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

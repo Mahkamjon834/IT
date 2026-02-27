@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            width: 700px;
+        }
+
+        .theme-header {
+            background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+            padding: 25px;
+            text-align: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .clock-container {
+            background: #2c3e50;
+            margin: 30px;
+            border-radius: 15px;
+            padding: 40px 20px;
+        }
+
+        .days {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            color: #95a5a6;
+        }
+
+        .days span {
+            padding: 5px 10px;
+        }
+
+        .days span.active {
+            background: #00d2ff;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .vaqt {
+            text-align: center;
+        }
+
+        .time {
+            font-size: 64px;
+            font-weight: bold;
+            color: #ecf0f1;
+            font-family: 'Courier New', monospace;
+        }
+
+        .pm {
+            font-size: 24px;
+            color: #95a5a6;
+            margin-left: 10px;
+        }
+
+        .date-info {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #bdc3c7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="theme-header">
+            Switch Theme
+        </div>
+
+        <div class="clock-container">
+            <div class="days">
+                <span>MON</span>
+                <span>TUE</span>
+                <span>WED</span>
+                <span>THU</span>
+                <span>FRI</span>
+                <span>SAT</span>
+                <span>SUN</span>
+            </div>
+
+            <div class="vaqt">
+                <span class="time">12:30:20</span><span class="pm">PM</span>
+                <div class="date-info">0000-00-00</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function formatTime(value) {
+            return value < 10 ? 0${value} : value;
+        }
+
+        function getTimes() {
+            let vaqt = new Date();
+            let yil = vaqt.getFullYear();
+            let oy = formatTime(vaqt.getMonth() + 1);
+            let kun = formatTime(vaqt.getDate());
+            let soat = formatTime(vaqt.getHours());
+            let minut = formatTime(vaqt.getMinutes());
+            let sekund = formatTime(vaqt.getSeconds());
+
+            const tims = document.querySelector(".time");
+            tims.innerHTML = ${soat}:${minut}:${sekund};
+            
+            const sana = document.querySelector(".date-info");
+            sana.innerHTML = ${yil}-${oy}-${kun};
+
+
+            let bugungiKun = vaqt.getDay();
+            if (bugungiKun === 0) bugungiKun = 6;
+            else bugungiKun = bugungiKun - 1;
+
+            let kunlar = document.querySelectorAll('.days span');
+            for (let i = 0; i < kunlar.length; i++) {
+                kunlar[i].classList.remove('active');
+            }
+
+
+            kunlar[bugungiKun].classList.add('active');
+        }
+
+        setInterval(getTimes, 1000);
+        getTimes();
+    </script>
+</body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy S25 FE - Samsung</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SamsungOne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #fff;
+        }
+
+        header {
+            background: #fff;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 15px 0;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #1428a0;
+        }
+
+        .support-link {
+            color: #000;
+            text-decoration: none;
+            font-size: 13px;
+            margin-right: 20px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .product-header {
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .product-specs {
+            display: flex;
+            gap: 20px;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .model-number {
+            color: #999;
+            font-size: 13px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 30px;
+            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 40px;
+        }
+
+        .tab {
+            padding: 15px 0;
+            color: #666;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .tab.active {
+            color: #000;
+            border-bottom-color: #000;
+        }
+
+        .product-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .product-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .phone-mockup {
+            width: 400px;
+            height: 550px;
+            background: linear-gradient(135deg, #4a5a8c 0%, #5b6a99 50%, #7b8bc4 100%);
+            border-radius: 40px;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .phone-screen {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            right: 12px;
+            bottom: 12px;
+            background: linear-gradient(180deg, #7b8bc4 0%, #9ba8d9 50%, #b8c1e8 100%);
+            border-radius: 30px;
+            overflow: hidden;
+        }.notch {
+            width: 30px;
+            height: 30px;
+            background: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .s-design {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: rgba(139, 148, 194, 0.3);
+        }
+
+        .s-design::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: rgba(159, 168, 214, 0.3);
+        }
+
+        .camera-module {
+            position: absolute;
+            top: 60px;
+            left: 30px;
+            width: 80px;
+            height: 200px;
+        }
+
+        .camera-lens {
+            width: 55px;
+            height: 55px;
+            background: #000;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid #2a3a5c;
+        }
+
+        .product-options {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .option-section h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .color-label {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .color-options {
+            display: flex;
+            gap: 15px;
+        }
+
+        .color-option {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .color-option.dark {
+            background: #2a2a2a;
+        }
+
+        .color-option.blue {
+            background: #5b6a99;
+            border-color: #1428a0;
+            box-shadow: 0 0 0 2px #fff, 0 0 0 4px #1428a0;
+        }
+
+        .storage-options, .memory-options {
+            display: flex;
+            gap: 15px;
+        }
+
+        .option-btn {
+            flex: 1;
+            padding: 20px;
+            border: 2px solid #ddd;
+            background: #fff;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .option-btn:hover {
+            border-color: #1428a0;
+        }
+
+        .option-btn.active {
+            border-color: #1428a0;
+            background: #f5f8ff;
+            color: #1428a0;
+        }
+
+        .product-summary {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .summary-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .summary-specs {
+            display: flex;
+            gap: 15px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .buy-button {
+            width: 100%;
+            padding: 18px;
+            background: #1428a0;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .buy-button:hover {
+            background: #0d1a70;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(20, 40, 160, 0.3);
+        }
+
+        @media (max-width: 968px) {
+            .product-content {
+                grid-template-columns: 1fr;
+            }nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">SAMSUNG</div>
+            <nav>
+                <a href="#">Акции</a>
+                <a href="#">Мобильные устройства</a>
+                <a href="#">ТВ и Аудио</a>
+                <a href="#">Бытовая техника</a>
+                <a href="#">Мониторы</a>
+                <a href="#">Носимые устройства</a>
+                <a href="#">Аксессуары</a>
+            </nav>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <a href="#" class="support-link">Поддержка</a>
+                <div class="search">🔍 Поиск</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="product-header">
+            <div class="badge">Новинка</div>
+            <h1 class="product-title">Galaxy S25 FE</h1>
+            <div class="product-specs">
+                <span>Тёмно-синий</span>
+                <span>256 ГБ</span>
+                <span>8 ГБ</span>
+            </div>
+            <div class="model-number">SM-S731B08CSGZ</div>
+        </div>
+
+        <div class="tabs">
+            <a href="#" class="tab active">Особенности</a>
+            <a href="#" class="tab">Характеристики</a>
+            <a href="#" class="tab">Поддержка</a>
+        </div>
+
+        <div class="product-content">
+            <div class="product-image">
+                <div class="phone-mockup">
+                    <div class="camera-module">
+                        <div class="camera-lens"></div>
+                        <div class="camera-lens"></div>
+                        <div class="camera-lens"></div>
+                    </div>
+                    <div class="phone-screen">
+                        <div class="notch"></div>
+                        <div class="s-design"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-options">
+                <div class="option-section">
+                    <h3>Выберите Цвет</h3>
+                    <div class="color-label">Цвет : Тёмно-синий</div>
+                    <div class="color-options">
+                        <div class="color-option dark"></div>
+                        <div class="color-option blue"></div>
+                    </div>
+                </div>
+
+                <div class="option-section">
+                    <h3>Выберите Хранилище</h3>
+                    <div class="storage-options">
+                        <button class="option-btn">128 ГБ</button>
+                        <button class="option-btn active">256 ГБ</button>
+                    </div>
+                </div>
+
+                <div class="option-section">
+                    <h3>Выберите Память</h3>
+                    <div class="memory-options">
+                        <button class="option-btn active">8 ГБ</button>
+                    </div>
+                </div>
+
+                <div class="product-summary">
+                    <div class="summary-title">Galaxy S25 FE</div>
+                    <div class="summary-specs">
+                        <span>Тёмно-синий</span>
+                        <span>|</span>
+                        <span>256 ГБ</span>
+                        <span>|</span>
+                        <span>8 ГБ</span>
+                    </div>
+                </div>
+
+                <button class="buy-button">Где купить</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

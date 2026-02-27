@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic Futbol O'yini</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0d0d0d; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    canvas { border: 5px solid #fff; }
+    h1 {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 24px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Futuristic Futbol O'yini</h1>
+  <canvas id="gameCanvas"></canvas>
+
+  <script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = 800;
+    canvas.height = 600;
+
+    const ball = {
+      x: canvas.width / 2,
+      y: canvas.height / 2,
+      radius: 10,
+      speed: 4,
+      dx: 4,
+      dy: -4,
+      color: "white"
+    };
+
+    const player1 = {
+      x: 20,
+      y: canvas.height / 2 - 30,
+      width: 10,
+      height: 60,
+      speed: 10,
+      color: "blue"
+    };
+
+    const player2 = {
+      x: canvas.width - 30,
+      y: canvas.height / 2 - 30,
+      width: 10,
+      height: 60,
+      speed: 10,
+      color: "red"
+    };
+
+    let player1Move = 0;
+    let player2Move = 0;
+
+    function drawBall() {
+      ctx.beginPath();
+      ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+      ctx.fillStyle = ball.color;
+      ctx.fill();
+      ctx.closePath();
+    }
+
+    function drawPlayer(player) {
+      ctx.beginPath();
+      ctx.rect(player.x, player.y, player.width, player.height);
+      ctx.fillStyle = player.color;
+      ctx.fill();
+      ctx.closePath();
+    }
+
+    function movePlayer() {
+      player1.y += player1Move;
+      player2.y += player2Move;
+
+      // Prevent player1 from going out of bounds
+      if (player1.y < 0) player1.y = 0;
+      if (player1.y + player1.height > canvas.height) player1.y = canvas.height - player1.height;
+
+      // Prevent player2 from going out of bounds
+      if (player2.y < 0) player2.y = 0;
+      if (player2.y + player2.height > canvas.height) player2.y = canvas.height - player2.height;
+    }
+
+    function moveBall() {
+      ball.x += ball.dx;
+      ball.y += ball.dy;
+
+      // Bounce off top and bottom
+      if (ball.y - ball.radius < 0 || ball.y + ball.radius > canvas.height) {
+        ball.dy = -ball.dy;
+      }
+
+      // Check if ball hits players
+      if (ball.x - ball.radius < player1.x + player1.width && ball.y > player1.y && ball.y < player1.y + player1.height) {
+        ball.dx = -ball.dx;
+      }
+
+      if (ball.x + ball.radius > player2.x && ball.y > player2.y && ball.y < player2.y + player2.height) {
+        ball.dx = -ball.dx;
+      }
+
+      // Ball out of bounds (reset the ball)
+      if (ball.x - ball.radius < 0 || ball.x + ball.radius > canvas.width) {
+        ball.x = canvas.width / 2;
+        ball.y = canvas.height / 2;
+        ball.dx = 4;
+        ball.dy = -4;
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawBall();
+      drawPlayer(player1);
+      drawPlayer(player2);
+      moveBall();
+      movePlayer();
+
+      requestAnimationFrame(draw);
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowUp") player2Move = -player2.speed;
+      if (e.key === "ArrowDown") player2Move = player2.speed;
+      if (e.key === "w") player1Move = -player1.speed;
+      if (e.key === "s") player1Move = player1.speed;
+    });
+
+    document.addEventListener("keyup", (e) => {
+      if (e.key === "ArrowUp" || e.key === "ArrowDown") player2Move = 0;
+      if (e.key === "w" || e.key === "s") player1Move = 0;
+    });
+
+    draw();
+  </script>
+</body>
+</html>

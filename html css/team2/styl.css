@@ -1,0 +1,36 @@
+.polka1{
+    margin: 50px;
+    padding-top: 80px;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(48, 48, 48);
+}
+button{
+    background-color: rgb(234, 68, 68);
+    color: white;
+    border-radius: 6px;
+    border: 1px solid rgb(217, 58, 58);
+    font-size: 25px;
+    margin: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+.td{
+    font-size: 34px;
+    color: red;
+}
+table,tr,td{
+padding-left: 37px;
+padding-right: 37px;
+font-family: Arial, Helvetica, sans-serif;
+}
+td{
+    color: rgb(67, 66, 66);
+    font-size: 24px;
+}
+.holodilnik{
+    margin-left: 170px;
+    margin-right: 170px;
+}

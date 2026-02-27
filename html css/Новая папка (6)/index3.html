@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лендинг</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: aqua;
+      color: rgb(26, 229, 161);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header"
+        "hero"
+        "content"
+        "sidebar"
+        "footer";
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    header {
+      grid-area: header;
+      background: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .hero {
+      grid-area: hero;
+      background-color: #b35252;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .card {
+      grid-area: content;
+      background-color: #2c1c86;
+      padding: 1rem;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #babd11;
+      padding: 1rem;
+    }
+
+    footer {
+      grid-area: footer;
+background: #ba19b8;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+
+    @media (min-width: 800px) {
+      .grid-container {
+        grid-template-areas:
+          "header  header"
+          "hero    hero"
+          "content sidebar"
+          "footer  footer";
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <header><h1>Lorem ipsum dolor sit.</h1></header>
+    <div class="hero">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere tempora vero perferendis animi qui quaerat.</div>
+    <main class="card"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, asperiores.</h1></main>
+    <div class="sidebar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, dicta.</div>
+    <footer>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, similique?</footer>
+  </div>
+</body>
+</html>

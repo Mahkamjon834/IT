@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .qa{
+            font-size: 25px;
+            background-color: aqua;
+            border: 2px solid red;
+        }
+        .qa:hover{
+        background-color: brown;
+        color: antiquewhite;
+        transform: translateY(-15);
+        transition: 3s;
+        }
+        input{
+            background-color: antiquewhite;
+            border: 5px solid blue;
+            width: 300px;height: 300px;
+        }
+        input:focus{
+            border: 2px inset yellow;
+            outline: none;
+            background: rgb(37, 202, 224);
+            width: 100%;
+            height: 200px;
+            transition: 6s;
+            border-radius: 50px;
+            box-shadow:  0 45px 70px aquamarine;
+        }
+        ul{
+            border: 5px solid red;
+            padding: 10px;
+            background-color: rgb(205, 110, 110);
+
+        }
+        li{
+            list-style-type: none;
+            color: rgb(132, 223, 34);
+        }
+        li:nth-child(even){
+            border: 2px solid silver;
+            margin: 10px;
+            background-color: aqua;
+        }
+        li:nth-child(odd){
+            border: 2px solid silver;
+            margin: 10px;
+            background-color: rgb(25, 196, 51);
+        }
+        li:nth-child(6  ){
+            border: 2px solid rgb(132, 42, 202);
+            margin: 10px;
+            background-color: rgb(132, 11, 189);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.youtube.com/" class="qa">Lorem, ipsum dolor.</a><br><br><br><br><br><br><br>
+    <input type="text"><br><br><br><br><br><br><br><br><br><br>
+    <ul >
+    <li> Lorem ipsum dolor sit amet.</li>
+    <li> Lorem ipsum dolor sit amet.</li>
+    <li> Lorem ipsum dolor sit amet.</li>
+    <li> Lorem ipsum dolor sit amet.</li>
+    <li> Lorem ipsum dolor sit amet.</li>
+    <li> Lorem ipsum dolor sit amet.</li>
+    <li> Lorem ipsum dolor sit amet.</li>
+    <li> Lorem ipsum dolor sit amet.</li>
+    <li> Lorem ipsum dolor sit amet.</li>
+    <li> Lorem ipsum dolor sit amet.</li>
+</ul>
+<style>
+    input{
+        font-size: 18px;
+        color: black;
+        transition: 1s ease; 
+    }
+</style>
+<div>
+    <input type="checkbox" id="q1">
+    <label for="q1">subscribe</label>
+</div>
+<div>
+    <input type="dificult" id="q2">
+    <label for="q2">subscribe</label>
+    <br><br><br><br><br><br><br><br><br><br>
+</div>
+</body>
+</html>

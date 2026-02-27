@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сайт-визитка</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      background: #1e1e1e;
+      line-height: 1.6;
+    }
+
+    header {
+      position: relative;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      padding: 60px 20px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50%;
+      width: 200%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      transform: rotate(-10deg);
+      z-index: 0;
+    }
+
+    header h1 {
+      font-size: 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+      position: relative;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      height: 3px;
+      background: #00f2fe;
+      width: 60px;
+      margin-top: 10px;
+    }
+
+    .about p {
+      font-size: 18px;
+      max-width: 800px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background: #2a2a2a;
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, #4facfe, #00f2fe);
+      opacity: 0.1;
+      transform: rotate(25deg);
+    }
+
+    .service-card:hover {
+      transform: scale(1.05);
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Иван Петров</h1>
+    <p>Веб-разработчик | Фрилансер</p>
+  </header>
+
+  <div class="container">
+    <section class="about">
+      <h2>Обо мне</h2>
+      <p>Я занимаюсь созданием современных и удобных сайтов. Моя цель — делать интерфейсы, которые работают быстро, выглядят красиво и приносят результат клиенту.</p>
+    </section>
+
+    <section class="services">
+      <h2>Услуги</h2>
+      <div class="services">
+        <div class="service-card">
+          <h3>Создание сайтов</h3>
+          <p>Адаптивные, современные сайты под ключ: лендинги, корпоративные, портфолио.</p>
+        </div>
+        <div class="service-card">
+          <h3>Редизайн</h3>
+          <p>Улучшение существующих сайтов: интерфейс, структура, скорость.</p>
+        </div>
+        <div class="service-card">
+          <h3>SEO Оптимизация</h3>
+          <p>Настройка мета-тегов, семантика, повышение видимости в поисковиках.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    © 2025 Иван Петров. Все права защищены.
+  </footer>
+
+</body>
+</html>

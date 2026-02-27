@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alivio Landing</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+      background-color: #fff;
+      color: #333;
+    
+
+      
+      
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      border-bottom: 1px solid #ddd;
+      
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 50px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    .auth-buttons {
+      display: flex;
+      gap: 15px;
+      margin-left: 200px;
+    }
+    .auth-buttons a {
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .sign-in {
+        
+      color: #10b981;
+      background: transparent;
+    }
+    .start-trial {
+      background: #10b981;
+      color: white;
+    }
+    .hero {
+      width: 1920px;
+height: 900px;
+top: 86px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px;
+      background-image: url("/BG.png") 
+    }
+    .hero-text {
+      max-width: 500px;
+      margin-left: 280px;
+      margin-top: 200px;
+    }
+    .hero-text h1 {
+      font-size: 40px;
+      color: #065f46;
+      margin-bottom: 20px;
+    }
+    .hero-text p {
+      margin-bottom: 30px;
+      font-size: 16px;
+      color: #555;
+    }
+    .hero-text a {
+      padding: 12px 20px;
+      background-color: #10b981;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+ .logo{
+    margin-left: 280px;
+ }
+
+ 
+ 
+ .steps {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #fff;
+}
+
+.steps h2 {
+  color: #22675a;
+}
+
+.step-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 70px;margin-left: 50px;
+}
+
+.step {
+  flex: 1;
+  margin-left: -100px;
+  min-width: 280px;
+  max-width: 300px;
+}
+
+.step h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.step img {
+  width: 100%;
+  border-radius: 8px;
+}
+.how-it-works {
+
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.how-it-works .content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.left {
+  flex: 1;
+  min-width: 300px;
+  margin-top: 100px;
+}
+
+.right {
+  flex: 1;
+  min-width: 300px;
+  margin-top: 100px;
+}
+
+.label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: -120px;
+}
+
+.left h2 {
+  font-size: 32px;
+  color: #1e6a56;
+  line-height: 1.3;
+  font-weight: bold;
+  text-align: left;
+  font-size: 43px;
+  margin-left: -120px;
+}
+
+.right p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  text-align: left;
+  font-size: 17px;
+}
+.success-section {
+  display: flex;
+  background-color: #006d5b;
+  padding: 40px;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  font-family: sans-serif;
+}
+
+.success-text h2 {
+ 
+  margin: 0 0 10px;
+  
+}
+
+.success-text span {
+  font-weight: 700;
+}
+
+.success-text p {
+  margin: 10px 0 20px;
+  color: #cfe8e4;
+}
+
+.success-text button {
+  background-color: #00b386;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.success-video {
+  position: relative;
+}
+
+.success-video img {
+width: 800px;
+height: 500px;
+margin-left: 100px;
+margin-top: 150px;
+
+}
+
+
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.success-text{
+  margin-top: 190px;
+  margin-left: 200px;
+}
+.product-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 60px 40px;
+  font-family: sans-serif;
+  margin-left: -210px;
+
+}
+
+.product-image {
+  position: relative;
+  margin-top: 150px;
+}
+
+.product-image img {
+  width: 600px;
+height: 530px;
+top: 3629px;
+left: 335.68px;
+border-radius: 18.11px;
+
+}
+
+.custom-card {
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  z-index: 2;
+
+}
+
+.custom-card img {
+  width: 296px;
+height: 293px;
+top: 3983.1px;
+margin-left: -50px;
+
+}
+
+.custom-card ul {
+  padding-left: 15px;
+  margin-top: 5px;
+}
+
+.product-text {
+  max-width: 400px;
+  margin-top: -50px;
+}
+
+.product-text .label {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product-text h2 {
+  color: #008060;
+  font-size: 26px;
+  margin: 0 0 15px;
+}
+
+.product-text .desc {
+  color: #444;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.product-text button {
+  background-color: #00b386;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.footer {
+  background-color: #006d5b;
+  padding: 60px 40px;
+  color: white;
+  font-family: sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-left: 250px;
+}
+
+.footer h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 12px;
+}
+
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+  </style>
+</head>
+<body>
+    <header>
+      <div class="logo"><strong>Alivio</strong></div>
+      <nav>
+        <ul>
+          <li><a href="#">Why Alivio</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="#" class="sign-in">Sign In</a>
+        <a href="#" class="start-trial">Start Trial</a>
+      </div>
+    </header>
+  
+    <section class="hero">
+      <div class="hero-text">
+        <h1 style="font-size: 65px;">Be aware, <br> Manage well.</h1><br>
+        <p style="font-size: 20px;">Everyone experiences stress in different ways. Let Alivio guide you in a personalized journal experience to overcome your stress.</p><br>
+        <a style="font-size: 20px;" href="#">Find Your Way</a>
+      </div>
+    </section><br><br><br><br><br><br><br><br><br><br><br>
+
+
+  <section class="steps">
+    <section class="how-it-works">
+      <div class="content">
+        <div class="left">
+          <p class="label">How it works</p>
+          <h2>Understand & Release<br>the stress in 3 steps</h2>
+        </div>
+        <div class="right">
+          <p style="  font-size: 20px;">
+            Alivio offers as many journals it takes, tackling different areas such as anxiety, 
+            overwhelmedness, sadness, or anger, and a variety of personal causes, to help you 
+            become aware of your emotions, and guide you in how to manage stress.
+          </p>
+        </div>
+      </div>
+    </section><br><br><br><br><br><br><br><br><br><br>
+    <div class="step-list">
+      <div class="step">
+        <h3>Personalize</h3><br><br>
+        <p style="text-align: left;">Answer a quick survey about how you <br> normally journal, what causes your stress, <br> and what areas you’d like to work on. <br> This way we can fully personalize your <br> journey!</p><br>
+        <img src="Rectangle 30.png" alt="Personalize image">
+      </div>
+      <div class="step" style="margin-top: 180px">
+        <h3>Write & Understand</h3><br><br>
+        <p style="text-align: left;">Write, draw, reflect, understand. Alivio will <br> guide you through the prompts and will help <br> you manage your stress.</p><br>
+        <img src="/Rectangle 30 (1).png" alt="Write & Understand image">
+      </div>
+      <div class="step">
+        <h3>Alivio!</h3><br><br>
+        <p style="text-align: left;">Now you are aware and have a way to manage <br> and overcome your own stress. <br> What are you waiting for? Alivio today!</p><br>
+        <img src="/Group 29.png" alt="Alivio image">
+      </div>
+    </div>
+  </section>
+
+  <div class="success-section">
+    <div class="success-text">
+      <h2 style="font-size: 40px;">Let's hear about<br><span>Kayla's success story</span></h2><br>
+      <p style="font-size: 20px;">See how well Alivio works in a real customer's life.</p><br>
+      <button>Let's get started</button>
+    </div>
+    <div class="success-video">
+      <img src="/Video.png" alt="Kayla Video Thumbnail" />
+
+    </div>
+  </div>
+
+  <div class="product-section">
+    <div class="product-image">
+      <img src="/Image (5).png" alt="User Photo">
+      <div class="custom-card">
+        <img src="/Card.png" alt="Avatar">
+      </div>
+    </div>
+  
+    <div class="product-text">
+      <p class="label" style="margin-left: -0px; font-size: 20px;">Our product</p><br>
+      <h2 style="font-size: 35px;">You tell us your stress,<br> We make your diary</h2><br>
+      <p class="desc" style="font-size: 18px;">
+        Everyone experiences it, and in different ways.<br>
+        Let Alivio guide you, in a personalized journal <br>
+         experience, to overcome your stress.
+      </p><br><br>
+      <button>Find Your Way</button>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <h3 style="font-style: 40px;">Alivio</h3>
+      <ul>
+        <li style="font-style: 200px;"><a  href="#">Why Alivio</a></li>
+        <li style="font-style: 20px;"><a href="#">Solutions</a></li>
+        <li style="font-style: 20px;"><a href="#">Community</a></li>
+        <li style="font-style: 20px;"><a href="#">Pricing</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

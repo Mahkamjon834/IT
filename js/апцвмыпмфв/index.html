@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Type convertation,
+         Array methods</h1>
+    
+
+
+    <script >
+
+// console.log("hello world");
+
+// // string -> number
+// let son = "12"
+// console.log(son + 8);
+// console.log(Number(son) + 8);
+// console.log(parseInt(son) + 2);
+// console.log(parseFloat(son) + 2);
+// console.log(+son + 5);
+
+// // number -> string
+// let raq = 34
+// console.log(String(raq) + 6);
+// console.log(raq.toString() + 6);
+
+// // string -> array
+// let text = "Salom Dunyo hello world"
+// console.log(text);
+// console.log(text.split(" ")); // so'z
+// console.log(text.split("")); // harf
+
+// // array -> string
+// let arr = ["white", "black"]
+// console.log(arr);
+// console.log(arr.join());
+
+// // Array Methods
+// // pop(), push(), unshift(), shift()
+
+// let array = [1, 2, 3, 4, 5]
+
+// console.log(array);
+// // push() methodi  arrayni oxiriga element qo'shadi
+// array.push("end")
+// console.log(array);
+
+// // unshift() boshiga qo'shib beradi
+// array.unshift("start")
+// console.log(array);
+
+// // pop() oxiridan olib tashlaydi
+// array.pop()
+// console.log(array);
+
+// // boshidan olib tashlaydi
+// array.shift() 
+// console.log(array);
+
+
+
+// let fruits = ["apple", "banana", "orange", "grape", "mango"]
+// console.log(fruits);
+// // forEach() methodi har bir elementni aylab chiqadi
+// fruits.forEach((meva) => {
+//     console.log(meva);
+// });
+// function kvadrat(son) {
+//  let newArr = []
+//     son.forEach((raq) => {
+//         raq = raq * 2
+//         newArr.push(raq)
+//     });
+//     return newArr
+// }
+// console.log(kvadrat([ 2, 3, 4, 5]));
+
+//foreEach islatib sozlarni ohiriga jon qoshishkerak
+// function createName(isimlar) {
+//     let result = []
+//     isimlar.forEach((name) => {
+//         name = name + "jon"
+//         result.push(name)
+//     });
+//     return result;
+// }
+// console.log(createName(["Ali", "Vali", "behruz", "Sardor"]));
+//     
+
+//
+// function filtred(numbers){
+//   let newSon = []
+//     numbers.forEach((item) => {
+//         if (typeof item === "number") {
+//         newSon.push(item)
+//         }
+//     });
+//     return newSon
+// }
+   
+// console.log(filtred(["salom", 10, 15, "hello", 20, 25, true, false]));
+// soni %2 == 0 if ishlatib
+// function sortNumber(numbers){
+//     let newArr = []
+//     numbers.forEach((num) => {
+//         if (num % 2 == 0) {
+//             newArr.push(num)
+//         }
+//     });
+//     return newArr
+// }
+// console.log(sortNumber([10,15,20,21]));
+
+// musbat sonlarni qaytaruvchi function yozing 
+// function musbat (numbers){
+//     let newArr = []
+//     numbers.forEach((num) => {
+//         if (num > 0) {
+//             newArr.push(num)
+//         }
+//     })
+//     return newArr
+// }
+
+// console.log(musbat([-10, 15, -20, 25, 30, -5]));
+
+
+
+//&& ishlatib paqat soni olish kerak
+function musbat (numbers){
+    let newArr = []
+    numbers.forEach((num) => {
+        if ((num > 0) && (typeof num === "number")) {
+            newArr.push(num)
+        }
+    })
+    return newArr
+}
+
+console.log(musbat([ 15, true,  "helo", 25, 30, ]));
+</script>
+</body>
+</html>

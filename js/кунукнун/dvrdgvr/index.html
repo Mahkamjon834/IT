@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+  
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>string methods</h1>
+    
+
+
+
+
+
+    <script>
+
+        let text = "Hello, World!";
+        console.log(text);
+        console.log(text.toUpperCase()); //kata qilib beradi
+        console.log(text.toLowerCase());// kkichik harfga o'giradi
+        console.log(text.slice(0,5)); // kesib oladi
+        console.log(text.replace("World", "JavaScript")); //sozlarni almashtiradi
+        console.log(text.concat(" Welcome to learning JavaScript.")); // qo'shadi
+        console.log(text.repeat(2)); // belgini oladi
+
+        
+        function foo(str, son) {
+            return str.repeat(son);
+        }
+        console.log(foo("🤪 ", 10)); 
+
+        console.log("            salom" .trimStart());
+        console.log("salom            " .trimEnd());
+        console.log("            salom            " .trim());
+
+        let letter = "ABCDEFGHIJKLM MNOPQRSTUVWXYZ";
+        console.log(letter.includes("ABC")); // A bor yo'qligini tekshiradi
+        console.log(letter.indexOf("ABC")); // A bilan boshlanadimi
+
+
+
+        function socinma(name ) {
+            return name.replace("JavaScript", "JS").replace("styale", "css");
+        }
+        console.log(socinma("JavaScript styale"));
+
+    </script>
+</body>
+</html>

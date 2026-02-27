@@ -1,0 +1,1951 @@
+// Variables
+$white: rgba(255, 255, 255, 1);
+$red: rgba(218, 69, 51, 1);
+$blackbackground: rgba(27, 27, 27, 1);
+$grey: rgba(138, 138, 138, 1);
+$darkgrey: rgba(92, 92, 92, 1);
+$whitebackground: rgba(249, 249, 249, 1);
+$gray-1: rgba(51, 51, 51, 1);
+
+// Font variables
+$button-s-font-family: "Montserrat", Helvetica;
+$button-s-font-weight: 500;
+$button-s-font-size: 16px;
+$button-s-letter-spacing: 0px;
+$button-s-line-height: 160%;
+$button-s-font-style: normal;
+
+$sh1-font-family: "Montserrat", Helvetica;
+$sh1-font-weight: 500;
+$sh1-font-size: 18px;
+$sh1-letter-spacing: 0px;
+$sh1-line-height: 160%;
+$sh1-font-style: normal;
+
+$label-font-family: "Montserrat", Helvetica;
+$label-font-weight: 400;
+$label-font-size: 14px;
+$label-letter-spacing: 0px;
+$label-line-height: 165%;
+$label-font-style: normal;
+
+$sh2-font-family: "Montserrat", Helvetica;
+$sh2-font-weight: 500;
+$sh2-font-size: 16px;
+$sh2-letter-spacing: 0px;
+$sh2-line-height: 160%;
+$sh2-font-style: normal;
+
+$body-font-family: "Montserrat", Helvetica;
+$body-font-weight: 400;
+$body-font-size: 16px;
+$body-letter-spacing: 0px;
+$body-line-height: 160%;
+$body-font-style: normal;
+
+$h1-font-family: "STIX Two Text", Helvetica;
+$h1-font-weight: 400;
+$h1-font-size: 38px;
+$h1-letter-spacing: 0px;
+$h1-line-height: 135%;
+$h1-font-style: normal;
+
+$sh0-font-family: "Montserrat", Helvetica;
+$sh0-font-weight: 500;
+$sh0-font-size: 24px;
+$sh0-letter-spacing: 0px;
+$sh0-line-height: 160%;
+$sh0-font-style: normal;
+
+$LEGEND-font-family: "Montserrat", Helvetica;
+$LEGEND-font-weight: 500;
+$LEGEND-font-size: 16px;
+$LEGEND-letter-spacing: 0px;
+$LEGEND-line-height: 160%;
+$LEGEND-font-style: normal;
+
+// Import fonts
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=STIX+Two+Text:500,400|Montserrat:500,400");
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.desktop-main {
+  background-color: $blackbackground;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+
+  .div {
+    background-color: $blackbackground;
+    width: 1920px;
+    height: 7836px;
+    position: relative;
+  }
+
+  .overlap {
+    position: absolute;
+    width: 1920px;
+    height: 2236px;
+    top: 0;
+    left: 0;
+  }
+
+  .backgroud-black {
+    position: absolute;
+    width: 1920px;
+    height: 2166px;
+    top: 70px;
+    left: 0;
+  }
+
+  .element-adv {
+    position: absolute;
+    width: 1248px;
+    height: 1296px;
+    top: 780px;
+    left: 320px;
+  }
+
+  .exp {
+    position: absolute;
+    width: 804px;
+    height: 620px;
+    top: 10px;
+    left: 444px;
+  }
+
+  .h {
+    position: absolute;
+    width: 808px;
+    height: 119px;
+    top: 0;
+    left: 0;
+  }
+
+  .text-wrapper {
+    position: absolute;
+    width: 345px;
+    height: 51px;
+    top: 0;
+    left: 0;
+    font-family: $h1-font-family;
+    font-weight: $h1-font-weight;
+    color: $white;
+    font-size: $h1-font-size;
+    letter-spacing: $h1-letter-spacing;
+    line-height: $h1-line-height;
+    white-space: nowrap;
+    font-style: $h1-font-style;
+  }
+
+  .p {
+    position: absolute;
+    width: 804px;
+    height: 52px;
+    top: 67px;
+    left: 0;
+    font-family: $sh2-font-family;
+    font-weight: $sh2-font-weight;
+    color: $grey;
+    font-size: $sh2-font-size;
+    letter-spacing: $sh2-letter-spacing;
+    line-height: $sh2-line-height;
+    font-style: $sh2-font-style;
+  }
+
+  .cards {
+    position: absolute;
+    width: 804px;
+    height: 451px;
+    top: 169px;
+    left: 0;
+  }
+
+  .frame {
+    position: absolute;
+    width: 392px;
+    height: 137px;
+    top: 314px;
+    left: 412px;
+  }
+
+  .img {
+    position: absolute;
+    width: 392px;
+    height: 137px;
+    top: 0;
+    left: 0;
+  }
+
+  .frame-2 {
+    position: absolute;
+    width: 392px;
+    height: 137px;
+    top: 0;
+    left: 412px;
+  }
+
+  .frame-3 {
+    position: absolute;
+    width: 392px;
+    height: 137px;
+    top: 314px;
+    left: 0;
+  }
+
+  .frame-4 {
+    position: absolute;
+    width: 392px;
+    height: 137px;
+    top: 157px;
+    left: 0;
+  }
+
+  .component {
+    position: absolute;
+    width: 392px;
+    height: 137px;
+    top: 157px;
+    left: 412px;
+  }
+
+  .logos {
+    position: absolute;
+    width: 804px;
+    height: 566px;
+    top: 730px;
+    left: 444px;
+  }
+
+  .text-wrapper-2 {
+    position: absolute;
+    width: 515px;
+    height: 51px;
+    top: 0;
+    left: 0;
+    font-family: $h1-font-family;
+    font-weight: $h1-font-weight;
+    color: $white;
+    font-size: $h1-font-size;
+    letter-spacing: $h1-letter-spacing;
+    line-height: $h1-line-height;
+    white-space: nowrap;
+    font-style: $h1-font-style;
+  }
+
+  .logos-wrapper {
+    position: absolute;
+    width: 392px;
+    height: 119px;
+    top: 169px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .logos-2 {
+    position: absolute;
+    width: 270px;
+    height: 99px;
+    top: 10px;
+    left: 61px;
+  }
+
+  .img-wrapper {
+    top: 308px;
+    left: 412px;
+    position: absolute;
+    width: 392px;
+    height: 119px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .component-2 {
+    top: 447px;
+    left: 0;
+    position: absolute;
+    width: 392px;
+    height: 119px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .component-3 {
+    top: 169px;
+    left: 412px;
+    position: absolute;
+    width: 392px;
+    height: 119px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .component-4 {
+    top: 308px;
+    left: 0;
+    position: absolute;
+    width: 392px;
+    height: 119px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .component-5 {
+    top: 447px;
+    left: 412px;
+    position: absolute;
+    width: 392px;
+    height: 119px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .image {
+    position: absolute;
+    width: 396px;
+    height: 431px;
+    top: 0;
+    left: 0;
+  }
+
+  .overlap-group {
+    position: relative;
+    width: 468px;
+    height: 468px;
+    left: -72px;
+  }
+
+  .vector {
+    position: absolute;
+    width: 344px;
+    height: 345px;
+    top: 86px;
+    left: 105px;
+  }
+
+  .element {
+    position: absolute;
+    width: 468px;
+    height: 468px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  .h-2 {
+    position: absolute;
+    width: 721px;
+    height: 410px;
+    top: 179px;
+    left: 352px;
+  }
+
+  .overlap-2 {
+    position: absolute;
+    width: 701px;
+    height: 148px;
+    top: 34px;
+    left: 14px;
+  }
+
+  .div-2 {
+    position: absolute;
+    width: 701px;
+    top: 0;
+    left: 0;
+    font-family: "STIX Two Text", Helvetica;
+    font-weight: 400;
+    color: $white;
+    font-size: 55px;
+    letter-spacing: 0;
+    line-height: 55px;
+  }
+
+  .span {
+    font-weight: 500;
+    line-height: 74.2px;
+  }
+
+  .text-wrapper-3 {
+    font-style: italic;
+    line-height: 74.2px;
+  }
+
+  .vector-2 {
+    position: absolute;
+    width: 11px;
+    height: 14px;
+    top: 91px;
+    left: 386px;
+  }
+
+  .text-wrapper-4 {
+    position: absolute;
+    width: 598px;
+    height: 58px;
+    top: 198px;
+    left: 14px;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 400;
+    color: $grey;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 28.8px;
+  }
+
+  .text-wrapper-5 {
+    position: absolute;
+    height: 26px;
+    top: 0;
+    left: 14px;
+    font-family: $LEGEND-font-family;
+    font-weight: $LEGEND-font-weight;
+    color: $grey;
+    font-size: $LEGEND-font-size;
+    letter-spacing: $LEGEND-letter-spacing;
+    line-height: $LEGEND-line-height;
+    white-space: nowrap;
+    font-style: $LEGEND-font-style;
+  }
+
+  .button-b {
+    position: absolute;
+    width: 305px;
+    height: 122px;
+    top: 288px;
+    left: 14px;
+  }
+
+  .div-wrapper {
+    position: relative;
+    width: 299px;
+    height: 91px;
+    top: 16px;
+    left: 3px;
+    background-color: $red;
+    border-radius: 149.5px / 45.5px;
+  }
+
+  .text-wrapper-6 {
+    position: absolute;
+    width: 259px;
+    height: 44px;
+    top: 23px;
+    left: 20px;
+    font-family: $button-s-font-family;
+    font-weight: $button-s-font-weight;
+    color: $white;
+    font-size: $button-s-font-size;
+    text-align: center;
+    letter-spacing: $button-s-letter-spacing;
+    line-height: $button-s-line-height;
+    font-style: $button-s-font-style;
+  }
+
+  .botton-adv {
+    position: absolute;
+    width: 154px;
+    height: 32px;
+    top: 333px;
+    left: 355px;
+  }
+
+  .overlap-group-2 {
+    position: relative;
+    width: 148px;
+    height: 41px;
+    top: -4px;
+    left: 3px;
+  }
+
+  .text-wrapper-7 {
+    position: absolute;
+    width: 92px;
+    height: 20px;
+    top: 8px;
+    left: 21px;
+    font-family: $button-s-font-family;
+    font-weight: $button-s-font-weight;
+    color: $red;
+    font-size: $button-s-font-size;
+    text-align: center;
+    letter-spacing: $button-s-letter-spacing;
+    line-height: $button-s-line-height;
+    white-space: nowrap;
+    font-style: $button-s-font-style;
+  }
+
+  .arrow {
+    left: 117px;
+    position: absolute;
+    width: 30px;
+    height: 7px;
+    top: 16px;
+    object-fit: cover;
+  }
+
+  .ellipse {
+    position: absolute;
+    width: 135px;
+    height: 41px;
+    top: 0;
+    left: 0;
+    border-radius: 67.5px / 20.5px;
+    border: 1px solid;
+    border-color: $red;
+  }
+
+  .vector-3 {
+    position: absolute;
+    width: 11px;
+    height: 14px;
+    top: 45px;
+    left: 0;
+  }
+
+  .overlap-wrapper {
+    position: absolute;
+    width: 544px;
+    height: 513px;
+    top: 103px;
+    left: 1054px;
+  }
+
+  .overlap-3 {
+    position: relative;
+    width: 586px;
+    height: 585px;
+    left: -42px;
+  }
+
+  .vector-4 {
+    position: absolute;
+    width: 514px;
+    height: 323px;
+    top: 135px;
+    left: 42px;
+  }
+
+  .main {
+    position: absolute;
+    width: 586px;
+    height: 585px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  .iphub {
+    position: absolute;
+    width: 1920px;
+    height: 1460px;
+    top: 0;
+    left: 0;
+  }
+
+  .footer {
+    position: absolute;
+    width: 1920px;
+    height: 559px;
+    top: 7275px;
+    left: 0;
+    background-color: transparent;
+    background-image: url(https://c.animaapp.com/mcmzutdw5VMcjw/img/vintage-film-plate-with-noisy-shadows-of-handrails-background-2.png);
+    background-size: 100% 100%;
+  }
+
+  .vector-5 {
+    position: absolute;
+    width: 1216px;
+    height: 1px;
+    top: 228px;
+    left: 352px;
+    object-fit: cover;
+  }
+
+  .frame-5 {
+    display: flex;
+    width: 1216px;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 486px;
+    left: 352px;
+  }
+
+  .text-wrapper-8 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: $label-font-family;
+    font-weight: $label-font-weight;
+    color: $grey;
+    font-size: $label-font-size;
+    letter-spacing: $label-letter-spacing;
+    line-height: $label-line-height;
+    white-space: nowrap;
+    font-style: $label-font-style;
+  }
+
+  .div-3 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: $label-font-family;
+    font-weight: $label-font-weight;
+    color: $white;
+    font-size: $label-font-size;
+    letter-spacing: $label-letter-spacing;
+    line-height: $label-line-height;
+    white-space: nowrap;
+    font-style: $label-font-style;
+  }
+
+  .frame-6 {
+    display: flex;
+    width: 1216px;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: absolute;
+    top: 279px;
+    left: 352px;
+  }
+
+  .frame-7 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .text-wrapper-9 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: $sh1-font-family;
+    font-weight: $sh1-font-weight;
+    color: $darkgrey;
+    font-size: $sh1-font-size;
+    letter-spacing: $sh1-letter-spacing;
+    line-height: $sh1-line-height;
+    white-space: nowrap;
+    font-style: $sh1-font-style;
+  }
+
+  .frame-8 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .component-6 {
+    position: relative;
+    width: 58px;
+    height: 26px;
+  }
+
+  .text-wrapper-10 {
+    position: absolute;
+    height: 26px;
+    top: -1px;
+    left: 0;
+    font-family: $button-s-font-family;
+    font-weight: $button-s-font-weight;
+    color: $white;
+    font-size: $button-s-font-size;
+    letter-spacing: $button-s-letter-spacing;
+    line-height: $button-s-line-height;
+    white-space: nowrap;
+    font-style: $button-s-font-style;
+  }
+
+  .text-wrapper-11 {
+    position: relative;
+    width: fit-content;
+    font-family: $button-s-font-family;
+    font-weight: $button-s-font-weight;
+    color: $white;
+    font-size: $button-s-font-size;
+    letter-spacing: $button-s-letter-spacing;
+    line-height: $button-s-line-height;
+    white-space: nowrap;
+    font-style: $button-s-font-style;
+  }
+
+  .component-7 {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 26px;
+  }
+
+  .frame-9 {
+    display: flex;
+    width: 1216px;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: absolute;
+    top: 100px;
+    left: 352px;
+  }
+
+  .group {
+    position: relative;
+    width: 745px;
+    height: 63px;
+  }
+
+  .text-wrapper-12 {
+    position: absolute;
+    width: 515px;
+    height: 62px;
+    top: 1px;
+    left: 228px;
+    font-family: $label-font-family;
+    font-weight: $label-font-weight;
+    color: $grey;
+    font-size: $label-font-size;
+    letter-spacing: $label-letter-spacing;
+    line-height: $label-line-height;
+    font-style: $label-font-style;
+  }
+
+  .logo {
+    position: absolute;
+    width: 209px;
+    height: 47px;
+    top: 0;
+    left: 0;
+  }
+
+  .frame-10 {
+    display: flex;
+    flex-direction: column;
+    width: 289px;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+  }
+
+  .text-wrapper-13 {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1.00px;
+    font-family: $label-font-family;
+    font-weight: $label-font-weight;
+    color: $white;
+    font-size: $label-font-size;
+    letter-spacing: $label-letter-spacing;
+    line-height: $label-line-height;
+    font-style: $label-font-style;
+  }
+
+  .frame-11 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 15px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .text-wrapper-14 {
+    color: #8a8a8a;
+    font-family: $label-font-family;
+    font-style: $label-font-style;
+    font-weight: $label-font-weight;
+    letter-spacing: $label-letter-spacing;
+    line-height: $label-line-height;
+    font-size: $label-font-size;
+  }
+
+  .text-wrapper-15 {
+    color: #ffffff;
+    font-family: $label-font-family;
+    font-style: $label-font-style;
+    font-weight: $label-font-weight;
+    letter-spacing: $label-letter-spacing;
+    line-height: $label-line-height;
+    font-size: $label-font-size;
+  }
+
+  .element-ban {
+    position: absolute;
+    width: 1920px;
+    height: 505px;
+    top: 6770px;
+    left: 0;
+    background-image: url(https://c.animaapp.com/mcmzutdw5VMcjw/img/rectangle-851.svg);
+    background-size: 100% 100%;
+  }
+
+  .h-3 {
+    position: absolute;
+    width: 706px;
+    height: 102px;
+    top: 99px;
+    left: 352px;
+    font-family: $h1-font-family;
+    font-weight: $h1-font-weight;
+    color: $white;
+    font-size: $h1-font-size;
+    letter-spacing: $h1-letter-spacing;
+    line-height: $h1-line-height;
+    font-style: $h1-font-style;
+  }
+
+  .text-wrapper-16 {
+    position: absolute;
+    width: 598px;
+    height: 52px;
+    top: 217px;
+    left: 352px;
+    opacity: 0.75;
+    font-family: $sh2-font-family;
+    font-weight: $sh2-font-weight;
+    color: $white;
+    font-size: $sh2-font-size;
+    letter-spacing: $sh2-letter-spacing;
+    line-height: $sh2-line-height;
+    font-style: $sh2-font-style;
+  }
+
+  .overlap-group-wrapper {
+    position: absolute;
+    width: 305px;
+    height: 122px;
+    top: 298px;
+    left: 352px;
+  }
+
+  .overlap-group-3 {
+    position: relative;
+    width: 299px;
+    height: 91px;
+    top: 16px;
+    left: 3px;
+    background-color: $blackbackground;
+    border-radius: 149.5px / 45.5px;
+  }
+
+  .group-2 {
+    position: absolute;
+    width: 413px;
+    height: 384px;
+    top: 21px;
+    left: 1159px;
+  }
+
+  .overlap-4 {
+    position: relative;
+    width: 432px;
+    height: 430px;
+    left: -19px;
+  }
+
+  .vector-6 {
+    position: absolute;
+    width: 305px;
+    height: 305px;
+    top: 79px;
+    left: 19px;
+  }
+
+  .element-2 {
+    position: absolute;
+    width: 432px;
+    height: 430px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  .element-team {
+    position: absolute;
+    width: 1920px;
+    height: 1538px;
+    top: 5232px;
+    left: 0;
+    background-image: url(https://c.animaapp.com/mcmzutdw5VMcjw/img/background-team.svg);
+    background-size: 100% 100%;
+  }
+
+  .h-4 {
+    position: absolute;
+    width: 711px;
+    height: 119px;
+    top: 160px;
+    left: 352px;
+  }
+
+  .text-wrapper-17 {
+    position: absolute;
+    height: 51px;
+    top: 0;
+    left: 0;
+    font-family: $h1-font-family;
+    font-weight: $h1-font-weight;
+    color: $blackbackground;
+    font-size: $h1-font-size;
+    letter-spacing: $h1-letter-spacing;
+    line-height: $h1-line-height;
+    white-space: nowrap;
+    font-style: $h1-font-style;
+  }
+
+  .text-wrapper-18 {
+    position: absolute;
+    width: 707px;
+    height: 52px;
+    top: 67px;
+    left: 0;
+    font-family: $sh2-font-family;
+    font-weight: $sh2-font-weight;
+    color: $grey;
+    font-size: $sh2-font-size;
+    letter-spacing: $sh2-letter-spacing;
+    line-height: $sh2-line-height;
+    font-style: $sh2-font-style;
+  }
+
+  .div-4 {
+    display: flex;
+    width: 1568px;
+    align-items: flex-start;
+    gap: 20px;
+    position: absolute;
+    top: 329px;
+    left: 352px;
+    overflow-x: scroll;
+    
+    &::-webkit-scrollbar {
+      width: 0;
+      display: none;
+    }
+  }
+
+  .div-5 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .frame-12 {
+    position: relative;
+    width: 289px;
+    height: 320px;
+    border-radius: 8px;
+    background-image: url(https://c.animaapp.com/mcmzutdw5VMcjw/img/ellipse-7-2.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  .frame-13 {
+    display: flex;
+    flex-direction: column;
+    width: 289px;
+    align-items: flex-start;
+    gap: 5px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .div-6 {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1.00px;
+    font-family: $sh1-font-family;
+    font-weight: $sh1-font-weight;
+    color: $blackbackground;
+    font-size: $sh1-font-size;
+    letter-spacing: $sh1-letter-spacing;
+    line-height: $sh1-line-height;
+    font-style: $sh1-font-style;
+  }
+
+  .text-wrapper-19 {
+    position: relative;
+    align-self: stretch;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 400;
+    color: $darkgrey;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 19.6px;
+  }
+
+  .frame-14 {
+    background-image: url(https://c.animaapp.com/mcmzutdw5VMcjw/img/unsplash-wnolnjo7ts8.png);
+    background-size: 100% 100%;
+    position: relative;
+    width: 289px;
+    height: 320px;
+    border-radius: 8px;
+  }
+
+  .frame-15 {
+    background-image: url(https://c.animaapp.com/mcmzutdw5VMcjw/img/unsplash-0fn7fxv1ewa.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    width: 289px;
+    height: 320px;
+    border-radius: 8px;
+  }
+
+  .text-wrapper-20 {
+    color: #1b1b1b;
+    line-height: $sh1-line-height;
+    font-family: $sh1-font-family;
+    font-style: $sh1-font-style;
+    font-weight: $sh1-font-weight;
+    letter-spacing: $sh1-letter-spacing;
+    font-size: $sh1-font-size;
+  }
+
+  .frame-16 {
+    background-image: url(https://c.animaapp.com/mcmzutdw5VMcjw/img/unsplash-j5kaurryx7g.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    width: 289px;
+    height: 320px;
+    border-radius: 8px;
+  }
+
+  .frame-17 {
+    background-image: url(https://c.animaapp.com/mcmzutdw5VMcjw/img/unsplash-v29-2mg3bne-3.png);
+    background-size: 100% 100%;
+    position: relative;
+    width: 289px;
+    height: 320px;
+    border-radius: 8px;
+  }
+
+  .frame-18 {
+    background-image: url(https://c.animaapp.com/mcmzutdw5VMcjw/img/unsplash-v29-2mg3bne-4.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    width: 289px;
+    height: 320px;
+    border-radius: 8px;
+  }
+
+  .btns {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: absolute;
+    top: 792px;
+    left: 893px;
+  }
+
+  .sliders {
+    margin-left: -0.50px;
+    position: relative;
+    width: 57.5px;
+    height: 50px;
+  }
+
+  .sliders-2 {
+    margin-right: -0.50px;
+    position: relative;
+    width: 57.5px;
+    height: 50px;
+  }
+
+  .forums {
+    position: absolute;
+    width: 1249px;
+    height: 466px;
+    top: 912px;
+    left: 352px;
+  }
+
+  .text-wrapper-21 {
+    position: absolute;
+    height: 38px;
+    top: 0;
+    left: 0;
+    font-family: $sh0-font-family;
+    font-weight: $sh0-font-weight;
+    color: $blackbackground;
+    font-size: $sh0-font-size;
+    letter-spacing: $sh0-letter-spacing;
+    line-height: $sh0-line-height;
+    white-space: nowrap;
+    font-style: $sh0-font-style;
+  }
+
+  .group-3 {
+    display: flex;
+    width: 1237px;
+    height: 176px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 27px 0px;
+    position: absolute;
+    top: 74px;
+    left: 0;
+  }
+
+  .user-forum {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .ellipse-2 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .frame-19 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .text-wrapper-22 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: $button-s-font-family;
+    font-weight: $button-s-font-weight;
+    color: $blackbackground;
+    font-size: $button-s-font-size;
+    letter-spacing: $button-s-letter-spacing;
+    line-height: $button-s-line-height;
+    white-space: nowrap;
+    font-style: $button-s-font-style;
+  }
+
+  .text-wrapper-23 {
+    position: relative;
+    width: 330px;
+    font-weight: 400;
+    color: $darkgrey;
+    font-size: 14px;
+    line-height: 19.6px;
+    font-family: "Montserrat", Helvetica;
+    letter-spacing: 0;
+  }
+
+  .frame-20 {
+    display: flex;
+    flex-direction: column;
+    width: 495px;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+  }
+
+  .frame-21 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .vector-7 {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 1px;
+    margin-bottom: -0.50px;
+    object-fit: cover;
+  }
+
+  .text-wrapper-24 {
+    position: relative;
+    align-self: stretch;
+    font-weight: $body-font-weight;
+    color: $darkgrey;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+    font-family: $body-font-family;
+    letter-spacing: $body-letter-spacing;
+    font-style: $body-font-style;
+  }
+
+  .frame-wrapper {
+    position: relative;
+    width: 197px;
+    height: 176px;
+    margin-top: -27.00px;
+    margin-bottom: -27.00px;
+  }
+
+  .frame-22 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    top: 58px;
+    left: 30px;
+  }
+
+  .element-3 {
+    position: relative;
+    width: 115px;
+    margin-top: -1.00px;
+    font-family: $sh1-font-family;
+    font-weight: $sh1-font-weight;
+    color: $blackbackground;
+    font-size: $sh1-font-size;
+    text-align: center;
+    letter-spacing: $sh1-letter-spacing;
+    line-height: $sh1-line-height;
+    font-style: $sh1-font-style;
+  }
+
+  .element-4 {
+    position: relative;
+    width: fit-content;
+    font-family: $body-font-family;
+    font-weight: $body-font-weight;
+    color: $blackbackground;
+    font-size: $body-font-size;
+    letter-spacing: $body-letter-spacing;
+    line-height: $body-line-height;
+    white-space: nowrap;
+    font-style: $body-font-style;
+  }
+
+  .group-4 {
+    display: flex;
+    width: 1237px;
+    height: 176px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 27px 0px;
+    position: absolute;
+    top: 290px;
+    left: 0;
+  }
+
+  .ellipse-3 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  .frame-23 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    top: 44px;
+    left: 30px;
+  }
+
+  .frame-24 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: absolute;
+    top: 12px;
+    left: 951px;
+  }
+
+  .button-s {
+    position: relative;
+    width: 138px;
+    height: 20px;
+  }
+
+  .text-wrapper-25 {
+    position: absolute;
+    height: 26px;
+    top: -4px;
+    left: 16px;
+    font-weight: $button-s-font-weight;
+    color: $darkgrey;
+    font-size: $button-s-font-size;
+    text-align: center;
+    line-height: $button-s-line-height;
+    white-space: nowrap;
+    font-family: $button-s-font-family;
+    letter-spacing: $button-s-letter-spacing;
+    font-style: $button-s-font-style;
+  }
+
+  .text-wrapper-26 {
+    position: absolute;
+    height: 26px;
+    top: -4px;
+    left: 31px;
+    font-weight: $button-s-font-weight;
+    color: $red;
+    font-size: $button-s-font-size;
+    text-align: center;
+    line-height: $button-s-line-height;
+    white-space: nowrap;
+    font-family: $button-s-font-family;
+    letter-spacing: $button-s-letter-spacing;
+    font-style: $button-s-font-style;
+  }
+
+  .vector-8 {
+    position: absolute;
+    width: 1216px;
+    height: 1px;
+    top: 270px;
+    left: 0;
+    object-fit: cover;
+  }
+
+  .element-case {
+    position: absolute;
+    width: 1920px;
+    height: 858px;
+    top: 4374px;
+    left: 0;
+    background-image: url(https://c.animaapp.com/mcmzutdw5VMcjw/img/vintage-film-plate-with-noisy-shadows-of-handrails-background-3.png);
+    background-size: 100% 100%;
+  }
+
+  .text-wrapper-27 {
+    position: absolute;
+    height: 51px;
+    top: 0;
+    left: 0;
+    font-family: $h1-font-family;
+    font-weight: $h1-font-weight;
+    color: $white;
+    font-size: $h1-font-size;
+    letter-spacing: $h1-letter-spacing;
+    line-height: $h1-line-height;
+    white-space: nowrap;
+    font-style: $h1-font-style;
+  }
+
+  .botton-adv-2 {
+    top: 237px;
+    left: 1414px;
+    position: absolute;
+    width: 154px;
+    height: 32px;
+  }
+
+  .case {
+    position: relative;
+    width: 598px;
+    height: 289px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .frame-25 {
+    position: absolute;
+    width: 289px;
+    height: 289px;
+    top: 0;
+    left: 0;
+  }
+
+  .shape {
+    left: 560px;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 20px;
+  }
+
+  .frame-26 {
+    display: flex;
+    flex-direction: column;
+    width: 269px;
+    align-items: flex-start;
+    gap: 5px;
+    position: absolute;
+    top: 74px;
+    left: 309px;
+  }
+
+  .text-wrapper-28 {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1.00px;
+    font-weight: $sh2-font-weight;
+    color: $whitebackground;
+    font-size: $sh2-font-size;
+    line-height: $sh2-line-height;
+    font-family: $sh2-font-family;
+    letter-spacing: $sh2-letter-spacing;
+    font-style: $sh2-font-style;
+  }
+
+  .div-7 {
+    color: $grey;
+    line-height: $label-line-height;
+    position: relative;
+    align-self: stretch;
+    font-family: $label-font-family;
+    font-weight: $label-font-weight;
+    font-size: $label-font-size;
+    letter-spacing: $label-letter-spacing;
+    font-style: $label-font-style;
+  }
+
+  .frame-27 {
+    top: 86px;
+    display: flex;
+    flex-direction: column;
+    width: 269px;
+    align-items: flex-start;
+    gap: 5px;
+    position: absolute;
+    left: 309px;
+  }
+
+  .frame-28 {
+    top: 63px;
+    display: flex;
+    flex-direction: column;
+    width: 269px;
+    align-items: flex-start;
+    gap: 5px;
+    position: absolute;
+    left: 309px;
+  }
+
+  .buttons {
+    top: 648px;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: absolute;
+    left: 893px;
+  }
+
+  .overlap-5 {
+    position: absolute;
+    width: 1920px;
+    height: 969px;
+    top: 2236px;
+    left: 0;
+  }
+
+  .element-services {
+    position: absolute;
+    width: 1920px;
+    height: 969px;
+    top: 0;
+    left: 0;
+    background-image: url(https://c.animaapp.com/mcmzutdw5VMcjw/img/background-team.svg);
+    background-size: 100% 100%;
+  }
+
+  .cards-2 {
+    display: flex;
+    width: 1292px;
+    align-items: flex-start;
+    gap: 20px;
+    position: absolute;
+    top: 329px;
+    left: 352px;
+    overflow-x: scroll;
+    
+    &::-webkit-scrollbar {
+      width: 0;
+      display: none;
+    }
+  }
+
+  .div-8 {
+    position: relative;
+    width: 289px;
+    height: 400px;
+    background-color: $blackbackground;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .text-wrapper-29 {
+    position: absolute;
+    width: 239px;
+    height: 58px;
+    top: 321px;
+    left: 25px;
+    font-weight: $sh1-font-weight;
+    color: $grey;
+    font-size: $sh1-font-size;
+    line-height: $sh1-line-height;
+    font-family: $sh1-font-family;
+    letter-spacing: $sh1-letter-spacing;
+    font-style: $sh1-font-style;
+  }
+
+  .objects {
+    position: absolute;
+    width: 167px;
+    height: 176px;
+    top: 81px;
+    left: 61px;
+  }
+
+  .shape-2 {
+    left: 251px;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 20px;
+  }
+
+  .objects-2 {
+    position: absolute;
+    width: 135px;
+    height: 142px;
+    top: 78px;
+    left: 77px;
+  }
+
+  .frame-29 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    position: absolute;
+    top: 250px;
+    left: 20px;
+  }
+
+  .text-wrapper-30 {
+    position: relative;
+    width: 249px;
+    margin-top: -1.00px;
+    font-weight: $sh1-font-weight;
+    color: $white;
+    font-size: $sh1-font-size;
+    line-height: $sh1-line-height;
+    font-family: $sh1-font-family;
+    letter-spacing: $sh1-letter-spacing;
+    font-style: $sh1-font-style;
+  }
+
+  .text-wrapper-31 {
+    position: relative;
+    width: 249px;
+    font-weight: $label-font-weight;
+    color: $grey;
+    font-size: $label-font-size;
+    line-height: $label-line-height;
+    font-family: $label-font-family;
+    letter-spacing: $label-letter-spacing;
+    font-style: $label-font-style;
+  }
+
+  .botton-adv-3 {
+    top: 230px;
+    left: 1414px;
+    position: absolute;
+    width: 154px;
+    height: 32px;
+  }
+
+  .buttons-2 {
+    top: 759px;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: absolute;
+    left: 893px;
+  }
+
+  .finger {
+    position: absolute;
+    width: 21px;
+    height: 25px;
+    top: 633px;
+    left: 853px;
+  }
+
+  .element-test {
+    position: absolute;
+    width: 1920px;
+    height: 1169px;
+    top: 3205px;
+    left: 0;
+    background-image: url(https://c.animaapp.com/mcmzutdw5VMcjw/img/rectangle-851.svg);
+    background-size: 100% 100%;
+  }
+
+  .h-5 {
+    position: absolute;
+    width: 711px;
+    height: 93px;
+    top: 160px;
+    left: 352px;
+  }
+
+  .text-wrapper-32 {
+    position: absolute;
+    width: 707px;
+    top: 67px;
+    left: 0;
+    opacity: 0.75;
+    font-family: $sh2-font-family;
+    font-weight: $sh2-font-weight;
+    color: $white;
+    font-size: $sh2-font-size;
+    letter-spacing: $sh2-letter-spacing;
+    line-height: $sh2-line-height;
+    font-style: $sh2-font-style;
+  }
+
+  .bonus {
+    position: absolute;
+    width: 806px;
+    height: 194px;
+    top: 815px;
+    left: 352px;
+  }
+
+  .text-wrapper-33 {
+    position: absolute;
+    height: 38px;
+    top: 0;
+    left: 0;
+    font-family: $sh0-font-family;
+    font-weight: $sh0-font-weight;
+    color: $white;
+    font-size: $sh0-font-size;
+    letter-spacing: $sh0-letter-spacing;
+    line-height: $sh0-line-height;
+    white-space: nowrap;
+    font-style: $sh0-font-style;
+  }
+
+  .bonus-2 {
+    position: absolute;
+    width: 392px;
+    height: 131px;
+    top: 63px;
+    left: 0;
+    background-color: $blackbackground;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .text-wrapper-34 {
+    position: absolute;
+    width: 246px;
+    height: 58px;
+    top: 33px;
+    left: 131px;
+    font-family: $sh1-font-family;
+    font-weight: $sh1-font-weight;
+    color: $white;
+    font-size: $sh1-font-size;
+    letter-spacing: $sh1-letter-spacing;
+    line-height: $sh1-line-height;
+    font-style: $sh1-font-style;
+  }
+
+  .objects-3 {
+    position: absolute;
+    width: 101px;
+    height: 101px;
+    top: 15px;
+    left: 15px;
+  }
+
+  .bonus-3 {
+    position: absolute;
+    width: 392px;
+    height: 131px;
+    top: 63px;
+    left: 412px;
+    background-color: $blackbackground;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .test {
+    position: absolute;
+    width: 1041px;
+    height: 462px;
+    top: 303px;
+    left: 352px;
+    background-color: $blackbackground;
+    border-radius: 10px;
+  }
+
+  .text-wrapper-35 {
+    position: absolute;
+    height: 38px;
+    top: 39px;
+    left: 40px;
+    font-family: $sh0-font-family;
+    font-weight: $sh0-font-weight;
+    color: $white;
+    font-size: $sh0-font-size;
+    letter-spacing: $sh0-letter-spacing;
+    line-height: $sh0-line-height;
+    white-space: nowrap;
+    font-style: $sh0-font-style;
+  }
+
+  .botton-adv-4 {
+    top: 390px;
+    left: 847px;
+    position: absolute;
+    width: 154px;
+    height: 32px;
+  }
+
+  .botton-adv-5 {
+    top: 390px;
+    left: 40px;
+    position: absolute;
+    width: 154px;
+    height: 32px;
+  }
+
+  .overlap-6 {
+    position: relative;
+    width: 148px;
+    height: 41px;
+    top: -4px;
+    left: -10px;
+  }
+
+  .text-wrapper-36 {
+    position: absolute;
+    width: 92px;
+    height: 20px;
+    top: 8px;
+    left: 34px;
+    font-weight: $button-s-font-weight;
+    color: $red;
+    font-size: $button-s-font-size;
+    text-align: center;
+    line-height: $button-s-line-height;
+    white-space: nowrap;
+    font-family: $button-s-font-family;
+    letter-spacing: $button-s-letter-spacing;
+    font-style: $button-s-font-style;
+  }
+
+  .arrow-2 {
+    left: 0;
+    position: absolute;
+    width: 30px;
+    height: 7px;
+    top: 16px;
+    object-fit: cover;
+  }
+
+  .ellipse-4 {
+    position: absolute;
+    width: 135px;
+    height: 41px;
+    top: 0;
+    left: 14px;
+    border-radius: 67.5px / 20.5px;
+    border: 1px solid;
+    border-color: $red;
+  }
+
+  .frame-30 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 15px;
+    position: absolute;
+    top: 108px;
+    left: 40px;
+  }
+
+  .component-8 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 18px 20px;
+    position: relative;
+    flex: 0 0 auto;
+    background-color: $red;
+  }
+
+  .text-wrapper-37 {
+    position: relative;
+    width: 433px;
+    margin-top: -1.00px;
+    font-weight: $button-s-font-weight;
+    color: $white;
+    font-size: $button-s-font-size;
+    line-height: $button-s-line-height;
+    font-family: $button-s-font-family;
+    letter-spacing: $button-s-letter-spacing;
+    font-style: $button-s-font-style;
+  }
+
+  .component-9 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 18px 20px;
+    position: relative;
+    flex: 0 0 auto;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .text-wrapper-38 {
+    position: relative;
+    width: 433px;
+    margin-top: -1.00px;
+    font-family: $button-s-font-family;
+    font-weight: $button-s-font-weight;
+    color: $whitebackground;
+    font-size: $button-s-font-size;
+    letter-spacing: $button-s-letter-spacing;
+    line-height: $button-s-line-height;
+    font-style: $button-s-font-style;
+  }
+
+  .element-5 {
+    position: absolute;
+    height: 45px;
+    top: 35px;
+    left: 951px;
+    font-family: "STIX Two Text", Helvetica;
+    font-weight: 500;
+    color: $white;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .text-wrapper-39 {
+    color: $red;
+  }
+
+  .text-wrapper-40 {
+    color: $white;
+  }
+
+  .header {
+    position: fixed;
+    width: 1920px;
+    height: 70px;
+    top: 0;
+    left: 0;
+    background-color: $blackbackground;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .frame-31 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 30px;
+    position: absolute;
+    top: 23px;
+    left: 1361px;
+  }
+
+  .component-10 {
+    position: relative;
+    width: 54px;
+    height: 26px;
+  }
+
+  .component-11 {
+    position: relative;
+    width: 35px;
+    height: 26px;
+  }
+
+  .group-5 {
+    position: absolute;
+    width: 399px;
+    height: 26px;
+    top: 22px;
+    left: 763px;
+  }
+
+  .text-wrapper-41 {
+    position: absolute;
+    height: 22px;
+    top: 1px;
+    left: 0;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 500;
+    color: $white;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .text-wrapper-42 {
+    position: absolute;
+    height: 26px;
+    top: 0;
+    left: 189px;
+    font-family: $button-s-font-family;
+    font-weight: $button-s-font-weight;
+    color: $red;
+    font-size: $button-s-font-size;
+    letter-spacing: $button-s-letter-spacing;
+    line-height: $button-s-line-height;
+    white-space: nowrap;
+    font-style: $button-s-font-style;
+  }
+
+  .logo-2 {
+    position: absolute;
+    width: 129px;
+    height: 29px;
+    top: 20px;
+    left: 352px;
+  }
+}

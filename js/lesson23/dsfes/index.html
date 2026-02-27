@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .main{
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(aqua, blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .section1{
+        width: 500px;
+        height: 600px;
+        background-color: white;
+        border-radius: 10px ;
+    }
+    .q1{
+        margin-top: 5%;
+        margin-left: 5%;
+        font-size: 40px;
+    }
+    .text{
+        width: 78%;
+        height: 50px;
+        margin-top: 5%;
+        margin-left: 5%;
+        border-radius: 5px;
+        border: 2px solid rgb(74, 72, 72);
+        font-size: 20px;
+        padding-left: 10px;
+    }
+    .p{
+        background-color: blueviolet;
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+        border-radius: 5px;
+        font-size: 25px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .p:hover{
+        background-color: rgb(50, 37, 105);
+        
+    }
+
+
+       .wq1{
+        width: 90%;
+        height: 55px;
+        margin-top: 5%;
+        margin-left: 5%;
+        border-radius: 5px;
+        background-color: lightgray;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        font-size: 20px;
+    }
+    .delite{
+        background-color: red;
+        width: 50px;
+        height: 50px;
+        margin-left: 160px;
+        border-radius: 5px;
+        font-size: 25px;
+        font-weight: bold;
+        cursor: pointer;
+       display: none;       
+    }
+ 
+    .delite:hover{
+        background-color: darkred;
+    }
+    .add{
+        font-size: 30px;
+        padding-left:25px ;
+    }
+    .as{
+        display: flex;
+        margin-top: 10%;
+    }
+    .ff{
+        margin-left: 5%;
+        font-size: 20px;
+        padding: 10px;
+        background-color: rgb(88, 88, 208);
+    }
+    .ff:hover{
+        background-color: rgb(28, 23, 51);
+    }
+    .text:focus{
+        outline: none;
+        border: 2px solid blueviolet;
+        box-shadow: 0 0 5px blueviolet;
+    }
+    .wq1:hover .delite{
+        display: block;
+    }
+    .wq1 .delite{
+        transition: 0.5s ease;
+    }
+    </style>
+</head>
+<body>
+    
+    <main class="main">
+        <section  class="section1">
+           <h1 class="q1">Todo App</h1>
+           <form>
+            <input class="text" type="text" placeholder="Add your new todo" />
+            <button class="p">+</button>
+           </form><br>
+
+
+           <section class="pk1">
+                <div class="wq1">
+                     <span>Lorem ipsum dolor, sit amet</span> 
+                    <button class="delite">📦</button>
+                </div>
+                <div class="wq1">
+                     <span>Lorem ipsum dolor, sit amet</span> 
+                    <button class="delite">📦</button>
+                </div>
+                <div class="wq1">
+                     <span>Lorem ipsum dolor, sit amet</span> 
+                    <button class="delite">📦</button>
+                </div>
+                <div class="wq1">
+                     <span>Lorem ipsum dolor, sit amet</span> 
+                    <button class="delite">📦</button>
+                </div>
+
+           </section>
+
+           <section class="as"><br><br>
+            <div class="add">Lorem ipsum dolor, sit amet </div>
+            <button class="ff">clean </button>
+           </section>
+        </section>
+
+    </main>
+    
+    
+
+
+
+
+
+
+     
+
+    <script>
+        
+    </script>
+</body>
+</html>

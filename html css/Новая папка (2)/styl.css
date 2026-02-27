@@ -1,0 +1,124 @@
+
+
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 1em 0;
+}
+
+.header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  color: #fff;
+  margin-left: 1em;
+  text-decoration: none;
+}
+
+.nav .btn-primary {
+  background: #3498db;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  background: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 4em 1em;
+}
+
+.hero .cta-buttons a {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.75em 1.5em;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hero .btn-primary {
+  background: #2ecc71;
+  color: #fff;
+}
+
+.hero .btn-secondary {
+  background: #fff;
+  color: #3498db;
+}
+
+/* Features */
+.features {
+  padding: 2em 1em;
+  text-align: center;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.feature-item {
+  flex: 1;
+  min-width: 200px;
+  background: #f9f9f9;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+/* Pricing */
+.pricing-grid {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.plan {
+  flex: 1;
+  min-width: 200px;
+  background: #f9f9f9;
+  padding: 1em;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.footer-nav a {
+  color: #fff;
+  margin: 0 0.5em;
+  text-decoration: none;
+}

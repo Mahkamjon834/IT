@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jura:wght@300..700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+        body{
+            overflow-x: hidden;
+            padding: 0;
+            margin: 0;
+            font-family: Roboto;
+            color: #0B2330;
+        }
+        .header-navigate{
+        display: flex;
+        font-size: 16px;
+        padding: 20px 30px 20px 30px;
+        gap: 50px;
+        color: #0B2330;
+
+    }   
+    #first{
+width: 163px;
+height: 54px;
+border-radius: 4px;
+border: 1px solid #0B2330;
+background-color: #0B2330;
+color: white;
+font-size: 16px;
+}
+.page{
+    color: #0B2330;
+    display: flex;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+#second{
+width: 163px;
+height: 54px;
+border-radius: 4px;
+border: 1px solid #F9C600;
+font-size: 16px;
+color: #0B2330;
+background-color: #F9C600;
+}
+#third{
+    width: 163px;
+    height: 54px;
+    border-radius: 4px;
+    border: 1px solid black;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    margin-left: 16px;
+}
+#devochka{
+    margin-left: 570px;
+    background-color: #F9C600;
+    width: 778px;
+    height: 886px;
+    left: 730px;  
+}
+#ulibka{
+width: 608px;
+height: 541px;
+margin-top: 170px;
+margin-left: -90px;
+}
+.pege{
+padding: 120px;
+text-align: center;
+}
+.im{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.pag{
+    width: 97%;
+height: 494px;
+top: 1622px;
+left: 32px;
+background-color: #51CEBC;
+margin: auto;
+border-radius: 10px;
+display: flex;
+}
+.fourth{
+width: 163px;
+height: 54px;
+border-radius: 4px;
+border: 1px solid #F9C600;
+font-size: 16px;
+color: #0B2330;
+margin-top: 90px;
+margin-left: 760px;
+background-color: #F9C600;
+justify-content: center;
+}
+#i{
+margin-left: 400px;
+padding-top: 50px;
+}
+.purpur{
+    display: flex;
+    width: 1560px;
+    height: 537px;
+    margin-left: 700px;
+    background-color: #BD78F0;
+    border-radius: 10px;
+    margin-top: 120px;
+    margin: auto;
+}
+.n{
+margin-top: 190px;
+padding-left: 190px;
+display: flex;
+}
+#fifth{
+    color: black;
+    border: 1px solid black;
+    font-size: 16px;
+    width: 144px;
+    height: 54px;
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 4px;
+}
+.mm{
+    margin-top: 120px;
+    padding-left: 190px;
+    display: flex;  
+}
+#six{
+    color: black;
+    border: 1px solid black;
+    font-size: 16px;
+    width: 144px;
+    height: 54px;
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 4px;  
+}
+.ss{
+    margin-top: 120px;
+    padding-left: 190px;
+    display: flex;  
+}
+#seven{
+    color: black;
+    border: 1px solid black;
+    font-size: 16px;
+    width: 144px;
+    height: 54px;
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 4px;  
+}
+.aim{
+    overflow-x: hidden;
+    background-color: #F2EDE7;
+    margin-top: 120px;
+    padding-left: 190px;
+    padding-bottom: 90px;
+}
+.a{
+     display: flex;  
+}
+.integration{
+    margin-top: 120px;
+    padding-left: 190px;
+    display: flex;
+}
+#eight{
+width: 208px;
+height: 54px;
+background-color: #F9C600;
+border-radius: 4px;
+border: 1px solid #F9C600;
+font-size: 16px;
+}
+.r{
+    margin-top: 200px;
+    padding-left: 30px;
+}
+#nine{
+font-size: 16px;
+width: 140px;
+height: 54px;
+background-color: #F2EDE7;
+border: #000000 1px solid;
+color: #000000;
+}
+.final{
+    background-color: #0B2330;
+    color: white;
+    margin-top: 40px;
+    padding: 50px 30px 190px 30px;
+    text-align: center;
+}
+    </style>
+    <!--Suhrob-->
+    <div class="header-navigate">
+        <img src="sprig-chorniy.png" style="width: 104px; height: 52px;">
+        <p style="margin-left: 90px;">Why Sprig?</p>
+        <p>Product ⌄</p>
+        <p>Customers ⌄</p>
+        <p>Resources ⌄</p>
+        <p>Plans</p>
+        <p style="margin-left: 540px;">Sign in</p>
+        <p>Talk to Sales</p>
+        <button id="first">Start for Free</button>
+    </div>
+
+    <!--first page-->
+    <div class="page">
+        <div style="padding-left: 130px; padding-top: 120px;">
+            <h1 style="font-size: 60px;">In-context user <br>
+            research that's <br>
+            fast and <br>
+            reliable.</h1>
+
+            <p style="font-size: 22px; color: #375361;">Ensure user research happens early and <br>
+            often with Sprig's targeted microsurveys,<br>
+            video questions, and more.</p>
+            <p><button id="second">Start for Free</button> <button id="third">Talk to Sales</button></p>
+        </div>
+
+        <div id="devochka">
+            <img src="devushka-ulibka.png" id="ulibka">
+        </div>
+    </div>
+
+    <!--Xayrullo-->
+    <div class="pege">
+<h1 style="font-size: 42px;">Trusted by the world's most <br>
+innovative companies</h1>
+
+<div style="padding-top: 40px;">
+
+    <div>
+<img src="square.png" class="im">
+<img src="code.png" class="im">
+<img src="dropbox.png" class="im">
+<img src="loom.png" class="im">
+<img src="adobe.png" class="im">      
+    </div>
+
+    <div style="padding-top: 20px;">
+<img src="shift.png" class="im">
+<img src="ease.png" class="im">
+<img src="ironclad.png" class="im">
+<img src="opendoor.png" class="im">
+<img src="surfline.png" class="im">
+    </div>
+    
+    <div style="padding-top: 20px;">
+<img src="app.png" class="im">     
+<img src="beyond.png" class="im">
+<img src="pro.png" class="im">
+<img src="invoice.png" class="im">
+<img src="chipper.png" class="im">      
+    </div>
+</div>
+    </div>
+
+    <!--Suhrob-->
+    <!--3 page-->
+
+<div class="pag">
+
+<div style="padding-top: 50px;">
+<img src="bike.png" style="width: 678px;
+height: 382px;
+top: 56px;
+padding: 0px;">
+</div>
+
+
+<div style="padding-top: 80px; padding-left: 50px;">
+    <h1 style="font-size: 34px; text-align:center">Modern product teams move fast, <br>
+    but learning from customers takes <br>
+    a ton of time, effort, and energy.</h1>
+
+    <p style="font-size: 22px;">So teams often rush user research or skip it altogether, <br>
+    causing products and features to miss the mark.</p>
+</div>
+</div>
+
+
+<div style="padding: 120px;">
+    <p style="font-size: 34px; margin-left: 500px;">Sprig makes it possible to obtain qualitative <br>
+    insights at the speed and scale of analytics</p>
+
+    <img src="border.png" id="i">
+<br>
+<button class="fourth">Start for Free</button>
+</div>
+
+<!--Malika-->
+<!--fourth page-->
+
+<div class="purpur">
+    <div><img src="features.png" style="margin-left: -120px; padding-top: 50px;"></div>
+    
+    
+    <div style="padding-left: 190px; padding-top: 50px;">
+        <p style="font-size: 42px;">Target your actual users <br>
+        during key moments <br>
+        throughout their product <br>
+        journey.</p>
+
+        <p style="font-size: 17px;">Get 30% higher response rates by asking your customers hyper-relevant <br>
+        questions based on who they are and what they'll do within your product.</p>
+    </div>
+</div>
+
+
+<div style="padding-left: 190px; margin-top: 120px;">
+    <p style="font-size: 42px;"><span style="color: #6A7981; font-size: 14px;">SOLUTIONS</span><br>
+    How Sprig helps ensure every <br>
+    product decision is customer-<br>
+    informed</p>
+
+    <p style="font-size: 22px; color:#375361;">And helps through every stage of your product.</p>
+</div>
+
+<div class="n">
+    <div>
+        <img src="message.png" width="40px" height="40px">
+
+        <p style="font-size: 34px;">Contextual Microsurveys</p>
+
+        <p style="color: #375361; font-size: 17px;">Keep a constant pulse on your customer’s experience. <br>
+        Continuously surface user insights via in-product, email, or link <br>
+        microsurveys to improve your product and acquisition funnels.</p>
+
+        <button id="fifth">Learn More</button>
+    </div>
+    <div>
+        <img src="negrityanka.png" style="width: 513px; height: 348px; margin-top: 20px; margin-left: 657px;">
+    </div>
+</div>
+
+    <div class="mm">
+        <div>
+            <img src="video.png" width="40px" height="40px">
+    
+            <p style="font-size: 34px;">Video Questions</p>
+    
+            <p style="color: #375361; font-size: 17px;">Have more customer conversations, in less time. Conduct one <br>
+            -to-one user interviews anytime, anywhere in order to validate <br>
+            ideas and build a roadmap your customers will love.</p>
+    
+            <button id="six">Learn More</button>
+        </div>
+
+        <div>
+            <img src="devushka-mahaet-rukoy.png" style="width: 513px; height: 348px; margin-top: 20px; margin-left: 657px;">
+        </div></div>
+
+        <div class="ss">
+            <div>
+                <img src="taymer.png" width="40px" height="40px">
+        
+                <p style="font-size: 34px;">Concept Testing</p>
+        
+                <p style="color: #375361; font-size: 17px;">Quickly iterate designs based on feedback from your users. <br>
+                Conduct rapid and remote concept testing to ensure your new <br>
+                concept, design, and messaging hit the mark by collecting <br>
+                feedback from your customers before launch.</p>
+        
+                <button id="seven">Learn More</button>
+<br><br><br>
+    <button style="color: #84969f; 
+    background-color:#dde9ee; 
+    border-radius: 4px; 
+    padding: 5px 10px 5px 10px; 
+    border: 1px solid #becbd1; 
+    padding-left: 10px;
+    font-size: 13px;">CONTEXTUAL MIROSURVEYS</button>
+    
+    <button style="color: #84969f; 
+    background-color:#dde9ee; 
+    border-radius: 4px; 
+    padding: 5px 10px 5px 10px; 
+    border: 1px solid #becbd1;
+    padding-left: 10px;
+    font-size: 13px;">VIDEO QUESTIONS</button>
+    
+    <button style="color: #0B2330; 
+    background-color:#ff8000; 
+    border-radius: 4px; 
+    padding: 5px 10px 5px 10px; 
+    border: 1px solid #ff8000;
+    font-size: 13px;">CONCEPT TESTING</button>
+            </div>
+    
+            <div>
+                <img src="o.png" style="width: 513px; height: 348px; margin-top: 20px; margin-left: 657px;">
+            </div>
+        </div>
+
+<!--fifth page-->
+    <div class="aim">
+<p style="font-size: 60px; padding-top: 90px;"><span style="color:#375361; font-size: 14px;">FEATURES</span><br>
+How Sprig delivers accurate, in-depth <br>
+user insights in real-time</p>
+<div class="a">
+<div><img src="streli.png"></div>
+
+<div style="margin-left: 700px;">
+    <p style="font-size: 24px; border-top: 2px solid #C9316F; padding-top:20px;">Contextual Targeting <span style="margin-left: 200px;">⌄</span></p>
+
+    <p style="font-size: 17px; color:#375361">Target users based on what they do in your product <br><br>
+        Conduct interviews, concept tests, and surveys with specific users based <br>
+        on certain characteristics and actions. Giving you faster, more relevant <br>
+        results every time.</p>
+<br>
+    <p style="font-size: 16px; border-bottom: 2px solid #C3CACD; padding-bottom: 20px;">Learn More →</p>
+    <br>
+    <p style="font-size: 24px; border-bottom: 2px solid #C3CACD; padding-bottom: 20px;">AI Analysis</p>
+    <br>
+    <p style="font-size: 24px; border-bottom: 2px solid #C3CACD; padding-bottom: 20px;">Templates</p>
+</div>
+</div></div>
+    </div>
+
+<!--six page-->
+<div class="integration">
+    <div><p style="font-size: 34px;"><span style="font-size: 14px; color:#375361">INTEGRATION</span><br>
+Share data and insights across all of your <br>
+(other) favorite tools by integrating with <br>
+Sprig</p>
+
+<p style="font-size: 17px; color:#375361">Connect events and attributes from other platforms to ensure you’re asking the right <br>
+customers the right questions. Then share your findings with apps like Slack and <br>
+Zendesk to get a comprehensive view of your users' behaviors.</p>
+<br>
+<button id="eight">See All Integrations</button>
+</div>
+<div>
+<img src="int.png" style="margin-left: 630px;">
+</div>
+</div>
+
+<!--seven page-->
+
+<div class="r">
+    <div style="background-color: #F2EDE7; 
+    border-radius: 30px 30px 30px 30px;
+    width: 1376px; height: 584px; top: 80px; 
+    left: 32px; display: flex; margin:auto;">
+
+    <div style="background-color: #F2EDE7; 
+    border-radius: 30px 0px 0px 30px; 
+    padding: 90px 90px 90px 120px;">
+      <p style="font-size: 14px; color: #375361;">CASE STUDY</p>
+      <p style="font-size: 24px;">Trusted by the world's most <br>
+    customer-centric teams</p> 
+    <p style="font-size: 17px;">Sprig helps product and research teams <br>
+    ensure user insights fuel every product <br>
+    decision.</p>
+<br>
+<button id="nine">Read More</button>
+</div>
+
+<div style="background-color: #F9C600;
+border-radius: 0 30px 30px 0; margin-left: 228px;">
+<p style="font-size: 34px; color:#000000; padding: 50px">Sprig helps us collect insights <br>
+easier, faster, and more accurately <br>
+than any other tool on the market, <br>
+which allows us to build a better <br>
+product for our users and ultimately <br>
+grow our revenue.</p>
+
+<table style="padding-left: 50px;">
+    <tr>
+        <td><img src="mujikkakoyto.png" width="80px" height="80px"></td>
+        <td style="font-size: 16px; padding-left: 20px">
+        Daniel Layfield <br>
+        Growth Product Manager at Codecademy</td>
+    </tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+<!--finally...-->
+<div class="final">
+    <p style="font-size: 42px;">Launch a Sprig within minutes. <br>
+    See insights within hours.</p>
+    <p style="font-size: 17px;">Create your free account to conduct video interviews, test designs, and survey <br>
+    specific users within your product, on your website, and more.</p>
+
+<button class="fourth" style="margin-left: -20px; margin-top: 30px;">Start for Free</button>
+</div>
+ <img src="beliy.png">   
+
+<table>
+    
+</table>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style>
+        *{
+    box-sizing: border-box;
+    font-family: 'popins ', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+    display: flex;
+
+}
+@property --a{
+    inherits: false;
+    syntax: '<angle>';
+    initial-value:0deg;
+
+}
+.box{
+    height: 200px;
+    width: 400px;
+    background: repeating-conic-gradient(from var(--a),#ff0057 0%,
+    #ff0057 5%, transparent 5%, transparent 40%, #ff0057 50%);
+    filter: drop-shadow(0 15px 50px black);
+    animation: rotating 4s linear infinite;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    position: relative;
+    display: flex;
+}
+
+.box:hover {
+    height: 500px;
+    width: 450px;
+}
+
+@keyframes rotating {
+    0% {
+        --a: 0deg;
+    }
+    100% {
+        --a: 360deg;
+    }
+}
+
+.box::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(
+        from var(--a),
+        #15ffff 0%,
+        #15ffff 5%,
+        transparent 5%,
+        transparent 40%,
+        #15ffff 40%
+    );
+    position: absolute;
+    filter: drop-shadow(0 15px 50px);
+    border-radius: 20px;
+    animation: rotating 4s linear infinite;
+    animation-delay: -1s;
+}
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: 15px;
+    border: solid #0d0d0d;
+    background: #252525;
+}
+
+.login {
+    position: absolute;
+    inset: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    overflow: hidden;
+}
+
+.box:hover .login {
+    inset: 40px;
+}
+
+.loginto {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(120px);
+    gap: 20px;
+    width: 70%;
+    transition: 0.5s;
+}
+
+.box:hover .loginbox {
+    transform: translateY(0px);
+}
+
+.loginbox h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+}
+
+.loginbox h2 i {
+    color: #ff2770;
+    text-shadow: 0 0 5px #ff2770, 0 0 30px #ff2770;
+}
+
+.loginbox input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    background: rgba(0,0,0,0.1);
+    border-radius: 30px;
+}
+
+.loginbox input::placeholder {
+    color: #999;
+}
+.loginns input[type="submit"] {
+    background: #45f3ff;
+    border: none;
+    font-weight: 500;
+    color: #111;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.loginns input[type="submit"]:hover {
+    box-shadow: 0 0 10px #45f3ff,
+                0 0 40px #45f3ff;
+}
+
+.group {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.group a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.group a:nth-child(2) {
+    color: #ff2770;
+    font-weight: 600;
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="login">
+            <div class="loginbox">
+                <h2>
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    login
+                    <i class="fa-solid fa-heard"></i>
+                </h2>
+                <input type="text" placeholder="username">
+                <input type="password" placeholder="password">
+                <input type="submit" value="sign in ">
+                <div class="group">
+                    <a href="#">forget password</a>
+                    <a href="#">sign up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/js/login/script.js"></script>
+</body>
+</html>

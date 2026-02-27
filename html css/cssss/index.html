@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+p.dotted {border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thin;
+}
+p.dashed {border-style: dashed;
+    border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: medium;
+}
+p.solid {border-style: solid;
+    border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thick;
+}
+p.double {border-style: double;
+    border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: 4px;
+}
+p.doubleoove {border-style: groove;
+    margin: 30px;
+  background:yellow;
+  border: 1px solid black;
+  outline: 1px solid red;
+  outline-offset: 15px;
+}
+
+p.ridge {border-style: ridge;
+    direction: rtl;
+  unicode-bidi: bidi-override;
+}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+
+
+
+p.one {
+  border-style: solid;
+  border-width: 5px;
+}
+p.two {
+  border-style: solid;
+  border-width: medium;
+}
+p.three {
+  border-style: dotted;
+  border-width: 2px;
+}
+p.four {
+  border-style: dotted;
+  border-width: thick;
+}
+div {
+
+  border: 1px solid black;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  text-align-last: justify;
+
+
+
+
+
+
+
+}
+h1{
+  font-size: 50px;
+    color: rgba(255, 100, 0, 0.9);
+    text-shadow: 
+        0px 0px 5px rgba(255, 69, 0, 0.8), 
+        0px 0px 10px rgba(255, 140, 0, 0.6), 
+        0px 0px 15px rgba(255, 69, 0, 0.4);
+    opacity: 0.9;
+
+
+}
+@keyframes neonGlow { 
+0% { 
+text-shadow: 0 0 5px rgba(255, 0, 0, 0.8),
+ 0 0 15px rgba(255, 0, 0, 0.8),
+ 0 0 30px rgba(255, 0, 0, 0.8);
+ color: rgba(255, 0, 0, 1);
+ opacity: 0.7; }
+ 33% { 
+text-shadow: 0 0 10px rgba(0, 255, 0, 0.9),
+ 0 0 20px rgba(0, 255, 0, 0.9),
+ 0 0 40px rgba(0, 255, 0, 0.9);
+ color: rgba(0, 255, 0, 1);
+ opacity: 0.85;
+ }
+ 66% { 
+text-shadow: 0 0 15px rgba(0, 0, 255, 1),
+ 0 0 25px rgba(0, 0, 255, 1),
+ 0 0 50px rgba(0, 0, 255, 1); 
+color: rgba(0, 0, 255, 1); 
+opacity: 1; 
+}100% { 
+text-shadow: 0 0 20px rgba(255, 255, 0, 1),
+ 0 0 30px rgba(255, 255, 0, 1),
+ 0 0 60px rgba(255, 255, 0, 1); 
+color: rgba(255, 255, 0, 1); 
+opacity: 0.75; }
+ }
+
+
+
+
+ .table {
+    display: table;
+    border: 1px solid black;
+  }
+  .row {
+    display: table-row;
+  }
+  .cell {
+    display: table-cell;
+    border: 1px solid black;
+    padding: 10px;
+  }
+
+    </style>
+</head>
+<body>
+  <div class="table">
+    <div class="row">
+      <div class="cell">Ячейка 1</div>
+      <div class="cell">Ячейка 2</div>
+    </div>
+  </div>
+  
+  <style>
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+  }
+  .grid-item {
+    background: lightgreen;
+    padding: 20px;
+    text-align: center;
+  }
+
+</style>
+<div class="grid-container">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>
+</div>
+
+
+  <style>
+    .flexbox {
+      display: flex;
+      gap: 10px;
+    }
+    .box {
+      width: 50px;
+      height: 50px;
+      background: orange;
+    }
+  </style>
+<div class="flexbox">
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+</div>
+  
+  <style>
+    li {
+      display: inline;
+    }
+    </style>
+    <ul>
+      <li><a href="/html/default.asp" target="_blank">HTML</a></li>
+      <li><a href="/css/default.asp" target="_blank">CSS</a></li>
+      <li><a href="/js/default.asp" target="_blank">JavaScript</a></li>
+    </ul>
+    
+  <div class="neon-text"> НЕОНОВЫЙ ТЕКСТ </div>
+
+    <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, id natus? Delectus totam nisi labore?</h1>
+    <p class="dotted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, omnis?</p>
+    <p class="dashed">Animi in voluptatum vitae nihil labore repellendus minus est nobis.</p>
+    <p class="solid">Vero aspernatur amet harum magnam debitis deserunt adipisci quo expedita!</p>
+    <p class="double">Laborum quas facilis totam. Similique officia perspiciatis hic vitae maiores.</p>
+    <p class="doubleoove">Asperiores, adipisci ipsam itaque iste officiis fugiat sequi? Quae, impedit.</p>
+    <p class="ridge">Reprehenderit inventore doloremque ipsum neque enim dolore et perferendis porro?</p>
+    <p class="inset">Sint, pariatur consequuntur numquam expedita itaque eos exercitationem molestiae quidem.</p>
+    <p class="outset">Eaque quas voluptatibus molestiae unde! Nisi cum rerum adipisci ea.</p>
+    <p class="none">Eius accusamus adipisci dignissimos velit eos perferendis exercitationem dolorem vel.</p>
+    <p class="hidden">Rerum hic minus dolor nemo. Est placeat nobis quidem non!</p>
+    <p class="mix">Voluptatibus amet veniam quidem similique dolorem deserunt inventore sequi debitis?</p>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, porro.
+    </div><br><br><br>
+    <style>
+      span {
+        display: block;
+      }
+      </style>
+      <span>A display property with</span> <span>a value of "block" results in</span> <span>a line break between each span elements.</span>
+      
+</body>
+</html>

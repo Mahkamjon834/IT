@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+header {
+  width: 100%;
+  background-color: rgba(35, 37, 54, 1);
+  height: 100px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+header nav h1 {
+  font-size: 48px;
+  color: white;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  justify-content: space-between;
+}
+header nav ul {
+  height: 100%;
+}
+header nav ul li {
+  float: left;
+  color: white;
+  font-size: 20px;
+  list-style: none;
+  margin-left: 25px;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid transparent;
+}
+header nav ul li:hover {
+  border-color: rgba(255, 161, 85, 1);
+}
+header nav ul li:last-child {
+  color: rgba(255, 161, 85, 1);
+}
+
+.career{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin: 0 auto;
+}
+.career .left, .career .right{
+    width: 45%;
+    padding: 50px;
+}
+.career .right{
+    background-color: rgba(255, 224, 199, 1);
+}
+.career .left span{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.career .left h1{
+    font-size: 48px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+.career .left p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.career .left button{
+    position: relative;
+    width: 182px;
+    height: 64px;
+    background-color: rgba(68, 76, 252, 1);
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.career .left button img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.career .right h1{
+    font-size: 24px;
+    font-weight: 600;
+}
+.career .right p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.details{
+    width: 85%;
+    margin: 0 auto;
+    background-color: rgba(236, 248, 249, 1);
+}
+.details .top{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    border-bottom: 4px solid rgba(224, 241, 242, 1);
+}
+.details .top p{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+}
+.details .top p:hover{
+    border-color: rgba(69, 77, 253, 1);
+    color: rgba(69, 77, 253, 1);
+}
+.details .bottom{
+    padding: 100px 200px;
+}
+
+.details .bottom ul li{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 35px;
+}
+
+.team{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+.cards{
+    width: 85%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.cards .card{
+    background-color: pink;
+    width: calc(100% / 3 - 1rem);
+    padding: 2rem;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cards .card h3{
+    font-size: 22px;
+    font-weight: 600;
+}
+.cards .card p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.cards .card span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 211, 175, 0.5);
+    border-radius: 50%;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Список задач</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+
+    }
+
+    input[type="text"] {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 20px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+    }
+
+    input[type="text"]:focus {
+      border-color: #26ff00;
+      outline: none;
+      box-shadow: 0 0 5px rgba(177, 186, 9, 0.5);
+    }
+
+    ul.task-list {
+      list-style: none;
+      padding: 0;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .task-list li {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background-color: #1994c9;
+      border-bottom: 1px solid #ddd;
+      transition: background 0.3s ease;
+    }
+
+    .task-list li:nth-child(even) {
+      background-color: #dce312;
+    }
+
+    .task-list li:hover {
+      background-color: #eb209a;
+    }
+
+    .task-list input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .task-list input[type="checkbox"]:checked + label {
+      text-decoration: line-through;
+      color: rgb(16, 167, 124);
+    }
+
+    .task-list label {
+      flex: 1;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="text" placeholder="Введите новую задачу...">
+
+  <ul class="task-list">
+    <li>
+      <input type="checkbox" id="task1">
+      <label for="task1">Пойти в школу</label>
+    </li>
+    <li>
+      <input type="checkbox" id="task2">
+      <label for="task2">Пойти на It</label>
+    </li>
+    <li>
+      <input type="checkbox" id="task3">
+      <label for="task3">Пойти домой</label>
+    </li>
+    <li>
+      <input type="checkbox" id="task4">
+      <label for="task4">Зделать дз</label>
+    </li>
+    <li>
+        <input type="checkbox" id="task1">
+        <label for="task1">Пойти в школу</label>
+      </li>
+      <li>
+        <input type="checkbox" id="task2">
+        <label for="task2">Пойти на It</label>
+      </li>
+      <li>
+        <input type="checkbox" id="task3">
+        <label for="task3">Пойти домой</label>
+      </li>
+      <li>
+        <input type="checkbox" id="task4">
+        <label for="task4">Зделать дз</label>
+      </li>
+  </ul>
+
+</body>
+</html>
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Virtual Reality Game</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    let scene, camera, renderer, cube;
+    
+    // Yaratish
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+    
+    // Katta kub
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+    
+    camera.position.z = 5;
+    
+    // Harakatni boshqarish
+    let animate = function () {
+      requestAnimationFrame(animate);
+      
+      cube.rotation.x += 0.01;
+      cube.rotation.y += 0.01;
+      
+      renderer.render(scene, camera);
+    };
+    
+    animate();
+    
+    // VR yordamida ko'rish
+    if (navigator.getVRDisplays) {
+      navigator.getVRDisplays().then(displays => {
+        if (displays.length > 0) {
+          let vrDisplay = displays[0];
+          renderer.vr.enabled = true;
+          renderer.vr.setDevice(vrDisplay);
+        }
+      });
+    }
+  </script>
+</body>
+</html>

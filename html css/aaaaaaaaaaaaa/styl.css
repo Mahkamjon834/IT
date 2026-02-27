@@ -1,0 +1,158 @@
+body{
+    background-color: black;
+}
+.flex-itm{
+    background-color: rgb(52, 207, 32);
+    color: rgb(168, 16, 16);
+    margin: 40px;
+    padding: 40px;
+}
+.flex{
+    display: flex;
+    justify-content:flex-end;
+    background-color: aqua;
+}
+.c1{
+    display: flex; justify-content: space-between;
+}
+.c11{
+    background-color: rgb(46, 114, 230);
+    color: rgb(255, 255, 255);
+    margin: 40px;
+    padding: 40px; 
+}
+.c2{
+    display: flex; justify-content: space-between;
+}
+.c22{
+    background-color: rgb(222, 218, 22);
+    color: rgb(255, 249, 249);
+    margin: 40px;
+    padding: 40px; 
+}
+.c3{
+    display: flex; justify-content: space-between;
+}
+.c33{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}
+.c4{
+    display: flex; justify-content: space-between; width: 300px;
+
+}
+.c44{
+    background-color: rgb(129, 183, 22);
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}
+.c5{
+    
+    display: flex; justify-content: space-between;
+}
+.card{
+    background-color: rgb(37, 220, 233);
+    color: rgb(209, 34, 188);
+    margin: 40px;
+    padding: 40px; 
+}
+.c6{
+    display: flex; justify-content: center;
+}
+.c7{
+    display: flex; justify-content: inherit;
+    background-color: brown;
+}
+.c8{
+    background-color: rgb(83, 218, 255);
+    color: rgb(218, 213, 213);
+    margin: 40px;
+    padding: 40px; 
+}
+.parent{
+    display: flex; justify-content: space-between;
+    background-color: chocolate;
+}
+.c9{
+    background-color: rgb(174, 226, 43);
+    color: rgb(225, 142, 142);
+    margin: 40px;
+    padding: 40px; 
+}
+.child{
+    display: flex;
+    justify-content: inherit;
+   
+}
+
+.c10{
+    display: flex; justify-content:flex-start;
+    background-color: darkgreen;
+}
+.c11{
+    display: flex; justify-content: inherit;
+}
+.c12{
+    background-color: rgb(67, 218, 118);
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}
+.c13{
+    display: flex; justify-content: space-around;
+}
+.c14{
+    display: flex; justify-content: inherit;
+}
+.c15{ background-color: rgb(49, 166, 249);
+color: rgb(0, 0, 0);
+margin: 40px;
+padding: 40px;} 
+.c16{
+    display: flex; justify-content: start; border: 1px solid #000;
+}
+.c17{
+    background-color: rgb(228, 39, 190);
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}  
+.c18{
+    display: flex; justify-content: start; background-color: lightgray;
+}.c19{
+    background-color: rgb(248, 255, 43);
+    color: rgb(0, 0, 0);
+    margin: 40px;
+    padding: 40px; 
+}
+.c20{
+    display: flex; justify-content: start; gap: 10px;
+}
+.c21{
+    background-color: rgb(107, 201, 151);
+    color: rgb(0, 0, 0);
+    margin: 50px;
+    padding: 40px;   
+}
+.c22{
+    display: flex; justify-content: start; gap: 20px;
+    background-color: aqua;
+}
+.xc{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 50px;
+    padding: 40px; 
+}
+.c23{
+    display: flex; justify-content: start; width: 400px;
+}
+.c24{
+    background-color: blueviolet;
+    color: rgb(0, 0, 0);
+    margin: 50px;
+    padding:60px; 
+}

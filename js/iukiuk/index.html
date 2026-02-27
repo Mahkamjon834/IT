@@ -1,0 +1,110 @@
+..MaxCondor.., [03.02.2026 18:26]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>Lo0caleStarej</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        //localStorage bu bizga ajratkan 5 megabayt xotirani brauzerda saqlash imkonini beradi
+        //sessionStorage bu esa faqatgina joriy sessiya davomida ma'lumotlarni saqlash imkonini beradi
+        //local storage da saqlangan ma'lumotlar brauzer yopilgandan keyin ham saqlanib qoladi
+        localStorage.setItem("ism", "MAX");
+
+        let person = {
+            name: "MAX",
+            age: 16,
+            job: "developer"
+        }
+        localStorage.setItem("person", JSON.stringify(person));
+        console.log(localStorage.getItem("ism"));
+        let data = JSON.parse(localStorage.getItem("person"));
+        console.log(data.job);
+
+
+
+        localStorage.clear()//barcha malumotlarni ochiradi
+        //bita bit tozalash
+        localStorage.removeItem("ism")
+
+    </script>
+    
+</body>
+</html>
+
+..MaxCondor.., [03.02.2026 18:26]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Some, reduce, concat,
+    indexOf, reverse, split</h1>
+    
+
+
+    <script >
+        console.log("hello world");
+
+let arr = [7, -12, 9, 10]
+
+let result = arr.every(num => num < 0)
+let result2 = arr.some(son => son < 0)
+console.log(result);
+console.log(result2);
+
+let sonlar = [10, 20, 30, 40, 50]
+
+let sum = 0
+for(let key of sonlar){
+    sum +=key
+}   
+console.log(sonlar);
+console.log(sum);
+
+let natija = sonlar.reduce((a, b)=> a + b, 0)
+console.log(sonlar);
+console.log(natija);
+
+let num1 = [1, 2, 3]
+let num2 = [4, 5, 6]
+let group = num1.concat(num2)
+console.log(group);
+
+let raqam = ["salom", 78, 45, 10, true]
+// index raqam qaytarib beradi
+console.log(raqam.indexOf(10));
+// teskarilab beradi
+console.log(raqam.reverse());
+
+let names = "Amirxon"
+console.log(names.split("").reverse().join());
+
+
+
+
+
+    </script>
+</body>
+</html>

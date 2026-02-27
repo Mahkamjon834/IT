@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funny Neon Menu</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: "Arial", sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Видеофон */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: black;
+            overflow: hidden;
+            position: relative;
+        }
+
+        video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: blur(2px);
+        }
+
+        ul {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10;
+        }
+
+        ul li {
+            list-style-type: none;
+            position: relative;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Кнопки - стеклянные и неоновые */
+        ul li a {
+            position: relative;
+            display: inline-block;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #00ffcc;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50px;
+            backdrop-filter: blur(8px);
+            transition: 0.5s ease-in-out;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+            border: 2px solid rgba(0, 255, 204, 0.3);
+        }
+
+        ul li a:hover {
+            color: #ff1493;
+            border-color: rgba(255, 20, 147, 0.7);
+            box-shadow: 0 0 30px rgba(255, 20, 147, 1);
+            text-shadow: 0 0 20px rgba(255, 20, 147, 1);
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        /* Задний текст */
+        ul li::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(255, 255, 255, 0.1);
+            font-size: 9em;
+            font-weight: 900;
+            pointer-events: none;
+            opacity: 0;
+            transition: 0.5s ease-in-out;
+            text-shadow: 0 0 40px rgba(255,255,255,0.2);
+        }
+
+        ul li:hover::before {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <!-- Видео на фоне -->
+    <video autoplay loop muted>
+        <source src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.mp4" type="video/mp4">
+    </video>
+
+    <ul>
+        <li data-text="😂 MEMES"><a href="#">Memes</a></li>
+        <li data-text="🤣 LOL"><a href="#">LOL</a></li>
+        <li data-text="🔥 EPIC"><a href="#">Epic</a></li>
+        <li data-text="💀 WTF"><a href="#">WTF</a></li>
+        <li data-text="😹 CATS"><a href="#">Cats</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,374 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f2ecec;
+    font-family: Arial, sans-serif;
+    color: #eb4b00;
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 5% 8%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left-text {
+    width: 70%;
+    
+  }
+
+  .left-text h1 {
+    font-size: 5vw;
+    line-height: 1;
+    margin: 0 0 2vw;margin-left: 13%;
+    font-size: 125px;
+  }
+
+  .left-text p {
+    font-size: 1.5vw;
+    color: #eb4b00;
+    margin-left: 13%;
+  }
+
+  .right-video {
+    width: 30%;
+    position: relative;
+    background: #ffe97b;
+    border-radius: 50% 40% 60% 50% / 60% 50% 40% 50%;
+    padding-top: 40%;
+    overflow: hidden;
+  }
+
+  .play-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .play-button {
+    font-size: 5vw;
+    color: #eb4b00;
+    z-index: 2;
+  }
+
+  .circle-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+    text-align: center;
+    animation: rotate 10s linear infinite;
+  }
+
+  .date-text {
+    position: absolute;
+    right: -10%;
+    bottom: 20%;
+    font-size: 1vw;
+    transform: rotate(90deg);
+    color: #eb4b00;
+  }
+
+  .top-left {
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  .top-right {
+    position: absolute;
+    top: 4%;
+    right: 5%;
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .left-vertical {
+    position: absolute;
+    left: -3%;
+    top: 50%;
+    transform: rotate(-90deg);
+    font-size: 0.8vw;
+    color: #eb4b00;
+  }
+  .section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5% 10%;
+  }
+
+  .left-column {
+    width: 60%;
+    margin-left: 8%;
+  }
+
+  .left-column h2 {
+    font-size: 3.5vw;
+    margin-bottom: 2%;
+    font-weight: bold;
+  }
+
+  .left-column p {
+    font-size: 1.2vw;
+    line-height: 1.7;
+    color: #eb4b00;
+  }
+
+  .right-box {
+    width: 30%;
+    background: #fff;
+    padding: 5%;
+    box-sizing: border-box;
+  }
+
+  .info-block {
+    margin-bottom: 10%;
+  }
+
+  .info-block h3 {
+    margin: 0 0 5%;
+    font-size: 1.4vw;
+    color: #eb4b00;
+  }
+
+  .info-block p {
+    margin: 0;
+    font-size: 1.2vw;
+    color: #eb4b00;
+    line-height: 1.5;
+  }
+  .meet-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+    position: relative;
+  }
+
+  .vertical-text {
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: rotate(-90deg) translateY(-50%);
+    font-size: 0.9vw;
+    color: #eb4b00;
+    letter-spacing: 0.1vw;
+  }
+
+  .meet-text {
+    font-size: 114px;
+    line-height: 1.2;
+    margin-left: 5%;
+  }
+
+  .footer-fade {
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    font-size: 0.7vw;
+    color: rgba(235, 75, 0, 0.05);
+    letter-spacing: 0.1vw;
+  }
+
+  .container2 {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 5%;z-index: 100;
+  }
+
+  .image-box {
+    width: 45%;
+    margin-bottom: 3%;
+  }
+.q10{
+  width: 416px;
+height: 549px;
+
+}
+.q11{
+  width: 622px;
+height: 432px;
+top: 248px;
+left: 99px;
+margin-top: 40%;
+
+
+}
+  .image-box  {
+    height: auto;
+    display: block;
+  }
+
+  .caption {
+    font-size: 0.9vw;
+    margin-top: 1%;
+  }
+
+  .text-section {
+    width: 90%;
+    margin: 5% auto;
+    font-size: 1.2vw;
+    line-height: 1.5;
+  }
+
+  .quote {
+    font-weight: bold;
+    margin-bottom: 3%;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vw;
+    font-size: 1vw;
+    margin-top: 2%;
+  }
+
+  .footer-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto 5%;
+  }
+.paska{
+  margin-left: 55%;
+  font-size: 22px;
+
+}
+  .footer-section > div {
+    width: 45%;
+  }
+
+  a {
+    text-decoration: none;
+    color: #f25000;
+  }
+  .contayner11{
+    display: flex;
+    width: 100%;
+height: 858px;
+justify-content: center;
+align-items: center;
+
+}
+.card2{
+    width:100%;
+height: 812px;
+justify-content: center;
+align-items: center;
+
+}
+.container111 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    font-size: 14px;
+    letter-spacing: 0.1vw;
+  }
+
+  .main-text {
+    font-size: 110px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    margin-left: -40%;
+  }
+  .container1111 {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .image-box {
+    width: 45%;
+    margin-bottom: 3%;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .caption {
+    font-size: 0.9vw;
+    margin-top: 1%;
+  }
+
+  .text-block {
+    width: 100%;
+    text-align: left;
+    margin: 3% 0;
+    font-size: 1.2vw;
+    line-height: 1.5;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 5% auto;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    font-size: 1vw;
+  }
+
+  a {
+    text-decoration: none;
+    color: #f25000;
+  }
+
+  .footer-text {
+    width: 45%;
+    font-size: 1.2vw;
+    line-height: 1.6;
+  }

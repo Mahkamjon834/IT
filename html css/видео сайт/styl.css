@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    max-width:1200%;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+}
+header{
+    background-color: #1D1E53;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+header nav{
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+}
+h1{
+    color: white;
+}
+header nav ul li{
+    float: left;
+    list-style:none;
+    margin-left: 25px;
+    cursor:pointer;
+    color: rgba(194, 194, 194, 0.771);
+    transition: .2s linear ;
+}
+header nav ul li:hover{
+    color: white;
+}
+header nav ul li button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(161, 161, 161, 0.637);
+    outline: none;
+    padding: 15px 25px;
+    border-radius : 30px; ;
+    cursor: pointer;
+}
+.hero_wraper{
+    width: 100%;
+    background-color: #1D1E53;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+}
+.rasm{
+    width: 45%;
+}
+.hero .rasm img{
+    width: 550px;
+    height: 350px;
+}
+.hero .text {
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    flex-direction: column;
+    gap:30px ;
+}
+.hero .text  h1 {
+    font-size: 55px;
+
+}
+.hero .text p{
+    font-size: 18px;
+    color: white;
+}
+.hero .text .knopka{
+    width: 100%;
+    display: flex;
+    gap: 20px
+    ;
+}
+.hero .text .knopka button{
+    font-size:18px ;
+    padding: 20px 35px;
+    border-radius: 70px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.hero .text .knopka button:first-child{
+    background-color:#DABA78 ;
+    color: black;
+
+}
+.hero .text .knopka button:last-child{
+    background-color: transparent;
+    color: white;
+    border: 1px solid transparent;
+}
+.hero .text .knopka button:last-child:hover{
+    background-color: #DABA78 ;
+    transition: .4s linear 
+    
+}
